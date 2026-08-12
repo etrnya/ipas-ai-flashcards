@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>iPAS AI 白底高清高密度精華圖卡</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&display=swap');
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1400px;
+      height: 900px;
+      background-color: #f1f5f9;
+      font-family: 'Noto Sans TC', sans-serif;
+      color: #1e293b;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    /* 上方主 layout (左側 Banner + 右側 6 區塊 Grid) */
+    .main-wrapper {
+      display: flex;
+      gap: 16px;
+      height: 750px;
+    }
+
+    /* 左側主 Sidebar Banner */
+    .sidebar {
+      width: 320px;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+    }
+
+    .brand-header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 12px;
+    }
+
+    .main-title {
+      font-size: 24px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .subtitle-badge {
+      display: inline-block;
+      background: #0284c7;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    .intro-desc {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .feature-capsules {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 14px 0;
+    }
+
+    .capsule-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 8px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: #334155;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .capsule-icon {
+      font-size: 18px;
+    }
+
+    .checklist-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 12px;
+    }
+
+    .checklist-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #166534;
+      margin-bottom: 6px;
+    }
+
+    .checklist-item {
+      font-size: 12px;
+      color: #15803d;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .flow-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 10px;
+      margin-top: 8px;
+    }
+
+    .flow-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #64748b;
+      margin-bottom: 6px;
+    }
+
+    .flow-steps {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .flow-arrow {
+      color: #94a3b8;
+    }
+
+    .author-tag {
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #64748b;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* 右側 6 區塊 Bento Grid Layout */
+    .content-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .card-block {
+      background: #ffffff;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+    }
+
+    .block-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .block-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .num-1 { background: #10b981; }
+    .num-2 { background: #3b82f6; }
+    .num-3 { background: #6366f1; }
+    .num-4 { background: #ef4444; }
+    .num-5 { background: #06b6d4; }
+    .num-6 { background: #f59e0b; }
+
+    .block-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .block-sub {
+      font-size: 11px;
+      color: #64748b;
+      margin-bottom: 6px;
+    }
+
+    /* 內容型態：表格 */
+    .mini-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      margin-top: 4px;
+    }
+
+    .mini-table th {
+      background: #f1f5f9;
+      color: #334155;
+      padding: 5px;
+      text-align: left;
+      font-weight: 700;
+      border: 1px solid #e2e8f0;
+    }
+
+    .mini-table td {
+      padding: 5px;
+      border: 1px solid #e2e8f0;
+      color: #1e293b;
+    }
+
+    .tag-high { color: #dc2626; font-weight: 700; background: #fee2e2; padding: 1px 4px; border-radius: 4px; }
+    .tag-mid { color: #d97706; font-weight: 700; background: #fef3c7; padding: 1px 4px; border-radius: 4px; }
+    .tag-low { color: #16a34a; font-weight: 700; background: #dcfce7; padding: 1px 4px; border-radius: 4px; }
+
+    /* 內容型態：清單與評等 */
+    .list-item {
+      font-size: 12px;
+      color: #334155;
+      margin-bottom: 6px;
+      line-height: 1.4;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .list-bullet {
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    .star-rating {
+      color: #f59e0b;
+      letter-spacing: 1px;
+    }
+
+    /* 小考點 Highlight */
+    .exam-focus {
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #0f172a;
+      border-left: 3px solid #0284c7;
+      margin-top: 6px;
+    }
+
+    /* 底部三大總結膠囊 Footer Grid */
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      height: 95px;
+    }
+
+    .footer-box {
+      border-radius: 12px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .box-summary {
+      background: #fefce8;
+      border: 1px solid #fef08a;
+    }
+
+    .box-strategy {
+      background: #f5f3ff;
+      border: 1px solid #ddd6fe;
+    }
+
+    .box-mnemonic {
+      background: #fff1f2;
+      border: 1px solid #fecdd3;
+    }
+
+    .footer-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-title {
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .title-summary { color: #854d0e; }
+    .title-strategy { color: #5b21b6; }
+    .title-mnemonic { color: #9f1239; }
+
+    .footer-text {
+      font-size: 12px;
+      color: #334155;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Section -->
+  <div class="main-wrapper">
+    <!-- Sidebar Banner -->
+    <div class="sidebar">
+      <div>
+        <div class="subtitle-badge">iPAS AI 初級考綱精華</div>
+        <div class="main-title">AI 基礎與演算法技術應用</div>
+        <div class="intro-desc">從資料驅動到模型訓練，徹底打通 AI 機器學習與深度學習核心邏輯！</div>
+        
+        <div class="feature-capsules">
+          <div class="capsule-item"><span class="capsule-icon">🤖</span><span>三級能力分級</span></div>
+          <div class="capsule-item"><span class="capsule-icon">📊</span><span>監督與非監督</span></div>
+          <div class="capsule-item"><span class="capsule-icon">⚡</span><span>模型選擇判別</span></div>
+          <div class="capsule-item"><span class="capsule-icon">🛡️</span><span>過擬合防護</span></div>
+        </div>
+
+        <div class="checklist-box">
+          <div class="checklist-title">🎯 學習與考試重點</div>
+          <div class="checklist-item">✓ 掌握 ANI / AGI / ASI 三級智慧差異</div>
+          <div class="checklist-item">✓ 辨識線性迴歸 vs 邏輯斯迴歸之應用情境</div>
+          <div class="checklist-item">✓ 理解 Overfitting 發生原因與正規化解法</div>
+          <div class="checklist-item">✓ 能判斷 CNN, RNN 與 Transformer 之差異</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flow-box">
+          <div class="flow-title">🔄 AI 專案生命週期流程圖</div>
+          <div class="flow-steps">
+            <span>資料收集</span> <span class="flow-arrow">➔</span>
+            <span>模型訓練</span> <span class="flow-arrow">➔</span>
+            <span>評估優化</span> <span class="flow-arrow">➔</span>
+            <span>推論部署</span>
+          </div>
+        </div>
+        <div class="author-tag">Antigravity Agent OS × iPAS 考點解析</div>
+      </div>
+    </div>
+
+    <!-- 6 大區塊 Bento Grid -->
+    <div class="content-grid">
+      <!-- 區塊 1 -->
+      <div class="card-block">
+        <div>
+          <div class="block-header">
+            <span class="block-num num-1">1</span>
+            <span class="block-title">AI 能力分級與能力階層</span>
+          </div>
+          <div class="block-sub">依「智慧廣度與深度」精確分類</div>
+          
+          <table class="mini-table">
+            <thead>
+              <tr><th>層級</th><th>名稱</th><th>能力特徵</th><th>代表範例</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>ANI</b></td><td>弱人工智慧</td><td>單一特定領域專用</td><td>ChatGPT / AlphaGo</td></tr>
+              <tr><td><b>AGI</b></td><td>強人工智慧</td><td>具備通用認知能力</td><td>未實現 (目標)</td></tr>
+              <tr><td><b>ASI</b></td><td>超級人工智慧</td><td>全面超越人類智慧</td><td>遠期理論概念</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="exam-focus">💡 考試重點：當今所有 AI 均屬於 ANI 弱人工智慧</div>
+      </div>
+
+      <!-- 區塊 2 -->
+      <div class="card-block">
+        <div>
+          <div class="block-header">
+            <span class="block-num num-2">2</span>
+            <span class="block-title">機器學習三大派系對比</span>
+          </div>
+          <div class="block-sub">依「學習方式與有無標籤」劃分</div>
+
+          <div class="list-item"><span class="list-bullet">•</span> <b>監督式學習</b>：有解答標籤 (Y)，專做分類與迴歸。</div>
+          <div class="list-item"><span class="list-bullet">•</span> <b>非監督式學習</b>：無標籤，專做資料分群 (Clustering)。</div>
+          <div class="list-item"><span class="list-bullet">•</span> <b>強化學習</b>：無標籤，透過環境獎懲機制 (Reward) 學習。</div>
+
+          <table class="mini-table" style="margin-top: 4px;">
+            <tr><th>類型</th><th>訓練難度</th><th>資料需求</th></tr>
+            <tr><td>監督式</td><td><span class="star-rating">★★☆☆☆</span></td><td>需大量標註</td></tr>
+            <tr><td>非監督</td><td><span class="star-rating">★★★☆☆</span></td><td>未標註原始檔</td></tr>
+          </table>
+        </div>
+        <div class="exam-focus">💡 考試重點：客戶自動分群屬於非監督式學習</div>
+      </div>
+
+      <!-- 區塊 3 -->
+      <div class="card-block">
+        <div>
+          <div class="block-header">
+            <span class="block-num num-3">3</span>
+            <span class="block-title">經典演算法應用情境對照</span>
+          </div>
+          <div class="block-sub">選對演算法是專案成功的關鍵</div>
+
+          <div class="list-item"><span class="list-bullet">•</span> <b>線性迴歸</b>：預測連續數值（如房價、明天氣溫）。</div>
+          <div class="list-item"><span class="list-bullet">•</span> <b>邏輯斯迴歸</b>：預測二選一機率（如刷卡是否詐欺）。</div>
+          <div class="list-item"><span class="list-bullet">•</span> <b>隨機森林</b>：多棵決策樹投票，準確度高抗干擾。</div>
+          <div class="list-item"><span class="list-bullet">•</span> <b>K 近鄰 (KNN)</b>：依據相鄰距離進行類別歸屬。</div>
+        </div>
+        <div class="exam-focus">💡 考試重點：邏輯斯迴歸名字叫迴歸，本質是分類</div>
+      </div>
+
+      <!-- 區塊 4 -->
+      <div class="card-block">
+        <div>
+          <div class="block-header">
+            <span class="block-num num-4">4</span>
+            <span class="block-title">過擬合 (Overfitting) 診斷與解法</span>
+          </div>
+          <div class="block-sub">模型過度死背訓練資料造成的泛化失敗</div>
+
+          <div class="list-item"><span class="list-bullet">⚠️</span> <b>症狀</b>：訓練集 100 分，但測試集準確率大崩盤。</div>
+          <div class="list-item"><span class="list-bullet">🛡️</span> <b>解法 1</b>：增加更多多樣化的訓練數據。</div>
+          <div class="list-item"><span class="list-bullet">🛡️</span> <b>解法 2</b>：加入正規化 (L1 / L2 Regularization)。</div>
+          <div class="list-item"><span class="list-bullet">🛡️</span> <b>解法 3</b>：Early Stopping (提早結束訓練)。</div>
+        </div>
+        <div class="exam-focus">💡 考試重點：訓練正確率高測試正確率低 ➔ Overfitting</div>
+      </div>
+
+      <!-- 區塊 5 -->
+      <div class="card-block">
+        <div>
+          <div class="block-header">
+            <span class="block-num num-5">5</span>
+            <span class="block-title">深度學習三大核心神經網路</span>
+          </div>
+          <div class="block-sub">依處理資料的型態與維度挑選模型</div>
+
+          <div class="list-item"><span class="list-bullet">•</span> <b>CNN (卷積)</b>：專門處理影像、圖片辨識、醫療影像。</div>
+          <div class="list-item"><span class="list-bullet">•</span> <b>RNN (循環)</b>：專門處理時間序列、前後順序語音。</div>
+          <div class="list-item"><span class="list-bullet">•</span> <b>Transformer</b>：自注意力機制，ChatGPT 之核心底層。</div>
+        </div>
+        <div class="exam-focus">💡 考試重點：圖像辨識選 CNN，大語言模型選 Transformer</div>
+      </div>
+
+      <!-- 區塊 6 -->
+      <div class="card-block">
+        <div>
+          <div class="block-header">
+            <span class="block-num num-6">6</span>
+            <span class="block-title">生成式 AI 與 RAG 落地最佳實踐</span>
+          </div>
+          <div class="block-sub">解決 LLM 幻覺與企業私有資料檢索</div>
+
+          <div class="list-item"><span class="list-bullet">🎯</span> <b>RAG (開書考)</b>：向量資料庫檢索 + LLM 內容整理。</div>
+          <div class="list-item"><span class="list-bullet">🎯</span> <b>Prompt 三要素</b>：設定角色 + 給予情境 + 指定 JSON 格式。</div>
+          <div class="list-item"><span class="list-bullet">🛡️</span> <b>不可否認性</b>：每筆記錄 Hash 雜湊值 + 簽署數位簽章。</div>
+        </div>
+        <div class="exam-focus">💡 考試重點：企業內部文件問答必選 RAG 降低幻覺</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Grid 三大總結 -->
+  <div class="footer-grid">
+    <div class="footer-box box-summary">
+      <div class="footer-icon">💡</div>
+      <div class="footer-content">
+        <div class="footer-title title-summary">總結重點</div>
+        <div class="footer-text">當今 AI 均為 ANI 弱人工智慧；監督式學習需有標籤；過擬合可用正規化與增加資料解決。</div>
+      </div>
+    </div>
+
+    <div class="footer-box box-strategy">
+      <div class="footer-icon">🎓</div>
+      <div class="footer-content">
+        <div class="footer-title title-strategy">考試攻略</div>
+        <div class="footer-text">題目見「連續數字」選線性迴歸；見「二選一/刷卡詐欺」選邏輯斯迴歸；見「企業文件」選 RAG。</div>
+      </div>
+    </div>
+
+    <div class="footer-box box-mnemonic">
+      <div class="footer-icon">🎯</div>
+      <div class="footer-content">
+        <div class="footer-title title-mnemonic">快速記憶口訣</div>
+        <div class="footer-text">「當今 AI 皆弱類，分群無標答案給；死背題目過擬合，開書檢索 RAG 隨。」</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

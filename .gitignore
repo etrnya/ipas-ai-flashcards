@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Temp render files
+render_temp_*.html
+temp_*.html
+
+# OS store
+.DS_Store
+Thumbs.db

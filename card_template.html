@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>iPAS AI 初級考點精華圖卡</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700;900&family=Outfit:wght@600;800&display=swap');
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      width: 1200px;
+      height: 675px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      font-family: 'Noto Sans TC', sans-serif;
+      color: #f8fafc;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    /* 頂部 Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 12px;
+    }
+    
+    .badge-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .badge-num {
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    }
+    
+    .badge-category {
+      background: rgba(255, 255, 255, 0.1);
+      color: #38bdf8;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    
+    .card-title {
+      font-size: 26px;
+      font-weight: 900;
+      background: linear-gradient(90deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
+    
+    .logo-tag {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      color: #94a3b8;
+      letter-spacing: 1px;
+    }
+
+    /* 主要內容 Bento Grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 12px;
+      flex-grow: 1;
+    }
+
+    .bento-box {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .analogy-box {
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%);
+      border-left: 4px solid #38bdf8;
+    }
+
+    .box-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .analogy-title {
+      color: #fbbf24;
+    }
+
+    .analogy-content {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+
+    .highlight-text {
+      color: #fbbf24;
+      background: rgba(251, 191, 36, 0.15);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* 關鍵點列表 */
+    .key-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .key-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #e2e8f0;
+    }
+
+    .key-icon {
+      color: #4ade80;
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* 底部秒解區域 */
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .keyword-box {
+      background: rgba(244, 63, 94, 0.1);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+      border-radius: 12px;
+      padding: 10px 16px;
+    }
+
+    .keyword-title {
+      color: #f43f5e;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .keyword-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .kw-tag {
+      background: rgba(244, 63, 94, 0.2);
+      color: #fecdd3;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .exam-box {
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      border-radius: 12px;
+      padding: 10px 16px;
+    }
+
+    .exam-title {
+      color: #4ade80;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .exam-text {
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="badge-group">
+      <span class="badge-num" id="card-id">CARD #01</span>
+      <span class="badge-category" id="card-cat">L111 人工智慧概念</span>
+    </div>
+    <div class="card-title" id="card-title">AI 的定義與三級能力分級</div>
+    <div class="logo-tag">iPAS AI 初級考點精華</div>
+  </div>
+
+  <!-- Main Content Grid -->
+  <div class="grid-container">
+    <!-- Left: 白話比喻 -->
+    <div class="bento-box analogy-box">
+      <div class="box-title analogy-title">💡 零基礎生活化比喻</div>
+      <div class="analogy-content" id="card-analogy">
+        想像 AI 就像是廚房裡的工具：<br>
+        • <span class="highlight-text">弱 AI</span>：像「果汁機」，只會榨果汁，不會炒菜。<br>
+        • <span class="highlight-text">強 AI</span>：像「特級廚師」，跟人類一樣什麼菜都會做。<br>
+        • <span class="highlight-text">超級 AI</span>：像「神廚」，做菜速度與美味度完全超越全人類！
+      </div>
+    </div>
+
+    <!-- Right: 核心考點整理 -->
+    <div class="bento-box">
+      <div class="box-title">⚡ 官方考點精華拆解</div>
+      <ul class="key-points" id="card-points">
+        <li class="key-item"><span class="key-icon">✓</span> <span><b>弱人工智慧 (ANI)</b>：又稱專用 AI，當今所有 AI (包含 ChatGPT) 都屬於此類。</span></li>
+        <li class="key-item"><span class="key-icon">✓</span> <span><b>強人工智慧 (AGI)</b>：具備通用認知能力，能跨領域學習並解決未知問題。</span></li>
+        <li class="key-item"><span class="key-icon">✓</span> <span><b>超級人工智慧 (ASI)</b>：在科學創造力、社交與智慧上全面超越人類總和。</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer Grid -->
+  <div class="footer-grid">
+    <div class="keyword-box">
+      <div class="keyword-title">🎯 考試秒解關鍵字</div>
+      <div class="keyword-tags" id="card-keywords">
+        <span class="kw-tag">專用AI ➔ 弱AI</span>
+        <span class="kw-tag">通用認知 ➔ AGI</span>
+        <span class="kw-tag">當今模型 ➔ 均為ANI</span>
+      </div>
+    </div>
+
+    <div class="exam-box">
+      <div class="exam-title">💡 歷屆真題直覺速解</div>
+      <div class="exam-text" id="card-exam">
+        <b>考題</b>：下列關於 AlphaGo 與 ChatGPT 的敘述何者正確？<br>
+        <b>秒解</b>：兩者皆屬於「弱 AI (ANI)」，因為它們僅能在特定範疇發揮功效。
+      </div>
+    </div>
+  </div>
+</body>
+</html>
