@@ -124,7 +124,8 @@
     ],
     "summary": "當今所有 AI 均為 ANI 弱人工智慧；爆發來自算力、資料、演算法與雲端四大驅動。",
     "strategy": "題目見「AlphaGo/ChatGPT」選 ANI 弱 AI；見「通用認知」選 AGI；見「1980年代瓶頸」選算力與資料。",
-    "mnemonic": "「當今 AI 皆弱類，算力資料雙引擎；專用模型辦特案，通用 AGI 夢中尋。」"
+    "mnemonic": "「當今 AI 皆弱類，算力資料雙引擎；專用模型辦特案，通用 AGI 夢中尋。」",
+    "png_path": "cards_png/junior/junior_bento_card_01.png"
   },
   {
     "id": "CARD 02",
@@ -250,7 +251,8 @@
     ],
     "summary": "AI 經歷三次起伏；當今主流為聯結主義；中文房間證明 AI 懂語法不等於懂語意。",
     "strategy": "見「模仿對話測試」選圖靈測試；見「反駁懂語意」選中文房間；見「2012復興」選 AlexNet/ImageNet。",
-    "mnemonic": "「圖靈測試測模仿，中文房間辯理解；三次起伏神經興，具身機器未來接。」"
+    "mnemonic": "「圖靈測試測模仿，中文房間辯理解；三次起伏神經興，具身機器未來接。」",
+    "png_path": "cards_png/junior/junior_bento_card_02.png"
   },
   {
     "id": "CARD 03",
@@ -371,7 +373,8 @@
     ],
     "summary": "CV 負責視覺、NLP 負責文字、ASR/TTS 負責聽說；多模態將多種資料對齊於同一空間。",
     "strategy": "見「框出位置」選物件偵測 (Detection)；見「文字轉數字向量」選 Word Embedding；見「低延遲免上雲」選 Edge AI。",
-    "mnemonic": "「CV 看圖物件框，NLP 詞向量裡藏；聽寫 ASR 說 TTS，邊緣運算隱私強。」"
+    "mnemonic": "「CV 看圖物件框，NLP 詞向量裡藏；聽寫 ASR 說 TTS，邊緣運算隱私強。」",
+    "png_path": "cards_png/junior/junior_bento_card_03.png"
   },
   {
     "id": "CARD 04",
@@ -513,7 +516,8 @@
     ],
     "summary": "監督式有標籤做分類迴歸；非監督無標籤做分群降維；訓練集與測試集必須嚴格隔離。",
     "strategy": "見「有標籤」選監督式；見「預測連續金額」選迴歸；見「資料未標示自動分組」選非監督分群。",
-    "mnemonic": "「標籤有無分監督，分類連續看迴歸；測試資料嚴隔離，試錯獎懲強化隨。」"
+    "mnemonic": "「標籤有無分監督，分類連續看迴歸；測試資料嚴隔離，試錯獎懲強化隨。」",
+    "png_path": "cards_png/junior/junior_bento_card_04.png"
   },
   {
     "id": "CARD 05",
@@ -617,7 +621,8 @@
     ],
     "summary": "連續數值用線性迴歸；二分類機率用邏輯斯；樹狀流程用決策樹/隨機森林；高維邊界用 SVM。",
     "strategy": "見「Sigmoid機率二選一」選邏輯斯迴歸；見「多樹投票抗過擬合」選隨機森林；見「最大化 Margin」選 SVM。",
-    "mnemonic": "「線性預測數連續，邏輯機率二選一；樹深容易過擬合，森林投票最精準。」"
+    "mnemonic": "「線性預測數連續，邏輯機率二選一；樹深容易過擬合，森林投票最精準。」",
+    "png_path": "cards_png/junior/junior_bento_card_05.png"
   },
   {
     "id": "CARD 06",
@@ -738,7 +743,8 @@
     ],
     "summary": "極端值填中位數；無順序用 One-Hot；KNN/SVM 必做 Scaling；資料不平衡看 F1/AUC。",
     "strategy": "見「無順序文字類別」選 One-Hot 編碼；見「有極端離群值」選中位數；見「資料極度不平衡」選 F1-Score / SMOTE。",
-    "mnemonic": "「極端數值中位補，無序類別 One-Hot 填；單位縮放標準化，不均看 F1 評估全。」"
+    "mnemonic": "「極端數值中位補，無序類別 One-Hot 填；單位縮放標準化，不均看 F1 評估全。」",
+    "png_path": "cards_png/junior/junior_bento_card_06.png"
   },
   {
     "id": "CARD 07",
@@ -860,7 +866,8 @@
     ],
     "summary": "Overfitting 代表 High Variance；L1 能讓係數歸零特徵選擇；Dropout 僅訓練時使用。",
     "strategy": "見「訓練好測試差」選 Overfitting/High Variance；見「係數歸零特徵選擇」選 L1 Lasso；見「交叉驗證保持比例」選 Stratified K-Fold。",
-    "mnemonic": "「過擬高變訓練甜，L1 歸零特徵選；交叉驗證 K 折輪，Dropout 訓練防死背。」"
+    "mnemonic": "「過擬高變訓練甜，L1 歸零特徵選；交叉驗證 K 折輪，Dropout 訓練防死背。」",
+    "png_path": "cards_png/junior/junior_bento_card_07.png"
   },
   {
     "id": "CARD 08",
@@ -981,7 +988,8 @@
     ],
     "summary": "單層感知器無法解 XOR；ReLU 解決梯度消失；Softmax 做多分類；BP 靠 Chain Rule 連鎖律。",
     "strategy": "見「微積分連鎖律權重更新」選 Backpropagation；見「隱藏層避免梯度消失」選 ReLU；見「多分類輸出層」選 Softmax。",
-    "mnemonic": "「感知非線解 XOR，ReLU 解決梯度消失；連鎖鏈律 BP 傳，Softmax 多類機率出。」"
+    "mnemonic": "「感知非線解 XOR，ReLU 解決梯度消失；連鎖鏈律 BP 傳，Softmax 多類機率出。」",
+    "png_path": "cards_png/junior/junior_bento_card_08.png"
   },
   {
     "id": "CARD 09",
@@ -1115,7 +1123,8 @@
     ],
     "summary": "CNN 靠卷積池化抓圖像空間特徵；LSTM 靠門控抓時間序列；Transformer 靠 Self-Attention 抓文本關聯。",
     "strategy": "見「圖片影像辨識」選 CNN；見「長距離時間序列/遺忘門」選 LSTM；見「GPT/大語言模型底層」選 Transformer。",
-    "mnemonic": "「CNN 池化抓圖像，LSTM 門控記時間；Transformer 注意力，平行訓練大模型。」"
+    "mnemonic": "「CNN 池化抓圖像，LSTM 門控記時間；Transformer 注意力，平行訓練大模型。」",
+    "png_path": "cards_png/junior/junior_bento_card_09.png"
   },
   {
     "id": "CARD 10",
@@ -1247,7 +1256,8 @@
     ],
     "summary": "垃圾郵件看護 Precision；癌症診斷看 Recall (降漏報)；不平衡看 F1；ROC 下面積為 AUC (0.5等於亂猜)。",
     "strategy": "見「癌症診斷/不可漏抓」選 Recall；見「垃圾郵件/不可誤判正常信」選 Precision；見「AUC等於0.5」選隨機瞎猜。",
-    "mnemonic": "「癌症診斷看 Recall，垃圾郵件看 Precision；調和平均 F1 算，AUC 點五隨機猜。」"
+    "mnemonic": "「癌症診斷看 Recall，垃圾郵件看 Precision；調和平均 F1 算，AUC 點五隨機猜。」",
+    "png_path": "cards_png/junior/junior_bento_card_10.png"
   },
   {
     "id": "CARD 11",
@@ -1378,7 +1388,8 @@
     ],
     "summary": "AI 偏見源於歷史資料；黑盒子用 XAI (SHAP) 打開；高風險決策必須 Human-in-the-Loop 人類簽核。",
     "strategy": "見「拒絕貸款理由」選可解釋性 XAI；見「高風險最終決策」選 Human-in-the-Loop；見「純 AI 生成畫作」選無著作權。",
-    "mnemonic": "「偏見源自歷史集，黑盒解鎖 XAI 找；最終簽核 HITL 在，純 AI 創作無著作。」"
+    "mnemonic": "「偏見源自歷史集，黑盒解鎖 XAI 找；最終簽核 HITL 在，純 AI 創作無著作。」",
+    "png_path": "cards_png/junior/junior_bento_card_11.png"
   },
   {
     "id": "CARD 12",
@@ -1494,7 +1505,8 @@
     ],
     "summary": "不可否認靠 Hash 加數位簽章；微小雜訊騙 AI 為對抗攻擊；聯邦學習資料不出地端。",
     "strategy": "見「不可否認性」選雜湊 Hash 加數位簽章；見「貼紙騙過自駕車」選對抗樣本攻擊；見「資料不出地端共同訓練」選聯邦學習。",
-    "mnemonic": "「雜湊簽章不可賴，對抗樣本雜訊騙；差別隱私加噪音，聯邦學習數據留。」"
+    "mnemonic": "「雜湊簽章不可賴，對抗樣本雜訊騙；差別隱私加噪音，聯邦學習數據留。」",
+    "png_path": "cards_png/junior/junior_bento_card_12.png"
   },
   {
     "id": "CARD 13",
@@ -1638,7 +1650,8 @@
     ],
     "summary": "公務機密與個資嚴禁貼外網 AI；公務決策必須人類核對；歐盟禁止社會信用評分。",
     "strategy": "見「公務員輸入機密至 ChatGPT」選違規；見「歐盟禁止 AI」選社會信用評分 (Social Scoring)；見「永久不可還原」選匿名化。",
-    "mnemonic": "「公務機密勿貼外，AI 產出人核對；歐盟禁止社分評，匿名數據合規隨。」"
+    "mnemonic": "「公務機密勿貼外，AI 產出人核對；歐盟禁止社分評，匿名數據合規隨。」",
+    "png_path": "cards_png/junior/junior_bento_card_13.png"
   },
   {
     "id": "CARD 14",
@@ -1753,7 +1766,8 @@
     ],
     "summary": "LLM 是機率文字接龍；精確計算設 Temp=0；Context 太長會 Lost in the Middle；降低幻覺靠 RAG。",
     "strategy": "見「要求結果精確不隨機」選低 Temperature (0.0)；見「LLM一本正經胡說八道」選幻覺 (Hallucination)；見「解決幻覺」選 RAG。",
-    "mnemonic": "「LLM 接龍機率計算，溫度為零精準出；長文中間容易忘，檢索 RAG 治幻覺。」"
+    "mnemonic": "「LLM 接龍機率計算，溫度為零精準出；長文中間容易忘，檢索 RAG 治幻覺。」",
+    "png_path": "cards_png/junior/junior_bento_card_14.png"
   },
   {
     "id": "CARD 15",
@@ -1874,7 +1888,8 @@
     ],
     "summary": "Few-Shot 給範例提升格式；CoT 要求一步步思考解邏輯；ReAct 結合思考與工具呼叫；防越獄需 Guardrail。",
     "strategy": "見「一步一步思考」選思維鏈 (Chain-of-Thought)；見「給2-3個範例」選 Few-Shot；見「忽略先前提問獲取機密」選 Prompt 注入攻擊。",
-    "mnemonic": "「Few-Shot 給例格式穩，一步一步 CoT 思；ReAct 思考呼工具，防護注入 Guardrail 守。」"
+    "mnemonic": "「Few-Shot 給例格式穩，一步一步 CoT 思；ReAct 思考呼工具，防護注入 Guardrail 守。」",
+    "png_path": "cards_png/junior/junior_bento_card_15.png"
   },
   {
     "id": "CARD 16",
@@ -2022,7 +2037,8 @@
     ],
     "summary": "RAG 流程：Chunking ➔ Embedding ➔ Vector DB 檢索 ➔ LLM 生成；動態資料與可追溯首選 RAG。",
     "strategy": "見「切塊保留重疊」選 Overlap；見「語意夾角計算」選 Cosine 相似度；見「資料常變動需附來源」選 RAG 而非 Fine-tuning。",
-    "mnemonic": "「文本切塊加重疊， Embedding 向量空間留；餘弦夾角算相似，動態資料 RAG 優先。」"
+    "mnemonic": "「文本切塊加重疊， Embedding 向量空間留；餘弦夾角算相似，動態資料 RAG 優先。」",
+    "png_path": "cards_png/junior/junior_bento_card_16.png"
   },
   {
     "id": "CARD 17",
@@ -2170,7 +2186,8 @@
     ],
     "summary": "低成本快速驗證用 Prompt；動態資料與附來源用 RAG；改變行為語氣與格式用 Fine-tuning/LoRA。",
     "strategy": "見「降低顯卡微調成本」選 LoRA；見「要求回答附帶頁碼來源」選 RAG；見「學習特定產業語氣」選 Fine-tuning。",
-    "mnemonic": "「驗證可行 Prompt 先，動態來源 RAG 牽；語氣格式微調改，低秩適應 LoRA 賢。」"
+    "mnemonic": "「驗證可行 Prompt 先，動態來源 RAG 牽；語氣格式微調改，低秩適應 LoRA 賢。」",
+    "png_path": "cards_png/junior/junior_bento_card_17.png"
   },
   {
     "id": "CARD 18",
@@ -2313,7 +2330,8 @@
     ],
     "summary": "PoC 驗證可行性需設量化標準；MLOps 負責自動化維運；資料變異需自動 trigger 重新訓練。",
     "strategy": "見「低成本驗證可行性」選 PoC；見「模型上線後準確率下降」選數據/概念漂移 (Drift) 並重新訓練；見流量切分選 A/B Testing。",
-    "mnemonic": "「需求明確 PoC 驗，量化標準事前簽；營運監控 MLOps，數據漂移再訓練。」"
+    "mnemonic": "「需求明確 PoC 驗，量化標準事前簽；營運監控 MLOps，數據漂移再訓練。」",
+    "png_path": "cards_png/junior/junior_bento_card_18.png"
   },
   {
     "id": "CARD 19",
@@ -2447,7 +2465,8 @@
     ],
     "summary": "AI 可行性看技術、經濟與營運；數據可用性是第一步；通用需求 Buy，核心護城河 Make。",
     "strategy": "見「AI專案第一步」選數據可用性與品質盤點；見「非核心通用需求」選外購 API (Buy)；見「簡單固定規則」選 RPA/傳統程式。",
-    "mnemonic": "「技術經濟營運查，數據品質第一關；通用外購 API 快，核心護城自研辦。」"
+    "mnemonic": "「技術經濟營運查，數據品質第一關；通用外購 API 快，核心護城自研辦。」",
+    "png_path": "cards_png/junior/junior_bento_card_19.png"
   },
   {
     "id": "CARD 20",
@@ -2576,7 +2595,8 @@
     ],
     "summary": "製造業看 AOI 與預測維護；金融業看 XAI 與防歧視；醫療 AI 是醫師輔助工具 (SaMD)。",
     "strategy": "見「設備故障前預警」選預測性維護 (PdM)；見「電商推薦」選協同過濾；見「醫療 AI 責任歸屬」選醫師最終負責。",
-    "mnemonic": "「製造 AOI 預維護，金融 XAI 防歧視；醫療 SaMD 醫師輔，電商推薦協同路。」"
+    "mnemonic": "「製造 AOI 預維護，金融 XAI 防歧視；醫療 SaMD 醫師輔，電商推薦協同路。」",
+    "png_path": "cards_png/junior/junior_bento_card_20.png"
   },
   {
     "id": "CARD 21",
@@ -2693,7 +2713,8 @@
     ],
     "summary": "文字用 LLM；圖像用 Diffusion 擴散模型去噪；程式碼用 Copilot；企業 API 需注意 opt-out 免被訓練。",
     "strategy": "見「圖像生成原理/去雜訊」選擴散模型 (Diffusion)；見「程式碼自動生成」選 Copilot；見「企業資安」選 Opt-out 免被訓練。",
-    "mnemonic": "「文字 LLM 擴散圖，繪圖去噪 Diffusion 幫；程式碼選 Copilot 輔，條款 Opt-out 隱私強。」"
+    "mnemonic": "「文字 LLM 擴散圖，繪圖去噪 Diffusion 幫；程式碼選 Copilot 輔，條款 Opt-out 隱私強。」",
+    "png_path": "cards_png/junior/junior_bento_card_21.png"
   },
   {
     "id": "CARD 22",
@@ -2826,6 +2847,7 @@
     ],
     "summary": "病歷基因屬最高級 SPII；個資用 Masking/Tokenization 遮蔽；影子 AI 需由企業網關攔截。",
     "strategy": "見「基因病歷」選 SPII 特種個資；見「員工私下貼資料入免費AI」選影子 AI (Shadow AI)；見「代換信用卡號」選 Tokenization。",
-    "mnemonic": "「病歷基因 SPII 防，信用卡號代換 Token 幫；影子 AI 網關攔，零留條款資安強。」"
+    "mnemonic": "「病歷基因 SPII 防，信用卡號代換 Token 幫；影子 AI 網關攔，零留條款資安強。」",
+    "png_path": "cards_png/junior/junior_bento_card_22.png"
   }
 ]

@@ -129,7 +129,8 @@
         ],
         "focus": "🎯 記憶口訣：『Transformer 平行算，LoRA 外掛低秩矩，縮放根號防止梯度消！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_01.png"
   },
   {
     "id": "MID-CARD 02",
@@ -261,7 +262,8 @@
         ],
         "focus": "🎯 記憶口訣：『ResNet 跨層捷徑線，YOLO 單次極速測，CLIP 對比圖文配！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_02.png"
   },
   {
     "id": "MID-CARD 03",
@@ -393,7 +395,8 @@
         ],
         "focus": "🎯 記憶口訣：『HyDE 先生寫假想，Bi 向量快速選，Cross 專家重排序！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_03.png"
   },
   {
     "id": "MID-CARD 04",
@@ -531,7 +534,8 @@
         ],
         "focus": "🎯 記憶口訣：『技術資料為先決，核心安全選自研，TCO 算清維運費！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_04.png"
   },
   {
     "id": "MID-CARD 05",
@@ -664,7 +668,8 @@
         ],
         "focus": "🎯 記憶口訣：『DE 鋪水管，DS 搞研發，MLE 部署上線，Domain 饕客驗收！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_05.png"
   },
   {
     "id": "MID-CARD 06",
@@ -802,7 +807,8 @@
         ],
         "focus": "🎯 記憶口訣：『信用評分嚴禁使用，醫療 HR 屬高風險，生成影音標明 AI！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_06.png"
   },
   {
     "id": "MID-CARD 07",
@@ -938,7 +944,8 @@
         ],
         "focus": "🎯 記憶口訣：『先 Split 後 Fit 絕不漏，時序切分看前後，簡單 Baseline 率先走！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_07.png"
   },
   {
     "id": "MID-CARD 08",
@@ -1070,7 +1077,8 @@
         ],
         "focus": "🎯 記憶口訣：『CI 測試 CD 鋪，CT 自動重訓練，漂移警報 KS 測！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_08.png"
   },
   {
     "id": "MID-CARD 09",
@@ -1200,7 +1208,8 @@
         ],
         "focus": "🎯 記憶口訣：『兩組 t 檢定，多組用 ANOVA，類別卡方算，p 小 05 拒絕 H0！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_09.png"
   },
   {
     "id": "MID-CARD 10",
@@ -1333,7 +1342,8 @@
         ],
         "focus": "🎯 記憶口訣：『ELT 存原始 RAW，離群點看 1.5 IQR，中位填補不怕偏！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_10.png"
   },
   {
     "id": "MID-CARD 11",
@@ -1476,7 +1486,8 @@
         ],
         "focus": "🎯 記憶口訣：『NameNode 掌目錄，Data 湖泊隨意存，Parquet 列存分析快！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_11.png"
   },
   {
     "id": "MID-CARD 12",
@@ -1602,7 +1613,8 @@
         ],
         "focus": "🎯 記憶口訣：『Spark 記憶體內算，Transformation 惰性延，Action 觸發 Job 執行！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_12.png"
   },
   {
     "id": "MID-CARD 13",
@@ -1723,7 +1735,8 @@
         ],
         "focus": "🎯 記憶口訣：『PCA 降維先 Scaler，最大變異正交軸，K-Means 肘點選最佳 K！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_13.png"
   },
   {
     "id": "MID-CARD 14",
@@ -1849,7 +1862,8 @@
         ],
         "focus": "🎯 記憶口訣：『千萬物品先召回，精緻排序選前十，Feature Store 止偏差！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_14.png"
   },
   {
     "id": "MID-CARD 15",
@@ -1981,7 +1995,8 @@
         ],
         "focus": "🎯 記憶口訣：『k 匿名防連結，l 多樣防同質，差分注入 ε 雜訊！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_15.png"
   },
   {
     "id": "MID-CARD 16",
@@ -2102,7 +2117,8 @@
         ],
         "focus": "🎯 記憶口訣：『Av 等於 λv 特徵值，SVD 分解解非方，Hessian 正定局部小！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_16.png"
   },
   {
     "id": "MID-CARD 17",
@@ -2235,7 +2251,8 @@
         ],
         "focus": "🎯 記憶口訣：『Momentum 慣性衝鞍點，RMSprop 調整自適應，大模型訓練選 AdamW！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_17.png"
   },
   {
     "id": "MID-CARD 18",
@@ -2371,7 +2388,8 @@
         ],
         "focus": "🎯 記憶口訣：『XGBoost 二階泰勒展，LightGBM 按葉快生長，SVM 核技巧破非線性！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_18.png"
   },
   {
     "id": "MID-CARD 19",
@@ -2497,7 +2515,8 @@
         ],
         "focus": "🎯 記憶口訣：『CNN 用 BN，Transformer 選 LN，GeLU 激活兼光滑，zero_grad 清舊梯！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_19.png"
   },
   {
     "id": "MID-CARD 20",
@@ -2629,7 +2648,8 @@
         ],
         "focus": "🎯 記憶口訣：『高基數選 Target 編碼，Filter 最快 RFE 最準，Lasso 歸零作選擇！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_20.png"
   },
   {
     "id": "MID-CARD 21",
@@ -2755,7 +2775,8 @@
         ],
         "focus": "🎯 記憶口訣：『不平衡看 PR-AUC，分層切分選 Stratified，SMOTE 插值僅在 Train！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_21.png"
   },
   {
     "id": "MID-CARD 22",
@@ -2882,7 +2903,8 @@
         ],
         "focus": "🎯 記憶口訣：『Grid 窮舉最浪費，Random 隨機勝網格，Optuna 貝氏優化兼剪枝！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_22.png"
   },
   {
     "id": "MID-CARD 23",
@@ -3003,7 +3025,8 @@
         ],
         "focus": "🎯 記憶口訣：『SHAP 賽局可相加，LIME 局部線性貼，DI 小於點八有歧視！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_23.png"
   },
   {
     "id": "MID-CARD 24",
@@ -3140,6 +3163,7 @@
         ],
         "focus": "🎯 終極口訣：『初級打底，中級通關；圖卡在手，高分及格！祝應考順利！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_24.png"
   }
 ]

@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iPAS AI 應用規劃師 高密度考點圖卡線上學習庫</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Fira+Code:wght@500;700&display=swap" rel="stylesheet">
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&family=Fira+Code:wght@400;500;700&display=swap');
-    
     * {
       box-sizing: border-box;
       margin: 0;
@@ -14,24 +18,24 @@
     }
 
     body {
-      background-color: #0f172a;
+      background-color: #0b0f19;
       color: #f8fafc;
-      font-family: 'Noto Sans TC', sans-serif;
+      font-family: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      padding-bottom: 40px;
     }
 
-    /* 頂部 Header & 導覽列 */
+    /* Top Nav Control Bar */
     header {
-      background: rgba(30, 41, 59, 0.95);
-      backdrop-filter: blur(16px);
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(12px);
       position: sticky;
       top: 0;
       z-index: 100;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 12px 20px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      padding: 12px 24px;
     }
 
     .top-nav {
@@ -51,26 +55,21 @@
     }
 
     .logo-badge {
-      background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
-      color: #fff;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 800;
-      font-size: 14px;
-      padding: 4px 12px;
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      color: #0f172a;
+      font-weight: 900;
+      padding: 6px 12px;
       border-radius: 8px;
+      font-size: 14px;
       letter-spacing: 0.5px;
-      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
     }
 
     .app-title {
-      font-size: 18px;
-      font-weight: 900;
-      background: linear-gradient(90deg, #38bdf8 0%, #818cf8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 16px;
+      font-weight: 700;
+      color: #f1f5f9;
     }
 
-    /* 控制控制項 (等級 + 搜尋 + 篩選) */
     .controls {
       display: flex;
       align-items: center;
@@ -78,61 +77,40 @@
       flex-wrap: wrap;
     }
 
-    .level-select, .category-select {
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(56, 189, 248, 0.4);
-      color: #38bdf8;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 700;
+    .level-select, .category-select, .search-input {
+      background: #1e293b;
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
       outline: none;
-      cursor: pointer;
       transition: all 0.2s;
     }
 
-    .level-select:hover, .category-select:hover {
+    .level-select:focus, .category-select:focus, .search-input:focus {
       border-color: #38bdf8;
-      box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+      box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
     }
 
     .search-input {
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 13px;
-      outline: none;
-      width: 180px;
-      transition: all 0.2s;
-    }
-
-    .search-input:focus {
-      border-color: #38bdf8;
-      box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
-      width: 220px;
+      min-width: 200px;
     }
 
     .btn-nav {
       background: #334155;
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 700;
+      color: #f8fafc;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s;
+      transition: background 0.2s;
     }
 
-    .btn-nav:hover:not(:disabled) {
-      background: #0284c7;
-      border-color: #38bdf8;
-      box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+    .btn-nav:hover {
+      background: #475569;
     }
 
     .btn-nav:disabled {
@@ -140,96 +118,90 @@
       cursor: not-allowed;
     }
 
-    /* 主要容器 */
     main {
       max-width: 1400px;
-      margin: 16px auto;
-      padding: 0 16px;
-      flex: 1;
+      margin: 20px auto;
+      padding: 0 24px;
       width: 100%;
+      flex: 1;
     }
 
-    /* 切換進度資訊條 */
     .progress-bar-area {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 16px;
-      background: rgba(30, 41, 59, 0.6);
-      padding: 10px 18px;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #1e293b;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
     }
 
     .card-counter {
-      font-size: 14px;
       font-weight: 700;
       color: #38bdf8;
     }
 
     .hint-text {
-      font-size: 12px;
       color: #94a3b8;
+      font-size: 13px;
     }
 
-    /* Bento 網格卡片容器 */
+    /* Bento Grid Flashcard Styles */
     .bento-card {
       background: #0f172a;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 20px;
       padding: 24px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
 
     .card-top {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding-bottom: 16px;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 16px;
     }
 
     .card-id-tag {
-      background: #38bdf8;
-      color: #0f172a;
-      font-family: 'Outfit', sans-serif;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
       font-weight: 800;
-      font-size: 13px;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .card-category-tag {
+      background: rgba(168, 85, 247, 0.15);
+      color: #c084fc;
+      font-weight: 700;
+      font-size: 12px;
       padding: 4px 10px;
       border-radius: 6px;
     }
 
-    .card-category-tag {
-      background: rgba(255, 255, 255, 0.1);
-      color: #cbd5e1;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 4px 12px;
-      border-radius: 6px;
-    }
-
-    .card-badge-right {
-      background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
-      color: #fff;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 4px 12px;
-      border-radius: 20px;
-    }
-
     .card-main-title {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 900;
       color: #f8fafc;
       margin-top: 8px;
     }
 
-    /* 卡片主體 Layout */
+    .card-badge-right {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #0f172a;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+
     .card-body-wrapper {
       display: grid;
       grid-template-columns: 320px 1fr;
@@ -242,12 +214,10 @@
       }
     }
 
-    /* 左側 Sidebar */
     .card-sidebar {
-      background: rgba(30, 41, 59, 0.6);
-      border-radius: 16px;
-      padding: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #1e293b;
+      border-radius: 14px;
+      padding: 16px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -255,80 +225,62 @@
     }
 
     .sidebar-desc {
-      font-size: 14px;
-      color: #94a3b8;
+      font-size: 13px;
+      color: #cbd5e1;
       line-height: 1.6;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding-bottom: 14px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .capsule-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      margin-bottom: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
     }
 
     .capsule-tag {
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      color: #38bdf8;
-      padding: 6px 10px;
-      border-radius: 8px;
-      font-size: 12px;
-      font-weight: 700;
-      text-align: center;
-      word-break: break-word;
+      background: #334155;
+      color: #e2e8f0;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
     }
 
     .sidebar-checklist {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      background: #0f172a;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 12px;
     }
 
     .checklist-head {
-      font-size: 13px;
+      color: #38bdf8;
       font-weight: 700;
-      color: #fbbf24;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      margin-bottom: 8px;
     }
 
     .checklist-row {
-      font-size: 13px;
-      color: #cbd5e1;
-      line-height: 1.5;
-      background: rgba(15, 23, 42, 0.5);
-      padding: 8px 12px;
-      border-radius: 8px;
-      border-left: 3px solid #fbbf24;
+      color: #94a3b8;
+      margin-bottom: 6px;
+      line-height: 1.4;
     }
 
     .sidebar-flow {
-      background: rgba(2, 132, 199, 0.15);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      color: #38bdf8;
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-size: 12px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      color: #34d399;
       font-weight: 700;
-      line-height: 1.5;
+      font-size: 12px;
+      padding: 10px;
+      border-radius: 8px;
     }
 
-    /* 右側 6 Bento Grid Blocks */
     .card-grid-6 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    @media (max-width: 1200px) {
-      .card-grid-6 {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      grid-template-rows: repeat(2, minmax(180px, auto));
+      gap: 14px;
     }
 
     @media (max-width: 768px) {
@@ -338,21 +290,13 @@
     }
 
     .grid-block {
-      background: rgba(30, 41, 59, 0.7);
-      border-radius: 14px;
-      padding: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 14px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 12px;
-      transition: all 0.2s;
-    }
-
-    .grid-block:hover {
-      border-color: rgba(56, 189, 248, 0.4);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .block-head {
@@ -363,146 +307,130 @@
     }
 
     .block-badge-num {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 800;
       font-size: 12px;
-      color: #fff;
+      font-weight: 900;
+      color: #0f172a;
       flex-shrink: 0;
     }
 
-    .num-1 { background: #3b82f6; }
-    .num-2 { background: #10b981; }
-    .num-3 { background: #f59e0b; }
-    .num-4 { background: #ec4899; }
-    .num-5 { background: #8b5cf6; }
-    .num-6 { background: #06b6d4; }
+    .num-1 { background: #38bdf8; }
+    .num-2 { background: #c084fc; }
+    .num-3 { background: #f43f5e; }
+    .num-4 { background: #fbbf24; }
+    .num-5 { background: #34d399; }
+    .num-6 { background: #fb923c; }
 
     .block-h-title {
-      font-size: 15px;
-      font-weight: 800;
-      color: #f8fafc;
+      font-size: 14px;
+      font-weight: 700;
+      color: #f1f5f9;
     }
 
     .block-h-sub {
-      font-size: 12px;
-      color: #64748b;
+      font-size: 11px;
+      color: #94a3b8;
       margin-bottom: 10px;
     }
 
-    /* 表格樣式 */
     .ui-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 12px;
+      font-size: 11px;
       margin-bottom: 8px;
     }
 
     .ui-table th {
-      background: rgba(15, 23, 42, 0.8);
+      background: #0f172a;
       color: #38bdf8;
-      padding: 6px 8px;
       text-align: left;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px;
+      border: 1px solid #334155;
     }
 
     .ui-table td {
-      padding: 6px 8px;
+      padding: 6px;
+      border: 1px solid #334155;
       color: #cbd5e1;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      line-height: 1.4;
     }
 
-    /* 比喻卡片樣式 */
     .analogy-box {
       background: rgba(245, 158, 11, 0.1);
-      border: 1px solid rgba(245, 158, 11, 0.3);
-      border-radius: 8px;
-      padding: 10px;
+      border-left: 3px solid #f59e0b;
+      padding: 8px 10px;
+      border-radius: 4px;
       margin-bottom: 8px;
     }
 
     .analogy-title {
-      font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
       color: #fbbf24;
+      font-size: 12px;
       margin-bottom: 4px;
     }
 
     .analogy-desc {
-      font-size: 12px;
-      color: #e2e8f0;
+      font-size: 11px;
+      color: #cbd5e1;
       line-height: 1.5;
     }
 
-    /* 程式碼區塊樣式 */
     .code-box {
       background: #090d16;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      padding: 10px;
+      color: #a5f3fc;
       font-family: 'Fira Code', monospace;
-      font-size: 11px;
-      color: #38bdf8;
-      line-height: 1.5;
+      font-size: 10px;
+      padding: 8px;
+      border-radius: 6px;
       white-space: pre-wrap;
       word-break: break-all;
       margin-bottom: 8px;
-      overflow-x: auto;
     }
 
-    /* 陷阱解析列表 */
     .tips-list {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 4px;
       margin-bottom: 8px;
     }
 
     .tip-item {
-      font-size: 12px;
+      font-size: 11px;
       color: #cbd5e1;
-      line-height: 1.5;
-      background: rgba(15, 23, 42, 0.5);
-      padding: 6px 10px;
-      border-radius: 6px;
+      background: #0f172a;
+      padding: 6px;
+      border-radius: 4px;
     }
 
     .block-list-item {
-      font-size: 12px;
+      font-size: 11px;
       color: #cbd5e1;
-      line-height: 1.5;
-      padding: 4px 0;
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+      margin-bottom: 4px;
     }
 
     .block-focus-box {
-      background: rgba(15, 23, 42, 0.9);
-      border-left: 3px solid #38bdf8;
-      padding: 6px 10px;
-      font-size: 12px;
-      font-weight: 700;
+      background: #0f172a;
       color: #38bdf8;
-      border-radius: 0 6px 6px 0;
-      margin-top: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 8px;
+      border-radius: 6px;
+      margin-top: 8px;
+      border: 1px solid rgba(56, 189, 248, 0.2);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      color: #64748b;
       font-size: 12px;
+      color: #64748b;
+      margin-top: 40px;
+      padding-top: 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    footer a {
-      color: #38bdf8;
-      text-decoration: none;
     }
   </style>
 </head>
@@ -536,7 +464,7 @@
 
         <!-- 模式切換按鈕 (圖片 vs 互動 Grid) -->
         <button class="btn-nav" id="btnToggleMode" style="background:#0284c7; color:#ffffff; font-weight:700; border:1px solid #38bdf8; padding:6px 12px;" onclick="toggleViewMode()">
-          🖼️ 切換高清照片模式
+          🖼️ 切換 2K 高清照片模式
         </button>
 
         <!-- 上下一張按鈕 -->
@@ -553,12 +481,14 @@
     </div>
 
     <div id="cardContainer">
-      <!-- 渲染 Bento Grid 卡片 -->
+      <!-- 渲染 Bento Grid 卡片或 PNG 圖片 -->
     </div>
   </main>
 
   <footer>
     Antigravity Agent OS 開發 | 內容依據 iPAS 官方考試大綱與歷屆 300 題考點編製 | 創用 CC BY-NC-SA 4.0 授權
+  </footer>
+
   <!-- 引入內置全備份資料庫，保證 file:// 協議與離線環境下 100% 可存取 -->
   <script src="cards_bundle.js"></script>
   <script>
@@ -566,6 +496,7 @@
     let filteredCards = [];
     let currentIndex = 0;
     let currentLevel = 'junior';
+    let currentViewMode = 'grid'; // 'grid' or 'image'
 
     const levelFiles = {
       'junior': 'junior_cards_data.json',
@@ -579,24 +510,43 @@
       loadLevelData(currentLevel);
     });
 
+    // 模式切換函數 (Grid vs Image)
+    function toggleViewMode() {
+      currentViewMode = (currentViewMode === 'grid') ? 'image' : 'grid';
+      const btn = document.getElementById('btnToggleMode');
+      if (currentViewMode === 'image') {
+        btn.innerHTML = '💻 切換互動 Bento Grid 模式';
+        btn.style.background = '#8b5cf6';
+      } else {
+        btn.innerHTML = '🖼️ 切換 2K 高清照片模式';
+        btn.style.background = '#0284c7';
+      }
+      renderCurrentCard();
+    }
+
     function loadLevelData(level) {
-      const jsonFile = levelFiles[level];
       const fallbackMap = {
         'junior': window.JUNIOR_CARDS,
         'mid': window.MID_CARDS,
         'adv': window.ADV_CARDS
       };
 
-      // 優先執行 AJAX fetch (帶 Cache-Busting)
+      // 1. 若為 file:// 協議本機開啟，直接使用內嵌數據，100% 免 fetch、免報錯！
+      if (window.location.protocol === 'file:') {
+        const data = fallbackMap[level] || [];
+        initCardData(data);
+        return;
+      }
+
+      // 2. 若為 http/https 網路環境，嘗試執行帶 Cache-Busting 之 fetch
+      const jsonFile = levelFiles[level];
       const cacheBustUrl = `${jsonFile}?v=${Date.now()}`;
       fetch(cacheBustUrl)
         .then(res => {
           if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
           return res.json();
         })
-        .then(data => {
-          initCardData(data);
-        })
+        .then(data => initCardData(data))
         .catch(err => {
           console.warn(`Fetch failed (${err.message}). Activating embedded fallback dataset for ${level}...`);
           const fallbackData = fallbackMap[level];
@@ -686,31 +636,21 @@
 
       const card = filteredCards[currentIndex];
       const levelLabel = currentLevel === 'junior' ? '📘 初級' : (currentLevel === 'mid' ? '📙 中級' : '🚀 進階強效');
-      counter.innerText = `${levelLabel} 圖卡 ${currentIndex + 1} / ${filteredCards.length} (${card.id}) [${currentViewMode === 'image' ? '🖼️ 圖片檢視' : '💻 互動 Grid'}]`;
+      counter.innerText = `${levelLabel} 圖卡 ${currentIndex + 1} / ${filteredCards.length} (${card.id}) [${currentViewMode === 'image' ? '🖼️ 圖片模式' : '💻 互動 Grid'}]`;
       btnPrev.disabled = (currentIndex === 0);
       btnNext.disabled = (currentIndex === filteredCards.length - 1);
 
-      // 若為圖片檢視模式 (2K PNG 照片)
+      // 1. 🖼️ 高清照片模式
       if (currentViewMode === 'image') {
-        const rawIndex = allCards.findIndex(c => c.id === card.id) + 1;
-        const cardNumStr = String(rawIndex).padStart(2, '0');
-        
-        let pngPath = '';
-        if (currentLevel === 'junior') {
-          pngPath = `cards_png/junior/junior_bento_card_${cardNumStr}.png`;
-        } else if (currentLevel === 'mid') {
-          pngPath = `cards_png/mid/mid_bento_card_${cardNumStr}.png`;
-        } else {
-          pngPath = `cards_png/adv/adv_bento_card_${cardNumStr}.png`;
-        }
+        const pngPath = card.png_path || `cards_png/${currentLevel}/${currentLevel}_bento_card_01.png`;
 
         container.innerHTML = `
           <div style="background:#0f172a; border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:24px; text-align:center; box-shadow:0 20px 25px -5px rgba(0,0,0,0.5);">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
-              <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:10px;">
+              <div style="text-align:left;">
                 <span class="card-id-tag">${card.id}</span>
                 <span class="card-category-tag" style="margin-left:8px;">${card.category}</span>
-                <span style="font-size:18px; font-weight:700; color:#f8fafc; margin-left:12px;">${card.title}</span>
+                <span style="font-size:18px; font-weight:700; color:#f8fafc; margin-left:12px; display:inline-block;">${card.title}</span>
               </div>
               <a href="${pngPath}" download="${card.id}_${card.title}.png" style="padding:8px 16px; background:#10b981; color:#fff; font-weight:700; border-radius:8px; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
                 📥 下載此 2K 高清照片
@@ -718,29 +658,27 @@
             </div>
             
             <div style="overflow:hidden; border-radius:12px; background:#020617; border:1px solid #1e293b;">
-              <a href="${pngPath}" target="_blank" title="點擊在新視窗開啟 2K 原圖照片">
-                <img src="${pngPath}" alt="${card.title}" style="width:100%; height:auto; display:block; max-height:800px; object-fit:contain; cursor:zoom-in;" onerror="this.onerror=null; this.src='cards_png/adv/adv_bento_card_01.png'; alert('⚠️ 照片載入中或連線稍慢');">
+              <a href="${pngPath}" target="_blank" title="點擊在新分頁開啟 2K 原圖照片">
+                <img src="${pngPath}" alt="${card.title}" style="width:100%; height:auto; display:block; max-height:800px; object-fit:contain; cursor:zoom-in;">
               </a>
             </div>
-            <div style="color:#94a3b8; font-size:13px; margin-top:12px;">💡 提示：點擊上方圖片可以在新頁面放大檢視 2K 原始解析度照片，或點擊綠色按鈕下載圖片存入相簿。</div>
+            <div style="color:#94a3b8; font-size:13px; margin-top:12px;">💡 提示：點擊上方圖片可在新分頁放大檢視 2K 原始解析度照片，或點擊綠色按鈕下載圖片存入相簿。</div>
           </div>
         `;
         return;
       }
 
-      // 構建 Capsules HTML
+      // 2. 💻 互動 Bento Grid 模式
       let capsulesHTML = '';
       if (card.capsules) {
         capsulesHTML = card.capsules.map(c => `<span class="capsule-tag">${c}</span>`).join('');
       }
 
-      // 構建 Checklist HTML
       let checklistHTML = '';
       if (card.checklist) {
         checklistHTML = card.checklist.map(c => `<div class="checklist-row">✓ ${c}</div>`).join('');
       }
 
-      // 構建 6 個 Bento Blocks
       let blocksHTML = '';
       card.bento_blocks.forEach(block => {
         let contentHTML = '';

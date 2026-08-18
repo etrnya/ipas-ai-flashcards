@@ -1,4 +1,4 @@
-// Dual-fallback embedded card datasets for file:// protocol & offline compatibility
+// Complete embedded card datasets & PNG paths for 100% offline & local file:// support
 window.JUNIOR_CARDS = [
   {
     "id": "CARD 01",
@@ -125,7 +125,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "當今所有 AI 均為 ANI 弱人工智慧；爆發來自算力、資料、演算法與雲端四大驅動。",
     "strategy": "題目見「AlphaGo/ChatGPT」選 ANI 弱 AI；見「通用認知」選 AGI；見「1980年代瓶頸」選算力與資料。",
-    "mnemonic": "「當今 AI 皆弱類，算力資料雙引擎；專用模型辦特案，通用 AGI 夢中尋。」"
+    "mnemonic": "「當今 AI 皆弱類，算力資料雙引擎；專用模型辦特案，通用 AGI 夢中尋。」",
+    "png_path": "cards_png/junior/junior_bento_card_01.png"
   },
   {
     "id": "CARD 02",
@@ -251,7 +252,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "AI 經歷三次起伏；當今主流為聯結主義；中文房間證明 AI 懂語法不等於懂語意。",
     "strategy": "見「模仿對話測試」選圖靈測試；見「反駁懂語意」選中文房間；見「2012復興」選 AlexNet/ImageNet。",
-    "mnemonic": "「圖靈測試測模仿，中文房間辯理解；三次起伏神經興，具身機器未來接。」"
+    "mnemonic": "「圖靈測試測模仿，中文房間辯理解；三次起伏神經興，具身機器未來接。」",
+    "png_path": "cards_png/junior/junior_bento_card_02.png"
   },
   {
     "id": "CARD 03",
@@ -372,7 +374,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "CV 負責視覺、NLP 負責文字、ASR/TTS 負責聽說；多模態將多種資料對齊於同一空間。",
     "strategy": "見「框出位置」選物件偵測 (Detection)；見「文字轉數字向量」選 Word Embedding；見「低延遲免上雲」選 Edge AI。",
-    "mnemonic": "「CV 看圖物件框，NLP 詞向量裡藏；聽寫 ASR 說 TTS，邊緣運算隱私強。」"
+    "mnemonic": "「CV 看圖物件框，NLP 詞向量裡藏；聽寫 ASR 說 TTS，邊緣運算隱私強。」",
+    "png_path": "cards_png/junior/junior_bento_card_03.png"
   },
   {
     "id": "CARD 04",
@@ -514,7 +517,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "監督式有標籤做分類迴歸；非監督無標籤做分群降維；訓練集與測試集必須嚴格隔離。",
     "strategy": "見「有標籤」選監督式；見「預測連續金額」選迴歸；見「資料未標示自動分組」選非監督分群。",
-    "mnemonic": "「標籤有無分監督，分類連續看迴歸；測試資料嚴隔離，試錯獎懲強化隨。」"
+    "mnemonic": "「標籤有無分監督，分類連續看迴歸；測試資料嚴隔離，試錯獎懲強化隨。」",
+    "png_path": "cards_png/junior/junior_bento_card_04.png"
   },
   {
     "id": "CARD 05",
@@ -618,7 +622,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "連續數值用線性迴歸；二分類機率用邏輯斯；樹狀流程用決策樹/隨機森林；高維邊界用 SVM。",
     "strategy": "見「Sigmoid機率二選一」選邏輯斯迴歸；見「多樹投票抗過擬合」選隨機森林；見「最大化 Margin」選 SVM。",
-    "mnemonic": "「線性預測數連續，邏輯機率二選一；樹深容易過擬合，森林投票最精準。」"
+    "mnemonic": "「線性預測數連續，邏輯機率二選一；樹深容易過擬合，森林投票最精準。」",
+    "png_path": "cards_png/junior/junior_bento_card_05.png"
   },
   {
     "id": "CARD 06",
@@ -739,7 +744,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "極端值填中位數；無順序用 One-Hot；KNN/SVM 必做 Scaling；資料不平衡看 F1/AUC。",
     "strategy": "見「無順序文字類別」選 One-Hot 編碼；見「有極端離群值」選中位數；見「資料極度不平衡」選 F1-Score / SMOTE。",
-    "mnemonic": "「極端數值中位補，無序類別 One-Hot 填；單位縮放標準化，不均看 F1 評估全。」"
+    "mnemonic": "「極端數值中位補，無序類別 One-Hot 填；單位縮放標準化，不均看 F1 評估全。」",
+    "png_path": "cards_png/junior/junior_bento_card_06.png"
   },
   {
     "id": "CARD 07",
@@ -861,7 +867,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "Overfitting 代表 High Variance；L1 能讓係數歸零特徵選擇；Dropout 僅訓練時使用。",
     "strategy": "見「訓練好測試差」選 Overfitting/High Variance；見「係數歸零特徵選擇」選 L1 Lasso；見「交叉驗證保持比例」選 Stratified K-Fold。",
-    "mnemonic": "「過擬高變訓練甜，L1 歸零特徵選；交叉驗證 K 折輪，Dropout 訓練防死背。」"
+    "mnemonic": "「過擬高變訓練甜，L1 歸零特徵選；交叉驗證 K 折輪，Dropout 訓練防死背。」",
+    "png_path": "cards_png/junior/junior_bento_card_07.png"
   },
   {
     "id": "CARD 08",
@@ -982,7 +989,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "單層感知器無法解 XOR；ReLU 解決梯度消失；Softmax 做多分類；BP 靠 Chain Rule 連鎖律。",
     "strategy": "見「微積分連鎖律權重更新」選 Backpropagation；見「隱藏層避免梯度消失」選 ReLU；見「多分類輸出層」選 Softmax。",
-    "mnemonic": "「感知非線解 XOR，ReLU 解決梯度消失；連鎖鏈律 BP 傳，Softmax 多類機率出。」"
+    "mnemonic": "「感知非線解 XOR，ReLU 解決梯度消失；連鎖鏈律 BP 傳，Softmax 多類機率出。」",
+    "png_path": "cards_png/junior/junior_bento_card_08.png"
   },
   {
     "id": "CARD 09",
@@ -1116,7 +1124,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "CNN 靠卷積池化抓圖像空間特徵；LSTM 靠門控抓時間序列；Transformer 靠 Self-Attention 抓文本關聯。",
     "strategy": "見「圖片影像辨識」選 CNN；見「長距離時間序列/遺忘門」選 LSTM；見「GPT/大語言模型底層」選 Transformer。",
-    "mnemonic": "「CNN 池化抓圖像，LSTM 門控記時間；Transformer 注意力，平行訓練大模型。」"
+    "mnemonic": "「CNN 池化抓圖像，LSTM 門控記時間；Transformer 注意力，平行訓練大模型。」",
+    "png_path": "cards_png/junior/junior_bento_card_09.png"
   },
   {
     "id": "CARD 10",
@@ -1248,7 +1257,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "垃圾郵件看護 Precision；癌症診斷看 Recall (降漏報)；不平衡看 F1；ROC 下面積為 AUC (0.5等於亂猜)。",
     "strategy": "見「癌症診斷/不可漏抓」選 Recall；見「垃圾郵件/不可誤判正常信」選 Precision；見「AUC等於0.5」選隨機瞎猜。",
-    "mnemonic": "「癌症診斷看 Recall，垃圾郵件看 Precision；調和平均 F1 算，AUC 點五隨機猜。」"
+    "mnemonic": "「癌症診斷看 Recall，垃圾郵件看 Precision；調和平均 F1 算，AUC 點五隨機猜。」",
+    "png_path": "cards_png/junior/junior_bento_card_10.png"
   },
   {
     "id": "CARD 11",
@@ -1379,7 +1389,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "AI 偏見源於歷史資料；黑盒子用 XAI (SHAP) 打開；高風險決策必須 Human-in-the-Loop 人類簽核。",
     "strategy": "見「拒絕貸款理由」選可解釋性 XAI；見「高風險最終決策」選 Human-in-the-Loop；見「純 AI 生成畫作」選無著作權。",
-    "mnemonic": "「偏見源自歷史集，黑盒解鎖 XAI 找；最終簽核 HITL 在，純 AI 創作無著作。」"
+    "mnemonic": "「偏見源自歷史集，黑盒解鎖 XAI 找；最終簽核 HITL 在，純 AI 創作無著作。」",
+    "png_path": "cards_png/junior/junior_bento_card_11.png"
   },
   {
     "id": "CARD 12",
@@ -1495,7 +1506,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "不可否認靠 Hash 加數位簽章；微小雜訊騙 AI 為對抗攻擊；聯邦學習資料不出地端。",
     "strategy": "見「不可否認性」選雜湊 Hash 加數位簽章；見「貼紙騙過自駕車」選對抗樣本攻擊；見「資料不出地端共同訓練」選聯邦學習。",
-    "mnemonic": "「雜湊簽章不可賴，對抗樣本雜訊騙；差別隱私加噪音，聯邦學習數據留。」"
+    "mnemonic": "「雜湊簽章不可賴，對抗樣本雜訊騙；差別隱私加噪音，聯邦學習數據留。」",
+    "png_path": "cards_png/junior/junior_bento_card_12.png"
   },
   {
     "id": "CARD 13",
@@ -1639,7 +1651,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "公務機密與個資嚴禁貼外網 AI；公務決策必須人類核對；歐盟禁止社會信用評分。",
     "strategy": "見「公務員輸入機密至 ChatGPT」選違規；見「歐盟禁止 AI」選社會信用評分 (Social Scoring)；見「永久不可還原」選匿名化。",
-    "mnemonic": "「公務機密勿貼外，AI 產出人核對；歐盟禁止社分評，匿名數據合規隨。」"
+    "mnemonic": "「公務機密勿貼外，AI 產出人核對；歐盟禁止社分評，匿名數據合規隨。」",
+    "png_path": "cards_png/junior/junior_bento_card_13.png"
   },
   {
     "id": "CARD 14",
@@ -1754,7 +1767,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "LLM 是機率文字接龍；精確計算設 Temp=0；Context 太長會 Lost in the Middle；降低幻覺靠 RAG。",
     "strategy": "見「要求結果精確不隨機」選低 Temperature (0.0)；見「LLM一本正經胡說八道」選幻覺 (Hallucination)；見「解決幻覺」選 RAG。",
-    "mnemonic": "「LLM 接龍機率計算，溫度為零精準出；長文中間容易忘，檢索 RAG 治幻覺。」"
+    "mnemonic": "「LLM 接龍機率計算，溫度為零精準出；長文中間容易忘，檢索 RAG 治幻覺。」",
+    "png_path": "cards_png/junior/junior_bento_card_14.png"
   },
   {
     "id": "CARD 15",
@@ -1875,7 +1889,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "Few-Shot 給範例提升格式；CoT 要求一步步思考解邏輯；ReAct 結合思考與工具呼叫；防越獄需 Guardrail。",
     "strategy": "見「一步一步思考」選思維鏈 (Chain-of-Thought)；見「給2-3個範例」選 Few-Shot；見「忽略先前提問獲取機密」選 Prompt 注入攻擊。",
-    "mnemonic": "「Few-Shot 給例格式穩，一步一步 CoT 思；ReAct 思考呼工具，防護注入 Guardrail 守。」"
+    "mnemonic": "「Few-Shot 給例格式穩，一步一步 CoT 思；ReAct 思考呼工具，防護注入 Guardrail 守。」",
+    "png_path": "cards_png/junior/junior_bento_card_15.png"
   },
   {
     "id": "CARD 16",
@@ -2023,7 +2038,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "RAG 流程：Chunking ➔ Embedding ➔ Vector DB 檢索 ➔ LLM 生成；動態資料與可追溯首選 RAG。",
     "strategy": "見「切塊保留重疊」選 Overlap；見「語意夾角計算」選 Cosine 相似度；見「資料常變動需附來源」選 RAG 而非 Fine-tuning。",
-    "mnemonic": "「文本切塊加重疊， Embedding 向量空間留；餘弦夾角算相似，動態資料 RAG 優先。」"
+    "mnemonic": "「文本切塊加重疊， Embedding 向量空間留；餘弦夾角算相似，動態資料 RAG 優先。」",
+    "png_path": "cards_png/junior/junior_bento_card_16.png"
   },
   {
     "id": "CARD 17",
@@ -2171,7 +2187,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "低成本快速驗證用 Prompt；動態資料與附來源用 RAG；改變行為語氣與格式用 Fine-tuning/LoRA。",
     "strategy": "見「降低顯卡微調成本」選 LoRA；見「要求回答附帶頁碼來源」選 RAG；見「學習特定產業語氣」選 Fine-tuning。",
-    "mnemonic": "「驗證可行 Prompt 先，動態來源 RAG 牽；語氣格式微調改，低秩適應 LoRA 賢。」"
+    "mnemonic": "「驗證可行 Prompt 先，動態來源 RAG 牽；語氣格式微調改，低秩適應 LoRA 賢。」",
+    "png_path": "cards_png/junior/junior_bento_card_17.png"
   },
   {
     "id": "CARD 18",
@@ -2314,7 +2331,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "PoC 驗證可行性需設量化標準；MLOps 負責自動化維運；資料變異需自動 trigger 重新訓練。",
     "strategy": "見「低成本驗證可行性」選 PoC；見「模型上線後準確率下降」選數據/概念漂移 (Drift) 並重新訓練；見流量切分選 A/B Testing。",
-    "mnemonic": "「需求明確 PoC 驗，量化標準事前簽；營運監控 MLOps，數據漂移再訓練。」"
+    "mnemonic": "「需求明確 PoC 驗，量化標準事前簽；營運監控 MLOps，數據漂移再訓練。」",
+    "png_path": "cards_png/junior/junior_bento_card_18.png"
   },
   {
     "id": "CARD 19",
@@ -2448,7 +2466,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "AI 可行性看技術、經濟與營運；數據可用性是第一步；通用需求 Buy，核心護城河 Make。",
     "strategy": "見「AI專案第一步」選數據可用性與品質盤點；見「非核心通用需求」選外購 API (Buy)；見「簡單固定規則」選 RPA/傳統程式。",
-    "mnemonic": "「技術經濟營運查，數據品質第一關；通用外購 API 快，核心護城自研辦。」"
+    "mnemonic": "「技術經濟營運查，數據品質第一關；通用外購 API 快，核心護城自研辦。」",
+    "png_path": "cards_png/junior/junior_bento_card_19.png"
   },
   {
     "id": "CARD 20",
@@ -2577,7 +2596,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "製造業看 AOI 與預測維護；金融業看 XAI 與防歧視；醫療 AI 是醫師輔助工具 (SaMD)。",
     "strategy": "見「設備故障前預警」選預測性維護 (PdM)；見「電商推薦」選協同過濾；見「醫療 AI 責任歸屬」選醫師最終負責。",
-    "mnemonic": "「製造 AOI 預維護，金融 XAI 防歧視；醫療 SaMD 醫師輔，電商推薦協同路。」"
+    "mnemonic": "「製造 AOI 預維護，金融 XAI 防歧視；醫療 SaMD 醫師輔，電商推薦協同路。」",
+    "png_path": "cards_png/junior/junior_bento_card_20.png"
   },
   {
     "id": "CARD 21",
@@ -2694,7 +2714,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "文字用 LLM；圖像用 Diffusion 擴散模型去噪；程式碼用 Copilot；企業 API 需注意 opt-out 免被訓練。",
     "strategy": "見「圖像生成原理/去雜訊」選擴散模型 (Diffusion)；見「程式碼自動生成」選 Copilot；見「企業資安」選 Opt-out 免被訓練。",
-    "mnemonic": "「文字 LLM 擴散圖，繪圖去噪 Diffusion 幫；程式碼選 Copilot 輔，條款 Opt-out 隱私強。」"
+    "mnemonic": "「文字 LLM 擴散圖，繪圖去噪 Diffusion 幫；程式碼選 Copilot 輔，條款 Opt-out 隱私強。」",
+    "png_path": "cards_png/junior/junior_bento_card_21.png"
   },
   {
     "id": "CARD 22",
@@ -2827,7 +2848,8 @@ window.JUNIOR_CARDS = [
     ],
     "summary": "病歷基因屬最高級 SPII；個資用 Masking/Tokenization 遮蔽；影子 AI 需由企業網關攔截。",
     "strategy": "見「基因病歷」選 SPII 特種個資；見「員工私下貼資料入免費AI」選影子 AI (Shadow AI)；見「代換信用卡號」選 Tokenization。",
-    "mnemonic": "「病歷基因 SPII 防，信用卡號代換 Token 幫；影子 AI 網關攔，零留條款資安強。」"
+    "mnemonic": "「病歷基因 SPII 防，信用卡號代換 Token 幫；影子 AI 網關攔，零留條款資安強。」",
+    "png_path": "cards_png/junior/junior_bento_card_22.png"
   }
 ];
 
@@ -2962,7 +2984,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『Transformer 平行算，LoRA 外掛低秩矩，縮放根號防止梯度消！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_01.png"
   },
   {
     "id": "MID-CARD 02",
@@ -3094,7 +3117,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『ResNet 跨層捷徑線，YOLO 單次極速測，CLIP 對比圖文配！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_02.png"
   },
   {
     "id": "MID-CARD 03",
@@ -3226,7 +3250,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『HyDE 先生寫假想，Bi 向量快速選，Cross 專家重排序！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_03.png"
   },
   {
     "id": "MID-CARD 04",
@@ -3364,7 +3389,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『技術資料為先決，核心安全選自研，TCO 算清維運費！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_04.png"
   },
   {
     "id": "MID-CARD 05",
@@ -3497,7 +3523,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『DE 鋪水管，DS 搞研發，MLE 部署上線，Domain 饕客驗收！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_05.png"
   },
   {
     "id": "MID-CARD 06",
@@ -3635,7 +3662,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『信用評分嚴禁使用，醫療 HR 屬高風險，生成影音標明 AI！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_06.png"
   },
   {
     "id": "MID-CARD 07",
@@ -3771,7 +3799,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『先 Split 後 Fit 絕不漏，時序切分看前後，簡單 Baseline 率先走！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_07.png"
   },
   {
     "id": "MID-CARD 08",
@@ -3903,7 +3932,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『CI 測試 CD 鋪，CT 自動重訓練，漂移警報 KS 測！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_08.png"
   },
   {
     "id": "MID-CARD 09",
@@ -4033,7 +4063,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『兩組 t 檢定，多組用 ANOVA，類別卡方算，p 小 05 拒絕 H0！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_09.png"
   },
   {
     "id": "MID-CARD 10",
@@ -4166,7 +4197,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『ELT 存原始 RAW，離群點看 1.5 IQR，中位填補不怕偏！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_10.png"
   },
   {
     "id": "MID-CARD 11",
@@ -4309,7 +4341,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『NameNode 掌目錄，Data 湖泊隨意存，Parquet 列存分析快！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_11.png"
   },
   {
     "id": "MID-CARD 12",
@@ -4435,7 +4468,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『Spark 記憶體內算，Transformation 惰性延，Action 觸發 Job 執行！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_12.png"
   },
   {
     "id": "MID-CARD 13",
@@ -4556,7 +4590,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『PCA 降維先 Scaler，最大變異正交軸，K-Means 肘點選最佳 K！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_13.png"
   },
   {
     "id": "MID-CARD 14",
@@ -4682,7 +4717,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『千萬物品先召回，精緻排序選前十，Feature Store 止偏差！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_14.png"
   },
   {
     "id": "MID-CARD 15",
@@ -4814,7 +4850,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『k 匿名防連結，l 多樣防同質，差分注入 ε 雜訊！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_15.png"
   },
   {
     "id": "MID-CARD 16",
@@ -4935,7 +4972,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『Av 等於 λv 特徵值，SVD 分解解非方，Hessian 正定局部小！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_16.png"
   },
   {
     "id": "MID-CARD 17",
@@ -5068,7 +5106,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『Momentum 慣性衝鞍點，RMSprop 調整自適應，大模型訓練選 AdamW！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_17.png"
   },
   {
     "id": "MID-CARD 18",
@@ -5204,7 +5243,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『XGBoost 二階泰勒展，LightGBM 按葉快生長，SVM 核技巧破非線性！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_18.png"
   },
   {
     "id": "MID-CARD 19",
@@ -5330,7 +5370,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『CNN 用 BN，Transformer 選 LN，GeLU 激活兼光滑，zero_grad 清舊梯！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_19.png"
   },
   {
     "id": "MID-CARD 20",
@@ -5462,7 +5503,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『高基數選 Target 編碼，Filter 最快 RFE 最準，Lasso 歸零作選擇！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_20.png"
   },
   {
     "id": "MID-CARD 21",
@@ -5588,7 +5630,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『不平衡看 PR-AUC，分層切分選 Stratified，SMOTE 插值僅在 Train！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_21.png"
   },
   {
     "id": "MID-CARD 22",
@@ -5715,7 +5758,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『Grid 窮舉最浪費，Random 隨機勝網格，Optuna 貝氏優化兼剪枝！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_22.png"
   },
   {
     "id": "MID-CARD 23",
@@ -5836,7 +5880,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『SHAP 賽局可相加，LIME 局部線性貼，DI 小於點八有歧視！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_23.png"
   },
   {
     "id": "MID-CARD 24",
@@ -5973,7 +6018,8 @@ window.MID_CARDS = [
         ],
         "focus": "🎯 終極口訣：『初級打底，中級通關；圖卡在手，高分及格！祝應考順利！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/mid/mid_bento_card_24.png"
   }
 ];
 
@@ -6109,7 +6155,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『誇大絕對直接刪，名詞對調仔細看，科學嚴謹選客觀！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_01.png"
   },
   {
     "id": "ADV-CARD 02",
@@ -6242,7 +6289,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『預測為母精確率，真實為母召回率，調和平均算 F1！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_02.png"
   },
   {
     "id": "ADV-CARD 03",
@@ -6378,7 +6426,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『邏輯斯做分類，Bagging 降變異 Boosting 降偏差，KNN 監督 K-Means 無標！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_03.png"
   },
   {
     "id": "ADV-CARD 04",
@@ -6506,7 +6555,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『不平衡選 PR-AUC，p 小於零五拒絕 H0，區間不含零顯著！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_04.png"
   },
   {
     "id": "ADV-CARD 05",
@@ -6646,7 +6696,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『機密公文禁輸入，人類最終做核對，社會信用嚴禁止，醫療 HR 高風險！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_05.png"
   },
   {
     "id": "ADV-CARD 06",
@@ -6788,7 +6839,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『先 Split 後 Fit 絕不漏，時序 Time 系列，病人 Group 綁， Train 好 Test 差過擬合！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_06.png"
   },
   {
     "id": "ADV-CARD 07",
@@ -6943,7 +6995,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『LoRA 低秩省顯存，DPO 免獎勵模型，CoT 逐步思維鏈，ReAct 工具帶行動！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_07.png"
   },
   {
     "id": "ADV-CARD 08",
@@ -7086,7 +7139,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『CNN 局部卷積掃，ViT 切塊 Patch 算，GBDT 擬合殘差，SVD 解非方陣！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_08.png"
   },
   {
     "id": "ADV-CARD 09",
@@ -7235,7 +7289,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『ELT 先存 RAW 資料，CAP 三者選其二，MLOps 自動重訓練看 CT！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_09.png"
   },
   {
     "id": "ADV-CARD 10",
@@ -7373,7 +7428,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『PII 遮蔽防外洩，DP 注入數學噪，FL 數據留在地，SHAP 基於賽局論！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_10.png"
   },
   {
     "id": "ADV-CARD 11",
@@ -7516,7 +7572,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『ResNet 殘差捷徑線，YOLO 極速測物體，U-Net 分割醫學圖，AdamW 解耦練大模型！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_11.png"
   },
   {
     "id": "ADV-CARD 12",
@@ -7661,7 +7718,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『富豪不填是 MNAR，偏態離群算 IQR，VIF 過十剔共線，PSI 兩五觸發 CT！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_12.png"
   },
   {
     "id": "ADV-CARD 13",
@@ -7793,7 +7851,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『AOI 嚴防漏殺放瑕疵，Edge 邊緣量化 INT8 快，PdM 自編碼測異音！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_13.png"
   },
   {
     "id": "ADV-CARD 14",
@@ -7920,7 +7979,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『風控漏報 FN 代價大，反洗錢看 Graph 蛛網，信貸拒貸必須 SHAP！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_14.png"
   },
   {
     "id": "ADV-CARD 15",
@@ -8052,7 +8112,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『醫療 AI 稱 SaMD，DICOM 標頭擦 SPII，AI 輔助做副駕，最終責任屬醫師！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_15.png"
   },
   {
     "id": "ADV-CARD 16",
@@ -8179,7 +8240,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『RFM 算 R 越小越活躍，電商主流選 Item CF，無資料冷啟動看內容！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_16.png"
   },
   {
     "id": "ADV-CARD 17",
@@ -8302,7 +8364,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『多跳推理 GraphRAG，型號搜尋選 Hybrid，權限過濾 Pre-filter！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_17.png"
   },
   {
     "id": "ADV-CARD 18",
@@ -8430,7 +8493,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『機密個資禁外貼，地端部署保主權，AI 輔助做草稿，人類蓋章負全責！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_18.png"
   },
   {
     "id": "ADV-CARD 19",
@@ -8568,7 +8632,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『大腦思考記憶存，規劃拆解子任務，工具調用改世界！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_19.png"
   },
   {
     "id": "ADV-CARD 20",
@@ -8700,7 +8765,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『Manager 規劃 Worker 跑，惡魔代言找漏洞，高風險操作 Human 審！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_20.png"
   },
   {
     "id": "ADV-CARD 21",
@@ -8821,7 +8887,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『Reasoning 慢思考草稿紙，Test-time 算力換精度，蒸餾小模型大能力！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_21.png"
   },
   {
     "id": "ADV-CARD 22",
@@ -8944,7 +9011,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『視覺編碼抓特徵，Projection 投影對齊空間，圖像文字拼接餵大腦！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_22.png"
   },
   {
     "id": "ADV-CARD 23",
@@ -9072,7 +9140,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『KV Cache 免重複算，RoPE 旋轉擴長度，CAG 預載快取勝 RAG！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_23.png"
   },
   {
     "id": "ADV-CARD 24",
@@ -9199,7 +9268,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『對話框覆蓋稱直接，外部文件藏間接，輸入輸出設護欄，OWASP 注入排第一！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_24.png"
   },
   {
     "id": "ADV-CARD 25",
@@ -9322,7 +9392,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『初級 22 考點全掌握，觀念清查高分過！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_25.png"
   },
   {
     "id": "ADV-CARD 26",
@@ -9445,7 +9516,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『中級 24 考點全貫通，雙科 70+ 順利拿證！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_26.png"
   },
   {
     "id": "ADV-CARD 27",
@@ -9593,7 +9665,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『表格樹集成，不平衡看 PR-AUC，偏態選 IQR 中位數！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_27.png"
   },
   {
     "id": "ADV-CARD 28",
@@ -9714,7 +9787,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『欠擬合加深模型，過擬合加資料與正則，Early Stop 看 Val Loss！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_28.png"
   },
   {
     "id": "ADV-CARD 29",
@@ -9862,7 +9936,8 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 記憶口訣：『泛化能力看未看，GBDT 擬合殘差，SHAP 值特徵可加，300 題真題秒過關！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_29.png"
   },
   {
     "id": "ADV-CARD 30",
@@ -9985,6 +10060,7 @@ window.ADV_CARDS = [
         ],
         "focus": "🎯 終極口訣：『初級打底，中級貫通；76 圖卡，雙證高分！祝應考大順利！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_30.png"
   }
 ];

@@ -130,7 +130,8 @@
         ],
         "focus": "🎯 記憶口訣：『誇大絕對直接刪，名詞對調仔細看，科學嚴謹選客觀！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_01.png"
   },
   {
     "id": "ADV-CARD 02",
@@ -263,7 +264,8 @@
         ],
         "focus": "🎯 記憶口訣：『預測為母精確率，真實為母召回率，調和平均算 F1！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_02.png"
   },
   {
     "id": "ADV-CARD 03",
@@ -399,7 +401,8 @@
         ],
         "focus": "🎯 記憶口訣：『邏輯斯做分類，Bagging 降變異 Boosting 降偏差，KNN 監督 K-Means 無標！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_03.png"
   },
   {
     "id": "ADV-CARD 04",
@@ -527,7 +530,8 @@
         ],
         "focus": "🎯 記憶口訣：『不平衡選 PR-AUC，p 小於零五拒絕 H0，區間不含零顯著！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_04.png"
   },
   {
     "id": "ADV-CARD 05",
@@ -667,7 +671,8 @@
         ],
         "focus": "🎯 記憶口訣：『機密公文禁輸入，人類最終做核對，社會信用嚴禁止，醫療 HR 高風險！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_05.png"
   },
   {
     "id": "ADV-CARD 06",
@@ -809,7 +814,8 @@
         ],
         "focus": "🎯 記憶口訣：『先 Split 後 Fit 絕不漏，時序 Time 系列，病人 Group 綁， Train 好 Test 差過擬合！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_06.png"
   },
   {
     "id": "ADV-CARD 07",
@@ -964,7 +970,8 @@
         ],
         "focus": "🎯 記憶口訣：『LoRA 低秩省顯存，DPO 免獎勵模型，CoT 逐步思維鏈，ReAct 工具帶行動！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_07.png"
   },
   {
     "id": "ADV-CARD 08",
@@ -1107,7 +1114,8 @@
         ],
         "focus": "🎯 記憶口訣：『CNN 局部卷積掃，ViT 切塊 Patch 算，GBDT 擬合殘差，SVD 解非方陣！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_08.png"
   },
   {
     "id": "ADV-CARD 09",
@@ -1256,7 +1264,8 @@
         ],
         "focus": "🎯 記憶口訣：『ELT 先存 RAW 資料，CAP 三者選其二，MLOps 自動重訓練看 CT！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_09.png"
   },
   {
     "id": "ADV-CARD 10",
@@ -1394,7 +1403,8 @@
         ],
         "focus": "🎯 記憶口訣：『PII 遮蔽防外洩，DP 注入數學噪，FL 數據留在地，SHAP 基於賽局論！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_10.png"
   },
   {
     "id": "ADV-CARD 11",
@@ -1537,7 +1547,8 @@
         ],
         "focus": "🎯 記憶口訣：『ResNet 殘差捷徑線，YOLO 極速測物體，U-Net 分割醫學圖，AdamW 解耦練大模型！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_11.png"
   },
   {
     "id": "ADV-CARD 12",
@@ -1682,7 +1693,8 @@
         ],
         "focus": "🎯 記憶口訣：『富豪不填是 MNAR，偏態離群算 IQR，VIF 過十剔共線，PSI 兩五觸發 CT！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_12.png"
   },
   {
     "id": "ADV-CARD 13",
@@ -1814,7 +1826,8 @@
         ],
         "focus": "🎯 記憶口訣：『AOI 嚴防漏殺放瑕疵，Edge 邊緣量化 INT8 快，PdM 自編碼測異音！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_13.png"
   },
   {
     "id": "ADV-CARD 14",
@@ -1941,7 +1954,8 @@
         ],
         "focus": "🎯 記憶口訣：『風控漏報 FN 代價大，反洗錢看 Graph 蛛網，信貸拒貸必須 SHAP！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_14.png"
   },
   {
     "id": "ADV-CARD 15",
@@ -2073,7 +2087,8 @@
         ],
         "focus": "🎯 記憶口訣：『醫療 AI 稱 SaMD，DICOM 標頭擦 SPII，AI 輔助做副駕，最終責任屬醫師！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_15.png"
   },
   {
     "id": "ADV-CARD 16",
@@ -2200,7 +2215,8 @@
         ],
         "focus": "🎯 記憶口訣：『RFM 算 R 越小越活躍，電商主流選 Item CF，無資料冷啟動看內容！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_16.png"
   },
   {
     "id": "ADV-CARD 17",
@@ -2323,7 +2339,8 @@
         ],
         "focus": "🎯 記憶口訣：『多跳推理 GraphRAG，型號搜尋選 Hybrid，權限過濾 Pre-filter！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_17.png"
   },
   {
     "id": "ADV-CARD 18",
@@ -2451,7 +2468,8 @@
         ],
         "focus": "🎯 記憶口訣：『機密個資禁外貼，地端部署保主權，AI 輔助做草稿，人類蓋章負全責！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_18.png"
   },
   {
     "id": "ADV-CARD 19",
@@ -2589,7 +2607,8 @@
         ],
         "focus": "🎯 記憶口訣：『大腦思考記憶存，規劃拆解子任務，工具調用改世界！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_19.png"
   },
   {
     "id": "ADV-CARD 20",
@@ -2721,7 +2740,8 @@
         ],
         "focus": "🎯 記憶口訣：『Manager 規劃 Worker 跑，惡魔代言找漏洞，高風險操作 Human 審！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_20.png"
   },
   {
     "id": "ADV-CARD 21",
@@ -2842,7 +2862,8 @@
         ],
         "focus": "🎯 記憶口訣：『Reasoning 慢思考草稿紙，Test-time 算力換精度，蒸餾小模型大能力！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_21.png"
   },
   {
     "id": "ADV-CARD 22",
@@ -2965,7 +2986,8 @@
         ],
         "focus": "🎯 記憶口訣：『視覺編碼抓特徵，Projection 投影對齊空間，圖像文字拼接餵大腦！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_22.png"
   },
   {
     "id": "ADV-CARD 23",
@@ -3093,7 +3115,8 @@
         ],
         "focus": "🎯 記憶口訣：『KV Cache 免重複算，RoPE 旋轉擴長度，CAG 預載快取勝 RAG！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_23.png"
   },
   {
     "id": "ADV-CARD 24",
@@ -3220,7 +3243,8 @@
         ],
         "focus": "🎯 記憶口訣：『對話框覆蓋稱直接，外部文件藏間接，輸入輸出設護欄，OWASP 注入排第一！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_24.png"
   },
   {
     "id": "ADV-CARD 25",
@@ -3343,7 +3367,8 @@
         ],
         "focus": "🎯 記憶口訣：『初級 22 考點全掌握，觀念清查高分過！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_25.png"
   },
   {
     "id": "ADV-CARD 26",
@@ -3466,7 +3491,8 @@
         ],
         "focus": "🎯 記憶口訣：『中級 24 考點全貫通，雙科 70+ 順利拿證！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_26.png"
   },
   {
     "id": "ADV-CARD 27",
@@ -3614,7 +3640,8 @@
         ],
         "focus": "🎯 記憶口訣：『表格樹集成，不平衡看 PR-AUC，偏態選 IQR 中位數！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_27.png"
   },
   {
     "id": "ADV-CARD 28",
@@ -3735,7 +3762,8 @@
         ],
         "focus": "🎯 記憶口訣：『欠擬合加深模型，過擬合加資料與正則，Early Stop 看 Val Loss！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_28.png"
   },
   {
     "id": "ADV-CARD 29",
@@ -3883,7 +3911,8 @@
         ],
         "focus": "🎯 記憶口訣：『泛化能力看未看，GBDT 擬合殘差，SHAP 值特徵可加，300 題真題秒過關！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_29.png"
   },
   {
     "id": "ADV-CARD 30",
@@ -4006,6 +4035,7 @@
         ],
         "focus": "🎯 終極口訣：『初級打底，中級貫通；76 圖卡，雙證高分！祝應考大順利！』"
       }
-    ]
+    ],
+    "png_path": "cards_png/adv/adv_bento_card_30.png"
   }
 ]
