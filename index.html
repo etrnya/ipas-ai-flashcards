@@ -534,6 +534,11 @@
         <!-- 搜尋 -->
         <input type="text" class="search-input" id="searchInput" placeholder="🔍 搜尋關鍵字 (如 RAG, LoRA)">
 
+        <!-- 模式切換按鈕 (圖片 vs 互動 Grid) -->
+        <button class="btn-nav" id="btnToggleMode" style="background:#0284c7; color:#ffffff; font-weight:700; border:1px solid #38bdf8; padding:6px 12px;" onclick="toggleViewMode()">
+          🖼️ 切換高清照片模式
+        </button>
+
         <!-- 上下一張按鈕 -->
         <button class="btn-nav" id="btnPrev" onclick="prevCard()">◀ 上一張</button>
         <button class="btn-nav" id="btnNext" onclick="nextCard()">下一張 ▶</button>
@@ -679,10 +684,49 @@
         return;
       }
 
+      const card = filteredCards[currentIndex];
       const levelLabel = currentLevel === 'junior' ? '📘 初級' : (currentLevel === 'mid' ? '📙 中級' : '🚀 進階強效');
-      counter.innerText = `${levelLabel} 圖卡 ${currentIndex + 1} / ${filteredCards.length} (${card.id})`;
+      counter.innerText = `${levelLabel} 圖卡 ${currentIndex + 1} / ${filteredCards.length} (${card.id}) [${currentViewMode === 'image' ? '🖼️ 圖片檢視' : '💻 互動 Grid'}]`;
       btnPrev.disabled = (currentIndex === 0);
       btnNext.disabled = (currentIndex === filteredCards.length - 1);
+
+      // 若為圖片檢視模式 (2K PNG 照片)
+      if (currentViewMode === 'image') {
+        const rawIndex = allCards.findIndex(c => c.id === card.id) + 1;
+        const cardNumStr = String(rawIndex).padStart(2, '0');
+        
+        let pngPath = '';
+        if (currentLevel === 'junior') {
+          pngPath = `cards_png/junior/junior_bento_card_${cardNumStr}.png`;
+        } else if (currentLevel === 'mid') {
+          pngPath = `cards_png/mid/mid_bento_card_${cardNumStr}.png`;
+        } else {
+          pngPath = `cards_png/adv/adv_bento_card_${cardNumStr}.png`;
+        }
+
+        container.innerHTML = `
+          <div style="background:#0f172a; border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:24px; text-align:center; box-shadow:0 20px 25px -5px rgba(0,0,0,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+              <div>
+                <span class="card-id-tag">${card.id}</span>
+                <span class="card-category-tag" style="margin-left:8px;">${card.category}</span>
+                <span style="font-size:18px; font-weight:700; color:#f8fafc; margin-left:12px;">${card.title}</span>
+              </div>
+              <a href="${pngPath}" download="${card.id}_${card.title}.png" style="padding:8px 16px; background:#10b981; color:#fff; font-weight:700; border-radius:8px; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+                📥 下載此 2K 高清照片
+              </a>
+            </div>
+            
+            <div style="overflow:hidden; border-radius:12px; background:#020617; border:1px solid #1e293b;">
+              <a href="${pngPath}" target="_blank" title="點擊在新視窗開啟 2K 原圖照片">
+                <img src="${pngPath}" alt="${card.title}" style="width:100%; height:auto; display:block; max-height:800px; object-fit:contain; cursor:zoom-in;" onerror="this.onerror=null; this.src='cards_png/adv/adv_bento_card_01.png'; alert('⚠️ 照片載入中或連線稍慢');">
+              </a>
+            </div>
+            <div style="color:#94a3b8; font-size:13px; margin-top:12px;">💡 提示：點擊上方圖片可以在新頁面放大檢視 2K 原始解析度照片，或點擊綠色按鈕下載圖片存入相簿。</div>
+          </div>
+        `;
+        return;
+      }
 
       // 構建 Capsules HTML
       let capsulesHTML = '';
