@@ -10,9 +10,9 @@
 
 ## 💡 專案簡介 (About The Project)
 
-本專案專為準備經濟部 **iPAS AI 應用規劃師（初級）能力鑑定** 所設計。
+本專案專為準備經濟部 **iPAS AI 應用規劃師（初級與中級）能力鑑定** 所設計。
 
-針對 237 頁官方考綱教科書，透過 **Antigravity Agent OS** 進行語意提煉與 **現代前端 HTML5/CSS3 Bento Grid** 視覺設計，將龐雜的 AI 學理精煉為 **22 張「一卡一重點」高資訊密度圖卡**。
+針對官方考綱教科書，透過 **Antigravity Agent OS** 進行語意提煉與 **現代前端 HTML5/CSS3 Bento Grid** 視覺設計，精煉為 **46 張「一卡一重點」高資訊密度圖卡**（含初級 22 張與中級 24 張）。
 
 無論您是否有技術背景，都能透過生活化比喻、對比矩陣表格、秒解關鍵字與記憶口訣，在手機、平板或電腦上輕鬆刷題複習！
 
@@ -20,50 +20,50 @@
 
 ## ✨ 核心特色 (Key Features)
 
-- 📱 **Mobile-First 響應式 App (RWD)**：支援手機、平板與電腦自適應，隨時隨地開啟網址即可刷題。
-- 💡 **零基礎直覺比喻**：拋棄抽象數學公式，使用「果汁機 vs 特級廚師」、「開書考 vs 閉卷考」等生活故事秒懂 AI。
-- 🎯 **考試秒解關鍵字**：每張圖卡標註歷屆試題關鍵字與陷阱題解法，現學現賣。
-- 🔍 **即時搜尋與分類過濾**：內建全文字搜尋（如 `RAG`, `Overfitting`, `SVM`）與 7 大考綱單元過濾。
-- 📷 **內建 2K 高清 PNG 產出**：提供完整 22 張圖卡高清圖片包，可直接下載存入手機相簿。
+- 📱 **Mobile-First 響應式 App (RWD)**：支援手機、平板與電腦自適應，選單可自由切換初級/中級卡片庫。
+- 💡 **零基礎直覺比喻**：拋棄抽象數學公式，使用「果汁機 vs 特級廚師」、「外掛便條紙 LoRA」、「拍桌彈起棋子 SVM Kernel」等生活故事秒懂 AI。
+- 🎯 **考試秒解關鍵字**：每張圖卡標註歷屆 300 題真題關鍵字與陷阱題解法，現學現賣。
+- 🔍 **即時搜尋與分類過濾**：內建全文字搜尋（如 `RAG`, `LoRA`, `Optuna`, `SHAP`）與考綱單元過濾。
+- 📷 **內建 2K 高清 PNG 產出**：提供完整初級 22 張與中級 24 張圖卡高清圖片包，可直接下載存入手機相簿。
 
 ---
 
-## 🖼️ 圖卡視覺預覽 (Flashcard Preview)
+## 🗺️ 考點精華圖卡地圖 (Flashcard Map)
 
-<div align="center">
-  <img src="cards_png/light_bento_ai_summary_card.png" alt="iPAS AI 初級考點圖卡範例" width="100%">
-  <p><i>▲ 白底清爽高密度 Bento Grid 圖卡範例（CARD 01 - AI 基礎與演算法）</i></p>
-</div>
+### 📘 初級能力鑑定 (22 張)
+（包含 L11 人工智慧基礎概論 13 張 + L12 生成式 AI 應用與規劃 9 張）
 
----
+### 📙 中級能力鑑定 (24 張)
+#### 科目一：L21 人工智慧技術應用與規劃 (8 張)
+- [x] **MID-CARD 01**：NLP 進階、Transformer 自注意力與 LLM 高階微調 (PEFT / LoRA / QLoRA)
+- [x] **MID-CARD 02**：電腦視覺 (CV) 經典架構 (ResNet)、單階段 YOLO 物體檢測與 CLIP 多模態
+- [x] **MID-CARD 03**：高級 RAG 檢索增強生成 (Advanced RAG)、HyDE 假想檢索、Re-ranking 重排序與 GraphRAG
+- [x] **MID-CARD 04**：AI 導入可行性分析 (技術/經濟/營運)、Make vs Buy 決策矩陣與 TCO 總持有成本
+- [x] **MID-CARD 05**：AI 專案範疇界定、敏捷開發與 MLOps 跨部門團隊角色 (DS / MLE / Domain Expert)
+- [x] **MID-CARD 06**：AI 風險管理、影子 AI (Shadow AI) 治理與歐盟 EU AI Act 四大風險分級
+- [x] **MID-CARD 07**：數據準備、Data Leakage 資料洩漏防範與 Baseline 基礎模型選擇策略
+- [x] **MID-CARD 08**：AI 系統集成、MLOps (CI/CD/CT) 管道與模型/資料漂移 (Model Drift) 監控
 
-## 🗺️ 22 張考點精華圖卡地圖 (Flashcard Map)
+#### 科目二：L22 大數據處理分析與應用 (8 張)
+- [x] **MID-CARD 09**：機率分佈、假設檢定 (p-value < 0.05, t-test, ANOVA) 與卡方檢定
+- [x] **MID-CARD 10**：大數據 ETL 管道、ETL vs ELT 雲端典範轉移與離群值 (IQR) / 缺失值治理
+- [x] **MID-CARD 11**：大數據儲存、HDFS 分散式檔案系統 (NameNode) 與 Data Lake vs Warehouse
+- [x] **MID-CARD 12**：分散式運算框架、Apache Spark 記憶體內運算與 RDD vs DataFrame (Catalyst)
+- [x] **MID-CARD 13**：大數據統計分析、K-Means 聚類 (肘部法) 與 PCA 主成分分析降維
+- [x] **MID-CARD 14**：大數據在鑑別式 AI 中的場景、風控系統與推薦系統二階段架構 (召回 + 排序)
+- [x] **MID-CARD 15**：大數據隱私保護、k-匿名性 (k-Anonymity)、差分隱私 (DP) 與聯邦學習 (FL)
+- [x] **MID-CARD 16**：機器學習數學基石、特徵值與特徵向量 (Eigenvalue) 及 SVD 奇異值分解
 
-### 📘 科目一：L11 人工智慧基礎概論 (13 張)
-- [x] **CARD 01**：AI 的定義、驅動因素與三級能力分級 (ANI / AGI / ASI)
-- [x] **CARD 02**：AI 發展演進史、圖靈測試、中文房間與黃仁勳 4 階段論
-- [x] **CARD 03**：AI 三大核心子技術 (CV / NLP / ASR) 與多模態 CLIP
-- [x] **CARD 04**：機器學習三大學習派系 (監督 / 非監督 / 強化學習)
-- [x] **CARD 05**：經典演算法對照 (線性迴歸 / 邏輯斯 / 隨機森林 / SVM / KNN)
-- [x] **CARD 06**：資料預處理與特徵工程 (缺失值 / 離群值 / One-Hot / Scaling)
-- [x] **CARD 07**：過擬合 (Overfitting) 與欠擬合診斷 (L1 Lasso / L2 Ridge / K-Fold)
-- [x] **CARD 08**：神經網絡基礎 (感知器 / ReLU / 損失函數 / BP 連鎖律)
-- [x] **CARD 09**：深度學習三大核心模型 (CNN 圖像 / RNN 序列 / Transformer 注意力)
-- [x] **CARD 10**：模型評估指標矩陣 (混淆矩陣 / Precision / Recall / F1 / ROC-AUC)
-- [x] **CARD 11**：AI 倫理五大原則、演算法偏見與可解釋性 AI (XAI)
-- [x] **CARD 12**：資安防禦與不可否認性 (加密雜湊 Hash + 數位簽章 + 聯邦學習)
-- [x] **CARD 13**：台灣 AI 基本法、行政院 GenAI 指引與歐盟 AI 法案
+#### 科目三：L23 機器學習技術與應用 (8 張)
+- [x] **MID-CARD 17**：數值優化技術、梯度下降全景 (SGD, Momentum, Adam, AdamW) 與學習率退火
+- [x] **MID-CARD 18**：高級集成學習、XGBoost (二階泰勒) vs LightGBM (Leaf-wise) vs CatBoost 與 SVM 核技巧
+- [x] **MID-CARD 19**：深度學習原理、PyTorch Autograd 計算圖、BatchNorm vs LayerNorm & GeLU
+- [x] **MID-CARD 20**：特徵工程、高基數類別編碼 (Target Encoding) 與特徵選擇三法 (Filter/Wrapper/Embedded)
+- [x] **MID-CARD 21**：模型評估指標、ROC-AUC vs PR-AUC、不平衡資料 (SMOTE) 與 Stratified K-Fold
+- [x] **MID-CARD 22**：超參數優化、Grid vs Random Search 與貝氏優化 (Optuna / TPE) 剪枝
+- [x] **MID-CARD 23**：可解釋性 AI (XAI)、SHAP 龐加萊/博弈論值、LIME 與演算法去偏 (Disparate Impact)
+- [x] **MID-CARD 24**：iPAS AI 應用規劃師中級三科 34 大考綱通關極速總複習地圖
 
-### 📙 科目二：L12 生成式 AI 應用與規劃 (9 張)
-- [x] **CARD 14**：大語言模型 (LLM) 底層機制、Context Window 與幻覺治理
-- [x] **CARD 15**：提示工程 (Prompt) 技巧 (Few-Shot / 思維鏈 CoT / ReAct 框架)
-- [x] **CARD 16**：RAG (檢索增強生成) 完整架構、Chunking 切塊與向量資料庫
-- [x] **CARD 17**：Prompt vs RAG vs Fine-tuning 技術選型決策樹與 LoRA
-- [x] **CARD 18**：企業 AI 專案五大生命週期 (PoC 驗證 / MLOps / 模型漂移)
-- [x] **CARD 19**：AI 專案範疇界定與可行性評估 (技術 / 經濟 / 營運 / Make or Buy)
-- [x] **CARD 20**：製造業 (AOI/預測維護)、金融業 (風控) 與醫療業 (SaMD) 導入指引
-- [x] **CARD 21**：生成式 AI 工具分類 (LLM / Diffusion 擴散模型 / Copilot)
-- [x] **CARD 22**：企業資安防護、影子 AI 治理與個資去識別化 (PII / SPII / Masking)
 
 ---
 
