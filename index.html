@@ -576,8 +576,15 @@
 
     function loadLevelData(level) {
       const jsonFile = levelFiles[level];
-      fetch(jsonFile)
-        .then(res => res.json())
+      // 加入 Cache Busting 避免瀏覽器/CDN 請求到舊版 404 緩存
+      const cacheBustUrl = `${jsonFile}?v=${Date.now()}`;
+      fetch(cacheBustUrl)
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+          }
+          return res.json();
+        })
         .then(data => {
           allCards = data;
           updateCategoryOptions();
@@ -587,7 +594,7 @@
         })
         .catch(err => {
           console.error('Error loading cards:', err);
-          document.getElementById('cardContainer').innerHTML = `<div style="color:#ef4444; padding:40px; text-align:center;">⚠️ 無法載入圖卡資料庫 ${jsonFile}</div>`;
+          document.getElementById('cardContainer').innerHTML = `<div style="color:#ef4444; padding:40px; text-align:center; font-size:16px;">⚠️ 無法載入圖卡資料庫 ${jsonFile} (${err.message})<br><br><button onclick="loadLevelData('${level}')" style="padding:8px 16px; background:#38bdf8; color:#0f172a; border:none; border-radius:6px; font-weight:700; cursor:pointer;">🔄 重新嘗試載入</button></div>`;
         });
     }
 
