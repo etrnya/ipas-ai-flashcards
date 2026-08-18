@@ -1,0 +1,1399 @@
+[
+  {
+    "id": "ADV-CARD 01",
+    "category": "主題一：真題陷阱與秒解神器",
+    "title": "iPAS 選擇題絕對不能選的 10 大題目陷阱詞與盲點詞",
+    "badge_tag": "強效進階 主題一",
+    "desc": "秒殺選擇題！一眼看破命題老師設置的『絕對化、誇大性與觀念顛倒』選項陷阱！",
+    "capsules": [
+      "Absolute Terms Trap",
+      "Deterministic Myth",
+      "Overfitting Fallacy",
+      "Data Immunity Trap"
+    ],
+    "checklist": [
+      "識別『必定100%』、『完全無誤差』等誇大絕對化選項，直接剔除",
+      "掌握『神經網路層數越深越不會過擬合』之常見顛倒謬誤",
+      "理解『不需要任何資料即可自動學習』違反機器學習基礎原理"
+    ],
+    "flow": [
+      "閱讀選項 ➔ 檢查是否含絕對化詞彙 ➔ 檢查概念是否相反 ➔ 秒殺剔除 ➔ 選擇客觀描述"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "高頻陷阱詞與錯解排查清單",
+        "sub": "看到以下關鍵字 99% 為錯誤選項！",
+        "type": "table",
+        "headers": [
+          "陷阱關鍵字",
+          "題目常見錯誤描述",
+          "正確事實與反例解析"
+        ],
+        "rows": [
+          [
+            "必定 100% / 完全精確",
+            "『適當調參後，模型能達成 100% 準確率』",
+            "現實中存在 Noise 與隨機誤差，100% 通常是 Overfitting 盲點"
+          ],
+          [
+            "不需要任何資料",
+            "『無監督學習不需要任何資料輸入即可運作』",
+            "無監督學習不需要『標籤 Label』，但極度需要原始數據！"
+          ],
+          [
+            "層數越多越不會過擬合",
+            "『增加深度學習層數可有效消除過擬合』",
+            "層數越深參數越多，反而越容易 Overfitting！需加正則化或 Dropout"
+          ],
+          [
+            "模型能自動解決資料品質",
+            "『只要使用大模型，資料有無垃圾 (GIGO) 皆可』",
+            "Garbage In, Garbage Out！資料品質決定 AI 上限"
+          ]
+        ],
+        "focus": "💡 秒殺金律：帶有『必定』、『完全』、『絕對』、『無需數據』的選項 99% 是陷阱。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "仙丹推銷員比喻",
+        "type": "analogy",
+        "analogy_title": "💊 包治百病的包解仙丹 (絕對化選項)",
+        "analogy_desc": "在科學界與工程界，沒有任何技術敢宣稱『100% 完美且無缺點』。選擇題裡的陷阱選項就好比夜市推銷員說『這顆仙丹能包治百病且完全無副作用』。看到這種誇大其詞、宣稱無窮算力或無資料即可作答的選項，秒殺劃掉就對了！",
+        "focus": "🎯 秒記：科學講求機率與邊界，過度絕對的陳述必定有詐！"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "易混淆專有名詞顛倒陷阱",
+        "sub": "命題老師最愛玩的對調遊戲",
+        "type": "compare",
+        "headers": [
+          "混淆對詞",
+          "陷阱對調寫法 (錯誤)",
+          "正確對應關係 (正解)"
+        ],
+        "rows": [
+          [
+            "邏輯斯迴歸 vs 線性迴歸",
+            "『邏輯斯迴歸用於預測連續數值』",
+            "邏輯斯迴歸本質是『二元分類』！預測連續數值用線性迴歸"
+          ],
+          [
+            "L1 vs L2 正則化",
+            "『L2 正則化會將不重要特徵權重變為 0』",
+            "L1 Lasso 才會將權重歸零 (產生稀疏矩陣)；L2 僅壓縮趨近於 0"
+          ],
+          [
+            "Precision vs Recall",
+            "『Recall 越高代表抓出的 positive 越精準』",
+            "Recall 是『抓得全不全』；Precision 才是『抓得準不準』"
+          ]
+        ],
+        "focus": "💡 試題常考：遇到兩個成對的名詞，命題者最喜歡把兩者的定義故意『對調』。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "秒殺解題思考流程代碼",
+        "sub": "Option Elimination Algorithm",
+        "type": "code",
+        "code_snippet": "def is_correct_option(option_text):\n    forbidden_words = ['必定100%', '完全無誤差', '不需要數據', '絕對不會過擬合']\n    for word in forbidden_words:\n        if word in option_text:\n            return False # 1 秒剔除！\n    return True",
+        "focus": "🔑 關鍵技巧：先用排除法剔除 2 個明顯含絕對化詞彙的選項，剩餘二選一命中率暴增至 50% 以上！"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題實戰避坑陷阱",
+        "sub": "iPAS 300 題真題抽絲剝繭",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 陷阱題：『RAG 技術可以 100% 完全消除 LLM 的幻覺？』 ➔ 錯誤！RAG 能顯著降低幻覺，但無法 100% 消除。",
+          "⚠️ 陷阱題：『測試集 (Test Set) 可以用來調整超參數？』 ➔ 錯誤！調整超參必須用 Validation Set，用 Test Set 會構成 Data Leakage。",
+          "⚠️ 陷阱題：『度量學習中，餘弦相似度越大代表向量距離越遠？』 ➔ 錯誤！餘弦相似度越接近 1 代表方向越一致 (距離越近)。"
+        ],
+        "focus": "💯 秒解原則：看到『消除所有幻覺』選錯；看到『測試集調超參』選錯。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 絕對詞剔除：『必定100%』、『完全無錯』直接劃掉",
+          "✅ 名詞防對調：Logistic 做分類；L1 才會權重歸零；Recall 是抓全",
+          "✅ 客觀原則：機器學習講求泛化與機率，永遠保留不確定性"
+        ],
+        "focus": "🎯 記憶口訣：『誇大絕對直接刪，名詞對調仔細看，科學嚴謹選客觀！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 02",
+    "category": "主題一：真題陷阱與秒解神器",
+    "title": "混淆矩陣 (Confusion Matrix) 與 Precision / Recall / F1 心算秒解",
+    "badge_tag": "強效進階 主題一",
+    "desc": "打通 TP, FP, TN, FN 混淆矩陣！掌握心算 10 秒算出一招過關！",
+    "capsules": [
+      "TP / FP / TN / FN",
+      "Precision (精確率)",
+      "Recall (召回率)",
+      "F1-Score Harmonic Mean"
+    ],
+    "checklist": [
+      "精確畫出 2x2 混淆矩陣：True/False 代表預測對錯，Positive/Negative 代表模型預測類別",
+      "掌握 Precision (TP / (TP+FP)) 與 Recall (TP / (TP+FN)) 的分子分母記憶法",
+      "掌握 F1-Score 調和平均數 $2 \\times \\frac{P \\times R}{P + R}$ 計算"
+    ],
+    "flow": [
+      "劃分 2x2 矩陣 ➔ 確定實際值與預測值 ➔ 填入 TP/FP/FN/TN ➔ 套入心算公式"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "混淆矩陣四大基本元素全景表",
+        "sub": "TP vs FP vs FN vs TN",
+        "type": "table",
+        "headers": [
+          "真實 \\ 預測",
+          "預測為 Positive (陽性)",
+          "預測為 Negative (陰性)"
+        ],
+        "rows": [
+          [
+            "真實為 Positive",
+            "TP (True Positive) 正確抓出陽性",
+            "FN (False Negative) 漏報！未抓出陽性"
+          ],
+          [
+            "真實為 Negative",
+            "FP (False Positive) 誤報！誤抓為陽性",
+            "TN (True Negative) 正確排除陰性"
+          ]
+        ],
+        "focus": "💡 記憶秘訣：字首 T/F 代表『模型預測結果對不對』；字尾 P/N 代表『模型預測輸出是什麼』。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "捕魚網與診斷比喻",
+        "type": "analogy",
+        "analogy_title": "🐟 撈魚率 (Recall) vs 魚簍純度 (Precision)",
+        "analogy_desc": "假設池塘裡有 100 條魚（正樣本 Positive）。Recall (召回率/撈魚率) 就好比問：『池塘裡的 100 條魚，你的網子撈出了幾條？』（關注有沒有漏報 FN）；Precision (精確率/純度) 就好比問：『你撈上岸的這桶水裡，有多少比例真的是魚，而不是破鞋水草（FP誤報）？』！",
+        "focus": "🎯 秒記：Recall 怕『漏報 (FN)』；Precision 怕『誤報 (FP)』。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "四大評估指標心算公式速查",
+        "sub": "Accuracy vs Precision vs Recall vs F1",
+        "type": "compare",
+        "headers": [
+          "指標名稱",
+          "心算公式",
+          "分母代表涵義",
+          "關注重點"
+        ],
+        "rows": [
+          [
+            "Accuracy (準確率)",
+            "(TP + TN) / Total",
+            "全體所有樣本總數",
+            "總體猜對比例 (不平衡資料下失效)"
+          ],
+          [
+            "Precision (精確率)",
+            "TP / (TP + FP)",
+            "所有『模型預測為 Positive』的樣本",
+            "寧可漏抓，絕不抓錯 (如 垃圾郵件過濾)"
+          ],
+          [
+            "Recall (召回率)",
+            "TP / (TP + FN)",
+            "所有『真實為 Positive』的樣本",
+            "寧可錯抓，絕不漏抓 (如 癌症診斷、地震警報)"
+          ],
+          [
+            "F1-Score",
+            "2 × P × R / (P + R)",
+            "Precision 與 Recall 之調和平均數",
+            "平衡 Precision 與 Recall 兩者"
+          ]
+        ],
+        "focus": "💡 試題常考：癌症診斷與火災警報優先看 Recall (不能漏報)；垃圾郵件過濾看 Precision。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "心算範例代碼",
+        "sub": "真題心算演算範例",
+        "type": "code",
+        "code_snippet": "# 題目：TP=40, FP=10, FN=10, TN=40\n# 1. Precision = TP / (TP + FP) = 40 / (40 + 10) = 40/50 = 0.80 (80%)\n# 2. Recall = TP / (TP + FN) = 40 / (40 + 10) = 40/50 = 0.80 (80%)\n# 3. F1-Score = 2 * (0.8 * 0.8) / (0.8 + 0.8) = 1.28 / 1.6 = 0.80 (80%)",
+        "focus": "🔑 關鍵公式：當 Precision == Recall 時，F1-Score 直接等於 Precision。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『在信用卡刷卡詐欺檢測中，何者為 FN？』 ➔ 答案：真實為詐欺，但模型評估為正常刷卡 (漏報詐欺，損失最大！)。",
+          "⚠️ 為什麼不用算術平均數 (P+R)/2 而用調和平均數？ ➔ 答案：調和平均數對極小值更敏感，若其中一者為 0，F1 直接歸零，防止極端偏差。",
+          "⚠️ Specificity (特異度) ➔ TN / (TN + FP)，代表真實陰性中被正確排除的比例 (與 FPR 互補：FPR = 1 - Specificity)。"
+        ],
+        "focus": "💯 秒解原則：聽到『醫療/詐欺防漏』選 Recall；聽到『廣告點擊/垃圾郵件』選 Precision。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 混淆矩陣：T/F 是預測對錯；P/N 是模型輸出",
+          "✅ 指標分母：Precision 分母是『預測 P』；Recall 分母是『真實 P』",
+          "✅ F1 公式：$2 \\times P \\times R / (P + R)$ 調和平均數"
+        ],
+        "focus": "🎯 記憶口訣：『預測為母精確率，真實為母召回率，調和平均算 F1！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 03",
+    "category": "主題一：真題陷阱與秒解神器",
+    "title": "似是而非演算法終極對決 (Logistic vs Linear, Tree vs XGBoost)",
+    "badge_tag": "強效進階 主題一",
+    "desc": "一眼看穿易混淆演算法！擺脫模糊概念，秒殺考場對決題！",
+    "capsules": [
+      "Logistic vs Linear",
+      "Random Forest vs XGBoost",
+      "Bagging vs Boosting",
+      "KNN vs K-Means"
+    ],
+    "checklist": [
+      "徹底釐清 Logistic Regression (分類) 與 Linear Regression (迴歸) 之本質界線",
+      "掌握 Bagging (並行/隨機森林) 與 Boosting (串行/XGBoost) 之抗誤差機制差異",
+      "區分 KNN (監督式分類) 與 K-Means (非監督式分群) 之名稱陷阱"
+    ],
+    "flow": [
+      "讀取題目需求 ➔ 判斷是否為監督式 ➔ 判斷類別或連續 ➔ 選擇正確演算法"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "三組最常混淆演算法大對決",
+        "sub": "核心機制與差異對照",
+        "type": "table",
+        "headers": [
+          "演算法對決組",
+          "核心運作機制差異",
+          "學習類別",
+          "題目典型情境關鍵字"
+        ],
+        "rows": [
+          [
+            "Logistic vs Linear",
+            "Linear 輸出 continuous 實數；Logistic 用 Sigmoid 將輸出壓至 (0,1) 作二元分類",
+            "皆為監督式",
+            "預測『房價/氣溫』選 Linear；預測『買或不買/是否生病』選 Logistic"
+          ],
+          [
+            "Bagging vs Boosting",
+            "Bagging (隨機森林) 多樹平行投票降低 Variance；Boosting (XGBoost) 樹串行修正上一棵樹誤差降低 Bias",
+            "皆為集成學習",
+            "降低 Overfitting 選 Bagging；追求高精確度降低 Bias 選 Boosting"
+          ],
+          [
+            "KNN vs K-Means",
+            "KNN 依據鄰近 K 個點的標籤多數決；K-Means 無標籤，迭代 K 個質心做資料分群",
+            "KNN 監督 / K-Means 非監督",
+            "有已知類別標籤選 KNN；無標籤客戶分群選 K-Means"
+          ]
+        ],
+        "focus": "💡 考試重點：KNN 是『有標籤的監督式分類』；K-Means 是『無標籤的非監督式分群』！"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "專家會診 (Bagging) vs 師徒傳承修正 (Boosting)",
+        "type": "analogy",
+        "analogy_title": "🩺 100 位醫生獨立投票 (Bagging) vs 弟子修正師父錯誤 (Boosting)",
+        "analogy_desc": "Bagging (隨機森林) 就好比找 100 位醫生各自獨立診斷最後多數決投票，能有效防止單一醫生看錯（降低變異數 Variance）；Boosting (XGBoost) 就好比第一位徒弟專門研究師父看錯的疑難雜症，第二位徒弟再專門修正上一位的錯誤（串行修正殘差 Residual），精確度極高！",
+        "focus": "🎯 秒記：Bagging 降 Variance (防過擬合)；Boosting 降 Bias (提升精確度)。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "單顆決策樹 vs 隨機森林 vs XGBoost",
+        "sub": "樹模型演進地圖",
+        "type": "compare",
+        "headers": [
+          "演算法",
+          "樹數量與結構",
+          "優點",
+          "缺點/痛點"
+        ],
+        "rows": [
+          [
+            "單顆決策樹 (Decision Tree)",
+            "單顆樹",
+            "可解釋性極高，規則可視化",
+            "極度容易 Overfitting，對資料噪音敏感"
+          ],
+          [
+            "隨機森林 (Random Forest)",
+            "多顆樹 (Bagging)",
+            "抗 Overfitting 能力強，穩定度高",
+            "缺乏對前一棵樹殘差的專門學習"
+          ],
+          [
+            "XGBoost (GBDT)",
+            "多顆樹 (Boosting)",
+            "二階泰勒展開，精度極高，帶正則化",
+            "超參數較多，需細緻調參"
+          ]
+        ],
+        "focus": "💡 試題常考：隨機森林採用 Bootstrap 抽樣 (Out-of-Bag, OOB Data 可作為免費驗證集)。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "演算法選擇決策樹邏輯代碼",
+        "sub": "Algorithm Selection Logic",
+        "type": "code",
+        "code_snippet": "def select_algorithm(has_label, is_continuous, need_speed):\n    if not has_label:\n        return 'K-Means (非監督分群)'\n    else:\n        if is_continuous:\n            return 'Linear Regression / Ridge / XGBoost Regressor'\n        else:\n            return 'Logistic Regression (二元) / XGBoost Classifier'",
+        "focus": "🔑 關鍵概念：先看有無 Label，再看是分類還是迴歸。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『名稱帶有 Regression 但本質是用於二元分類的演算法是？』 ➔ 答案：Logistic Regression (邏輯斯迴歸)。",
+          "⚠️ 考題問『KNN 與 K-Means 的共同點與不同點？』 ➔ 答案：共同點都使用距離度量 (如歐氏距離)；不同點 KNN 為監督式，K-Means 為非監督式。",
+          "⚠️ 隨機森林的兩個「隨機」 ➔ 1. 隨機 Bootstrap 抽樣樣本；2. 隨機選擇特徵子集 (Feature Subspace)。"
+        ],
+        "focus": "💯 秒解原則：聽到『名字叫迴歸做分類』選 Logistic；聽到『兩大隨機』選隨機森林；聽到『串行修正殘差』選 Boosting。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 邏輯斯：名稱叫迴歸，本質是 Sigmoid 分類",
+          "✅ 集成對比：Bagging 平行降 Variance；Boosting 串行降 Bias",
+          "✅ K 族區分：KNN 有標籤監督分類；K-Means 無標籤分群"
+        ],
+        "focus": "🎯 記憶口訣：『邏輯斯做分類，Bagging 降變異 Boosting 降偏差，KNN 監督 K-Means 無標！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 04",
+    "category": "主題一：真題陷阱與秒解神器",
+    "title": "混淆指標避坑與假設檢定 p-value / 置信區間秒解",
+    "badge_tag": "強效進階 主題一",
+    "desc": "徹底搞懂 ROC-AUC vs PR-AUC、p-value 統計意義與置信區間 (Confidence Interval)！",
+    "capsules": [
+      "ROC-AUC vs PR-AUC",
+      "p-value < 0.05",
+      "Confidence Interval",
+      "Type I & II Errors"
+    ],
+    "checklist": [
+      "掌握極度不平衡資料 (Imbalanced Data) 下首選 PR-AUC 而非 ROC-AUC 之原因",
+      "理解 p-value < 0.05 的統計學本質：在 H0 為真下出現當前數據之機率小於 5%",
+      "理解 95% 置信區間不包含 0 代表兩組差異達到統計顯著"
+    ],
+    "flow": [
+      "讀取題目指標 ➔ 檢查資料是否不平衡 ➔ 檢查 p-value 與 α 關係 ➔ 秒判結論"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "ROC-AUC vs PR-AUC 在不平衡資料下之對決",
+        "sub": "為何 ROC-AUC 會給予虛高假象？",
+        "type": "table",
+        "headers": [
+          "指標項目",
+          "ROC-AUC (Receiver Operating Characteristic)",
+          "PR-AUC (Precision-Recall)"
+        ],
+        "rows": [
+          [
+            "X 軸與 Y 軸",
+            "X: FPR = FP / (FP + TN), Y: TPR = TP / (TP + FN)",
+            "X: Recall = TP / (TP + FN), Y: Precision = TP / (TP + FP)"
+          ],
+          [
+            "TN (真正陰性) 影響",
+            "極大！當 negative 樣本極多時 (如 99k 筆)，FPR 分母被拉極大，使 FPR 趨近 0",
+            "完全不受 TN 影響！完全聚焦於少數正樣本 Positive 的預測能力"
+          ],
+          [
+            "評估結論",
+            "不平衡資料下分數虛高 (如 0.98)，給予過度樂觀錯覺",
+            "真實反映少數派召回能力，為信用卡詐欺與罕見病首選"
+          ]
+        ],
+        "focus": "💡 考試重點：當正負樣本極度不平衡時 (如 1:99)，ROC-AUC 失去鑑別力，必須使用 PR-AUC！"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "95% 置信區間 (Confidence Interval) 比喻",
+        "type": "analogy",
+        "analogy_title": "🎯 100 次投頭的平均命中範圍 (置信區間)",
+        "analogy_desc": "『95% 置信區間為 [2.5, 8.1]』並不代表『真值有 95% 機率落在這裡』；而是代表『如果你重複做 100 次抽樣實驗，構建出來的 100 個區間中，大約有 95 個會成功包含真實參數』！如果兩組差值的 95% 置信區間不包含 0（例如 [1.2, 4.5]），就代表兩組有顯著差異！",
+        "focus": "🎯 秒記：區間不包含 0 ➔ 顯著差異 (p < 0.05)。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "p-value 與顯著水準 α 的判定法則",
+        "sub": "Reject H0 or Fail to Reject",
+        "type": "compare",
+        "headers": [
+          "比較項目",
+          "p-value < α (通常 α = 0.05)",
+          "p-value ≥ α (通常 α = 0.05)"
+        ],
+        "rows": [
+          [
+            "統計學決策",
+            "拒絕虛無假設 H0 (Reject H0)",
+            "無法拒絕虛無假設 H0 (Fail to reject H0)"
+          ],
+          [
+            "實際業務涵義",
+            "兩組結果存在『統計上之顯著差異』(非隨機巧合)",
+            "無足夠證據證明兩組存在顯著差異 (可能只是隨機抽樣誤差)"
+          ],
+          [
+            "型一錯誤風險",
+            "型一錯誤風險在可接受範圍 α 內",
+            "若硬要宣稱有差異，會犯下型一錯誤 (假陽性)"
+          ]
+        ],
+        "focus": "💡 試題常考：p-value 小於 0.05 代表『拒絕 H0』，承認有顯著差異。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "p-value 判斷代碼邏輯",
+        "sub": "Hypothesis Testing Logic",
+        "type": "code",
+        "code_snippet": "def interpret_p_value(p_val, alpha=0.05):\n    if p_val < alpha:\n        return \"✅ 拒絕 H0：達到統計顯著差異！(Reject H0)\"\n    else:\n        return \"❌ 無法拒絕 H0：無顯著差異！(Fail to Reject H0)\"",
+        "focus": "🔑 關鍵概念：p-value 越小，代表支持 H1 (對立假設) 的證據越強烈。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『當兩組演算法效果差值的 95% 置信區間包含 0 (如 [-0.5, 1.2]) 時，結論為何？』 ➔ 答案：代表兩組無統計顯著差異 (p > 0.05)。",
+          "⚠️ 考題問『為何在垃圾郵件過濾中，Precision 比 Recall 重要？』 ➔ 答案：因為誤把重要郵件抓成垃圾郵件 (FP) 的損失遠大於漏抓垃圾郵件 (FN)。",
+          "⚠️ p-value 的常見誤解 ➔ p-value 不是 H0 為真的機率，而是 H0 為真條件下觀察到當前數據的條件機率 P(Data|H0)。"
+        ],
+        "focus": "💯 秒解原則：看到『不平衡資料』選 PR-AUC；看到『置信區間不含 0』選顯著差異；看到『p < 0.05』選拒絕 H0。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 不平衡首選：PR-AUC 排除 TN 影響，專注少數派",
+          "✅ p 值原則：p < 0.05 ➔ 拒絕 H0 ➔ 顯著差異",
+          "✅ 區間法則：95% 置信區間不含 0 ➔ 顯著差異"
+        ],
+        "focus": "🎯 記憶口訣：『不平衡選 PR-AUC，p 小於零五拒絕 H0，區間不含零顯著！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 05",
+    "category": "主題一：真題陷阱與秒解神器",
+    "title": "台灣 AI 基本法 7 原則、行政院指引 10 條款與歐盟 AI 法案專題",
+    "badge_tag": "強效進階 主題一",
+    "desc": "秒記 AI 法規倫理真題！整合台灣 basic law、行政院 GenAI 指引與歐盟 EU AI Act！",
+    "capsules": [
+      "Taiwan AI Basic Law",
+      "Executive Yuan GenAI Guide",
+      "EU AI Act 4 Tiers",
+      "Copyright & Privacy"
+    ],
+    "checklist": [
+      "掌握台灣《人工智慧基本法》草案 7 大基本原則（永續、人本、風險管理等）",
+      "掌握《行政院使用生成式 AI 參考指引》10 大條款（公務保密、禁止製作機密等）",
+      "精確區分歐盟 EU AI Act 四級風險與禁止事項"
+    ],
+    "flow": [
+      "閱讀法規題目 ➔ 判斷屬台灣基本法 / 行政院指引 / 歐盟法案 ➔ 套用核心條款秒解"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "台灣 AI 基本法草案 7 大原則速查表",
+        "sub": "國家級 AI 治理架構",
+        "type": "table",
+        "headers": [
+          "原則名稱",
+          "核心精神與規範範疇"
+        ],
+        "rows": [
+          [
+            "1. 永續發展與福祉",
+            "以提升人類福祉、促進社會經濟永續發展為目標"
+          ],
+          [
+            "2. 人本價值與自主",
+            "確保人類主體性，維護人性尊嚴與基本人權"
+          ],
+          [
+            "3. 隱私保護與資料治理",
+            "嚴格遵守個人資料保護法，強化資料隱私"
+          ],
+          [
+            "4. 安全性與風險管理",
+            "建立風險分級與安全防護機制，降低 AI 危害"
+          ],
+          [
+            "5. 透明度與可解釋性",
+            "合理揭露 AI 使用情境與決策邏輯 (XAI)"
+          ],
+          [
+            "6. 公平性與非歧視",
+            "防止演算法偏見，確保多元包容與平等待遇"
+          ],
+          [
+            "7. 問責與救濟",
+            "明確 AI 系統開發生產與使用之責任歸屬與救濟管道"
+          ]
+        ],
+        "focus": "💡 考試重點：基本法強調『人本自主』與『風險分級治理』，確保人類主體性。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "公務員使用 GenAI 禁忌",
+        "type": "analogy",
+        "analogy_title": "🚫 公文密件絕對不能丟進 ChatGPT (行政院指引)",
+        "analogy_desc": "《行政院使用生成式 AI 參考指引》就好比公務機關的『資安天條』。規定公務員絕對不能把『機密級以上公文、個人隱私個資』輸入公用生成式 AI（防範資料被模型吸收）；而且 AI 生成的公文草稿，最終必須經過『人類公務員親自核對處置 (Human-in-the-loop)』才生效，AI 絕不能直接代為核決！",
+        "focus": "🎯 秒記：機密資料禁止輸入公用 AI；AI 產出需由人類最終核對與問責。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "行政院 GenAI 指引核心 10 條條文速記",
+        "sub": "公務機關使用規範",
+        "type": "compare",
+        "headers": [
+          "規範領域",
+          "重點禁止與允許事項"
+        ],
+        "rows": [
+          [
+            "機密防護",
+            "⚠️ 嚴禁將機密性、敏感性及個資輸入生成式 AI"
+          ],
+          [
+            "決策問責",
+            "⚠️ 業務處置與公文核決不可完全交由 AI 獨立決定 (需 Human Check)"
+          ],
+          [
+            "採購與維運",
+            "✅ 採購 AI 軟體需揭露資安風險；建議優先採用私有雲/本機部署"
+          ],
+          [
+            "揭露與標註",
+            "✅ 使用 AI 輔助製作之公文或報告，建議適當標註揭露說明"
+          ]
+        ],
+        "focus": "💡 試題常考：公務員得使用 AI 輔助草擬非機密文件，但不得直接作為最終處置依據。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "歐盟 EU AI Act 歐盟法案四級精準秒刷",
+        "sub": "Risk Classification Rule",
+        "type": "code",
+        "code_snippet": "def get_eu_risk_tier(ai_application):\n    if ai_application in ['Social Scoring', 'Subliminal Manipulation', 'Public Realtime Biometrics']:\n        return '❌ Unacceptable (全面禁止)'\n    elif ai_application in ['Medical SaMD', 'HR Resume Screening', 'Credit Scoring', 'Critical Infra']:\n        return '⚠️ High Risk (強制事前合規審計)'\n    elif ai_application in ['Chatbot', 'Deepfake', 'AI Generated Text']:\n        return 'ℹ️ Specific Transparency (必須揭露標籤)'\n    else:\n        return '✅ Minimal Risk (自由發展)'",
+        "focus": "🔑 關鍵劃分：HR 履歷篩選與信貸評估屬『高風險 (High Risk)』；社會信用評分屬『不可接受 (Unacceptable)』。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『依行政院指引，公務人員得否使用生成式 AI 撰寫機密公文？』 ➔ 答案：否！嚴禁輸入機密性與個資。",
+          "⚠️ 著作權爭議 ➔ 純粹由 AI 完全生成之圖片/文章，目前各國通例不享有著作權；但人機協同改作且具原創性者得受保護。",
+          "⚠️ 歐盟 AI 法案對 Deepfake 之要求 ➔ 屬於特定透明度風險，必須明確標示『此內容由 AI 生成』。"
+        ],
+        "focus": "💯 秒解原則：聽到『機密公文』選嚴禁輸入；聽到『信用評分/面部識別』選不可接受；聽到『HR/醫療』選高風險。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 台灣 AI 基本法：7 原則以人本自主與風險治理為核心",
+          "✅ 行政院指引：機密嚴禁輸入；AI 產出需人類最終核對",
+          "✅ 歐盟風險：社會信用 (禁止) ➔ 醫療/HR (高風險) ➔ Chatbot (揭露)"
+        ],
+        "focus": "🎯 記憶口訣：『機密公文禁輸入，人類最終做核對，社會信用嚴禁止，醫療 HR 高風險！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 06",
+    "category": "主題一：真題陷阱與秒解神器",
+    "title": "過擬合與資料洩漏 (Data Leakage) 10 大高難度真題解密",
+    "badge_tag": "強效進階 主題一",
+    "desc": "攻克最高難度考題！透視 10 種隱蔽資料洩漏 (Data Leakage) 與 Overfitting 診斷！",
+    "capsules": [
+      "Temporal Leakage",
+      "Feature Preprocessing Leakage",
+      "Group Leakage",
+      "Overfitting vs Underfitting"
+    ],
+    "checklist": [
+      "掌握時序資料 (Time-series) 誤用隨機 K-Fold 導致未來資訊洩漏給過去",
+      "理解群組資料 (Group Data，如同一病人多張 CT 影像) 切分不當造成之 Group Leakage",
+      "掌握特徵工程 (Imputation, Scaling, Target Encoding) 先 Split 後 Fit 鐵律"
+    ],
+    "flow": [
+      "讀取題目場景 ➔ 檢查 Scaling/Impute 時間點 ➔ 檢查切割是否跨時間/群組 ➔ 判定 Leakage 類別"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "10 大致命資料洩漏 (Data Leakage) 漏洞對照表",
+        "sub": "考試與實務最高頻踩坑點",
+        "type": "table",
+        "headers": [
+          "資料洩漏類型",
+          "錯誤操作行為 (Leakage)",
+          "正確避坑作法"
+        ],
+        "rows": [
+          [
+            "1. 預處理洩漏 (Preprocessing)",
+            "在 train_test_split 前對全體資料做 StandardScaler 或 Imputer",
+            "先 split 切分資料集，Scaler 僅在 train 上 fit，用得到的參數 transform test"
+          ],
+          [
+            "2. 時間序列洩漏 (Temporal)",
+            "對股票/時序資料使用隨機 K-Fold 交叉驗證",
+            "使用 TimeSeriesSplit，保證訓練集時間嚴格早於驗證集 (Past ➔ Future)"
+          ],
+          [
+            "3. 群組/患者洩漏 (Group)",
+            "同一病人的 5 張切片影像被隨機分到 Train 與 Test",
+            "使用 GroupKFold，確保同一病人的所有資料完全在 Train 或完全在 Test"
+          ],
+          [
+            "4. 標籤資訊洩漏 (Target)",
+            "包含了預測事件發生後才產生的欄位 (如用『退款單號』預測『是否退款』)",
+            "審計特徵時間點，嚴禁加入事件發生後才可取得之特徵"
+          ],
+          [
+            "5. SMOTE 採樣洩漏 (Sampling)",
+            "對包含 Test 在內的全體資料做 SMOTE 增採樣",
+            "僅對 Train 折做 SMOTE 採樣，使用 imblearn.pipeline.Pipeline 封裝"
+          ]
+        ],
+        "focus": "💡 考試重點：只要在切分 Train/Test 之前計算了全體資料的統計量 (Mean, Std, Median, Target Mean)，即構成資料洩漏！"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "患者切片群組洩漏 (Group Leakage)",
+        "type": "analogy",
+        "analogy_title": "🩺 拿同一個學生的隨堂測驗題目考期末考 (Group Leakage)",
+        "analogy_desc": "假設小明寫了 10 頁練習題。如果你把第 1~8 頁放訓練集，第 9~10 頁放測試集（隨機切分），模型其實不是學會了診斷疾病，而是『記住了小明個人的獨特筆跡與習慣』！正確做法是拿小明的 10 頁全部做訓練集，拿小華的 10 頁做測試集 (GroupKFold)！",
+        "focus": "🎯 秒記：相同 Subject / Patient 的所有樣本必須綁定在同一資料集。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "過擬合 (Overfitting) vs 欠擬合 (Underfitting) 診斷對照",
+        "sub": "Train Error vs Test Error 曲線",
+        "type": "compare",
+        "headers": [
+          "診斷狀態",
+          "訓練集誤差 (Train Error)",
+          "測試集誤差 (Test Error)",
+          "主要解法策略"
+        ],
+        "rows": [
+          [
+            "欠擬合 (Underfitting)",
+            "高 (High Bias)",
+            "高 ( High Bias)",
+            "增加模型複雜度 (加深層數)、增加特徵、減少正則化 (降低 L1/L2)"
+          ],
+          [
+            "過擬合 (Overfitting)",
+            "極低 (Low Bias)",
+            "高 (High Variance，兩者差距大)",
+            "增加訓練資料、加強正則化 (L1/L2)、Dropout、Early Stopping、特徵選擇"
+          ],
+          [
+            "完美擬合 (Good Fit)",
+            "低",
+            "低 (與 Train 誤差接近)",
+            "保持現狀，準備部署"
+          ]
+        ],
+        "focus": "💡 試題常考：訓練集表現極佳，但測試集表現暴跌 ➔ 高變異數 (High Variance) ＝ Overfitting。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "防洩漏標準程式碼範例",
+        "sub": "Scikit-Learn Pipeline Solution",
+        "type": "code",
+        "code_snippet": "from sklearn.model_selection import GroupKFold, TimeSeriesSplit\nfrom sklearn.pipeline import Pipeline\n\n# 1. 時間序列防洩漏\ntss = TimeSeriesSplit(n_splits=5) # 嚴格 Past -> Future!\n\n# 2. 病人/群組防洩漏\ngkf = GroupKFold(n_splits=5)\nfor train_idx, test_idx in gkf.split(X, y, groups=patient_ids):\n    X_tr, X_te = X[train_idx], X[test_idx]\n\n# 3. 預處理防洩漏 Pipeline\npipe = Pipeline([('scaler', StandardScaler()), ('model', Ridge())])\npipe.fit(X_tr, y_tr) # 僅用 X_tr fit Scaler!",
+        "focus": "🔑 關鍵規則：`Pipeline` 內部自動保證各 Fold 驗證折不被 fit 洩漏。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『股票價格預測中，模型訓練準確率 99%，但上線後表現極差，最可能原因？』 ➔ 答案：錯用隨機 K-Fold 造成時間序列資料洩漏 (Temporal Leakage)。",
+          "⚠️ 考題問『如何降低模型的 Variance (變異數)？』 ➔ 答案：增加數據量、增加正則化懲罰 λ、簡化模型結構 (減少層數/樹深度)。",
+          "⚠️ 考題問『標籤編碼 (Target Encoding) 何時會造成 Data Leakage？』 ➔ 答案：若直接用全體資料的 y 計算 Target Mean，測試集便洩漏了答案。"
+        ],
+        "focus": "💯 秒解原則：聽到『訓練好上線差』選 Overfitting / Data Leakage；聽到『時序切割』選 TimeSeriesSplit；聽到『病人多切片』選 GroupKFold。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 鐵律一：先 Split 再 Fit，預處理統計量絕不上移至 Test",
+          "✅ 鐵律二：時序用 TimeSeriesSplit；病人多切片用 GroupKFold",
+          "✅ 診斷技巧：Train 好 Test 差 ➔ Overfitting (High Variance) ➔ 加正則化"
+        ],
+        "focus": "🎯 記憶口訣：『先 Split 後 Fit 絕不漏，時序 Time 系列，病人 Group 綁， Train 好 Test 差過擬合！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 07",
+    "category": "主題二：高頻專有名詞與縮寫",
+    "title": "GenAI & LLM 核心術語大辭典 (PEFT, LoRA, RLHF, DPO, RAG, HyDE)",
+    "badge_tag": "強效進階 主題二",
+    "desc": "打通生成式 AI 最常考縮寫！一口氣掌握微調、對齊與高級 RAG 專有名詞！",
+    "capsules": [
+      "PEFT / LoRA / QLoRA",
+      "SFT / RLHF / DPO",
+      "RAG / HyDE / GraphRAG",
+      "CoT / ReAct / Tool Use"
+    ],
+    "checklist": [
+      "掌握 PEFT (低算力微調)、LoRA (低秩適應) 與 QLoRA (4-bit 量化) 關係",
+      "區分 SFT (監督微調)、RLHF (人類偏好強化學習) 與 DPO (直接偏好優化)",
+      "掌握 RAG (檢索增強生成)、HyDE (假想文件) 與 CoT / ReAct 提示框架"
+    ],
+    "flow": [
+      "Pre-training ➔ SFT (監督微調) ➔ RLHF/DPO (對齊) ➔ RAG / Agent (推理與檢索)"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "GenAI & LLM 核心縮寫對照一覽表",
+        "sub": "模型微調與對齊全家族",
+        "type": "table",
+        "headers": [
+          "英文縮寫",
+          "全稱 (Full Name)",
+          "核心定義與用途",
+          "考試重點與關鍵字"
+        ],
+        "rows": [
+          [
+            "PEFT",
+            "Parameter-Efficient Fine-Tuning",
+            "參數高效微調總稱",
+            "凍結多數權重，僅微調 0.1% 參數"
+          ],
+          [
+            "LoRA",
+            "Low-Rank Adaptation",
+            "低秩適應微調",
+            "外掛低秩矩陣 $A \\times B$，顯存需求暴降 90%"
+          ],
+          [
+            "QLoRA",
+            "Quantized LoRA",
+            "4-bit 量化低秩微調",
+            "NF4 量化與雙量化，消費級 GPU 微調"
+          ],
+          [
+            "SFT",
+            "Supervised Fine-Tuning",
+            "監督式指令微調",
+            "利用 (Prompt, Response) 數對對齊指令"
+          ],
+          [
+            "RLHF",
+            "Reinforcement Learning from Human Feedback",
+            "人類反饋強化學習",
+            "利用 PPO 演算法與獎勵模型 (Reward Model) 對齊安全與拒答"
+          ],
+          [
+            "DPO",
+            "Direct Preference Optimization",
+            "直接偏好優化",
+            "無需獎勵模型，直接在偏好數據上優化，比 RLHF 更穩定"
+          ]
+        ],
+        "focus": "💡 考試重點：DPO (Direct Preference Optimization) 為近年替代傳統 RLHF 複雜 PPO 訓練的主流演算法。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "LLM 養成四階段比喻",
+        "type": "analogy",
+        "analogy_title": "🎓 通才學生 (Pre-train) ➔ 專業實習 (SFT) ➔ 禮儀與倫理 (RLHF/DPO)",
+        "analogy_desc": "大語言模型的養成：1. 預訓練 (Pre-training) 就好比讀完億萬本書的博學學生；2. 監督微調 (SFT) 就好比進入醫學院做實習醫師，學會『問一答一』的問答格式；3. 人類對齊 (RLHF / DPO) 就好比學習醫師倫理，學會拒絕開立毒藥處方（拒答安全與不有害）！",
+        "focus": "🎯 秒記：Pre-train 給知識 ➔ SFT 給格式 ➔ RLHF/DPO 給無害倫理。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "RAG 與 Agent 核心技術名詞對照",
+        "sub": "RAG vs HyDE vs CoT vs ReAct",
+        "type": "compare",
+        "headers": [
+          "縮寫/術語",
+          "全稱 / 定義",
+          "核心功能與機制"
+        ],
+        "rows": [
+          [
+            "RAG",
+            "Retrieval-Augmented Generation",
+            "檢索外部向量庫補充上下文，解決 LLM 幻覺與過期問題"
+          ],
+          [
+            "HyDE",
+            "Hypothetical Document Embeddings",
+            "先讓 LLM 生成假想解答草稿，再拿草稿去向量庫比對真實文件"
+          ],
+          [
+            "CoT",
+            "Chain of Thought (思維鏈)",
+            "提示 LLM『Step by Step 逐步思考』，顯著提升複雜數學與邏輯推理能力"
+          ],
+          [
+            "ReAct",
+            "Reasoning + Acting (推理與行動)",
+            "將 Thought 思考 ➔ Action 工具調用 ➔ Observation 觀察結果組合成 Agent 迴圈"
+          ]
+        ],
+        "focus": "💡 試題常考：ReAct 框架讓 LLM 具備『思考 ➔ 呼叫外部 API ➔ 讀取結果 ➔ 再思考』的 Agent 能力。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "核心技術定義代碼化結構",
+        "sub": "LLM Tech Taxonomy",
+        "type": "code",
+        "code_snippet": "LLM_Taxonomy = {\n    'Alignment': ['SFT (Supervised)', 'RLHF (PPO + Reward Model)', 'DPO (Direct)'],\n    'Efficient_FT': ['PEFT', 'LoRA (Low-Rank A*B)', 'QLoRA (4-bit NF4)'],\n    'RAG_Advanced': ['HyDE (Hypothetical Doc)', 'Cross-Encoder Re-ranker'],\n    'Prompt_Eng': ['Zero-Shot', 'Few-Shot', 'CoT (Chain of Thought)', 'ReAct (Reason+Act)']\n}",
+        "focus": "🔑 關鍵速記：一圖掌握微調、對齊、RAG 與提示詞四大體系。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『何種技術能在不安裝獎勵模型 (Reward Model) 下，直接對齊人類偏好？』 ➔ 答案：DPO (Direct Preference Optimization)。",
+          "⚠️ 考題問『提示詞中加入 \"Let's think step by step\" 屬於何種技術？』 ➔ 答案：Zero-Shot Chain of Thought (CoT 思維鏈)。",
+          "⚠️ QLoRA 特性 ➔ 使用 NF4 (NormalFloat4) 4-bit 數據型態量化基底模型權重。"
+        ],
+        "focus": "💯 秒解原則：聽到『免獎勵模型偏好對齊』選 DPO；聽到『逐步思考』選 CoT；聽到『推理+行動工具』選 ReAct。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 微調對齊：PEFT/LoRA (低算力) ➔ SFT (指令) ➔ DPO (無獎勵模型對齊)",
+          "✅ 高級 RAG：HyDE (假想草稿檢索) + Cross-Encoder (重排序)",
+          "✅ 提示與 Agent：CoT (逐步思考) + ReAct (思考+工具行動)"
+        ],
+        "focus": "🎯 記憶口訣：『LoRA 低秩省顯存，DPO 免獎勵模型，CoT 逐步思維鏈，ReAct 工具帶行動！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 08",
+    "category": "主題二：高頻專有名詞與縮寫",
+    "title": "ML & DL 演算法與數學縮寫全集 (CNN, ViT, XGBoost, SVM, PCA, SVD)",
+    "badge_tag": "強效進階 主題二",
+    "desc": "打通機器學習與深度學習最常考縮寫！演算法與數學底層術語一網打盡！",
+    "capsules": [
+      "CNN / RNN / ViT",
+      "GBDT / XGBoost / LightGBM",
+      "SVM / RBF / KNN",
+      "PCA / SVD / Eigen"
+    ],
+    "checklist": [
+      "掌握 CNN (卷積)、RNN (循環)、ViT (Vision Transformer) 影像與序列架構",
+      "掌握 GBDT、XGBoost、LightGBM、CatBoost 梯度提升樹全家族",
+      "掌握 SVM (支持向量機)、RBF 核、PCA (主成分分析) 與 SVD (奇異值分解)"
+    ],
+    "flow": [
+      "資料型態判斷 ➔ 選擇 ML (XGBoost/SVM) 或 DL (CNN/ViT) ➔ 選擇數學工具 (PCA/SVD)"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "深度學習與影像/序列網路縮寫全覽表",
+        "sub": "CNN ➔ RNN ➔ Transformer ➔ ViT",
+        "type": "table",
+        "headers": [
+          "英文縮寫",
+          "全稱 (Full Name)",
+          "核心技術機制",
+          "典型應用場景"
+        ],
+        "rows": [
+          [
+            "CNN",
+            "Convolutional Neural Network",
+            "卷積核 (Kernel) 提取局部空間特徵 (權重共享)",
+            "圖像分類、物件檢測 (YOLO, ResNet)"
+          ],
+          [
+            "RNN",
+            "Recurrent Neural Network",
+            "隱藏狀態 (Hidden State) 傳遞時序序列資訊",
+            "時間序列預測、傳統語音處理"
+          ],
+          [
+            "LSTM",
+            "Long Short-Term Memory",
+            "遺忘門 (Forget Gate)、輸入門、輸出門解決梯度消失",
+            "長序列 NLP、文本處理"
+          ],
+          [
+            "ViT",
+            "Vision Transformer",
+            "將圖像切割為 Patch 塊，視為 Token 輸入 Transformer",
+            "SOTA 圖像分類與多模態模型"
+          ]
+        ],
+        "focus": "💡 考試重點：ViT (Vision Transformer) 將圖像切成 16x16 的 Image Patches 當作 Token 輸入 Self-Attention。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "CNN 放大鏡 vs ViT 全景拼圖比喻",
+        "type": "analogy",
+        "analogy_title": "🔍 滑動放大鏡掃描 (CNN) vs 全圖拼圖塊同時注意力 (ViT)",
+        "analogy_desc": "CNN (卷積神經網路) 就好比拿著一柄 3x3 的小放大鏡（卷積核）在圖片上一格一格滑動掃描，只看局部邊緣與特徵；而 ViT 就好比把整張照片剪成 16 塊拼圖 (Patches)，讓 AI 同時看著所有拼圖塊，並用 Self-Attention 算出拼圖塊與拼圖塊之間的全局關聯！",
+        "focus": "🎯 秒記：CNN 擅長『局部歸納偏置 (Inductive Bias)』；ViT 需要巨量數據訓練以學習『全景注意力』。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "機器學習與數學降維縮寫對照",
+        "sub": "GBDT vs SVM vs PCA vs SVD",
+        "type": "compare",
+        "headers": [
+          "縮寫",
+          "全稱",
+          "核心定義與用途"
+        ],
+        "rows": [
+          [
+            "GBDT",
+            "Gradient Boosting Decision Tree",
+            "梯度提升決策樹，每一棵樹擬合前一棵樹的殘差 (Residual)"
+          ],
+          [
+            "SVM",
+            "Support Vector Machine",
+            "支持向量機，尋找最大邊界超平面 (Margin)，配合 Kernel 降/升維"
+          ],
+          [
+            "PCA",
+            "Principal Component Analysis",
+            "主成分分析，正交投影最大化變異數 (Variance) 進行無監督降維"
+          ],
+          [
+            "SVD",
+            "Singular Value Decomposition",
+            "奇異值分解，$A = U \\Sigma V^T$，適用於任意矩陣降維與推薦系統"
+          ]
+        ],
+        "focus": "💡 試題常考：PCA 僅適用於方陣特徵分解；SVD 適用於任意矩陣 ($M \\times N$) 的奇異值分解。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "演算法與模型全景樹代碼",
+        "sub": "Model Taxonomy",
+        "type": "code",
+        "code_snippet": "ML_DL_Taxonomy = {\n    'CV_Models': ['CNN (ResNet, U-Net)', 'YOLO (v5/v8)', 'ViT (Patches)'],\n    'Tree_Ensemble': ['RF (Bagging)', 'GBDT (Boosting)', 'XGBoost', 'LightGBM'],\n    'Linear_Kernel': ['Linear Reg', 'Logistic Reg', 'SVM (RBF Kernel)'],\n    'Math_Decomp': ['PCA (Variance)', 'SVD (Matrix Factorization)']\n}",
+        "focus": "🔑 關鍵概念：表格數據優先選 Tree Ensemble (XGBoost/LGBM)；圖像選 CNN/ViT。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『ViT (Vision Transformer) 如何將 2D 圖像轉為 1D 序列輸入？』 ➔ 答案：將圖像分割成平坦化 (Flattened) 的 2D Patches 向量並加上位置編碼 (Positional Embedding)。",
+          "⚠️ 考題問『GBDT (梯度提升樹) 的每一棵新樹在擬合什麼？』 ➔ 答案：擬合上一輪模型累積的負梯度 / 殘差 (Residual)。",
+          "⚠️ SVM 中的 RBF (高斯核) 核心參數 ➔ Gamma (掌控單一樣本影響範圍) 與 C (懲罰係數)。"
+        ],
+        "focus": "💯 秒解原則：聽到『圖像切 Patch 當 Token』選 ViT；聽到『擬合殘差』選 GBDT/XGBoost；聽到『最大 Margin』選 SVM。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 視覺進化：CNN (局部卷積) ➔ ViT (圖像切 Patch 全局注意力)",
+          "✅ 集成提升：GBDT / XGBoost 逐棵樹擬合前樹殘差",
+          "✅ 降維工具：PCA (最大變異數正交) vs SVD (非方陣奇異值分解)"
+        ],
+        "focus": "🎯 記憶口訣：『CNN 局部卷積掃，ViT 切塊 Patch 算，GBDT 擬合殘差，SVD 解非方陣！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 09",
+    "category": "主題二：高頻專有名詞與縮寫",
+    "title": "大數據與 MLOps 縮寫全集 (ETL, ELT, HDFS, RDD, DAG, CAP, Parquet)",
+    "badge_tag": "強效進階 主題二",
+    "desc": "打通大數據工程與 MLOps 最常考縮寫！資料管道、分散式與運算術語速查！",
+    "capsules": [
+      "ETL / ELT / Feature Store",
+      "HDFS / NameNode / DataNode",
+      "Spark RDD / DAG / Catalyst",
+      "CAP / Parquet / NoSQL"
+    ],
+    "checklist": [
+      "掌握 ETL (傳統轉換載入) 與 ELT (雲端載入後轉換) 之演進",
+      "掌握 HDFS (分散式檔案系統)、NameNode (元數據) 與 DataNode (區塊塊)",
+      "掌握 Spark RDD (彈性分散式資料集)、DAG (有向無環圖) 與 CAP 定理"
+    ],
+    "flow": [
+      "Data Ingestion ➔ HDFS/S3 Storage (ELT) ➔ Spark DAG Execution (Tungsten) ➔ MLOps Registry"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "大數據與分散式工程縮寫全覽表",
+        "sub": "Data Engineering & Storage",
+        "type": "table",
+        "headers": [
+          "英文縮寫",
+          "全稱 (Full Name)",
+          "核心定義與用途",
+          "考試重點與關鍵字"
+        ],
+        "rows": [
+          [
+            "ETL",
+            "Extract, Transform, Load",
+            "傳統數據管道：提取 ➔ 轉換 ➔ 載入倉儲",
+            "轉換發生於獨立 ETL 伺服器，不留 Raw Data"
+          ],
+          [
+            "ELT",
+            "Extract, Load, Transform",
+            "雲端數據管道：提取 ➔ 載入資料湖 ➔ 彈性轉換",
+            "先載入原始 RAW Data 到 S3/BigQuery，後續隨需轉換"
+          ],
+          [
+            "HDFS",
+            "Hadoop Distributed File System",
+            "Hadoop 分散式檔案系統",
+            "NameNode (存目錄 Metadata) + DataNode (存 Block, 副本=3)"
+          ],
+          [
+            "RDD",
+            "Resilient Distributed Dataset",
+            "Spark 彈性分散式資料集",
+            "Spark 最底層抽象，具備不可變性與 Lineage 容錯"
+          ],
+          [
+            "DAG",
+            "Directed Acyclic Graph",
+            "有向無環圖",
+            "Spark 與 Airflow 用於定義任務執行依賴順序，無死循環"
+          ]
+        ],
+        "focus": "💡 考試重點：Spark 的惰性求值 (Lazy Evaluation) 能建立完整 DAG，再交由 Catalyst 優化器執行。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "CAP 定理三角形比喻",
+        "type": "analogy",
+        "analogy_title": "🔺 魚與熊掌不可兼得的 CAP 三角形",
+        "analogy_desc": "CAP 定理指出分散式資料庫在 Consistency (強一致性，讀到的都是最新資料)、Availability (高可用性，隨時保證響應不報錯)、Partition Tolerance (網路分區容忍性，斷網時系統不崩潰) 這三者中，『最多只能同時滿足兩者！』因為網路斷線 (P) 必然發生，分散式資料庫只能在 CP (犧牲可用性保數據正確) 與 AP (犧牲一致性保系統不中斷) 之間做二選一！",
+        "focus": "🎯 秒記：P (分區容忍) 必須具備 ➔ 只能選擇 CP (如 HBase, MongoDB) 或 AP (如 Cassandra)。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "MLOps 與模型維運縮寫對照",
+        "sub": "CI / CD / CT & Feature Store",
+        "type": "compare",
+        "headers": [
+          "縮寫",
+          "全稱",
+          "核心定義與特徵"
+        ],
+        "rows": [
+          [
+            "CI",
+            "Continuous Integration",
+            "持續整合：自動進行代碼語法檢查、單元測試 (PyTest) 與 Schema 驗證"
+          ],
+          [
+            "CD",
+            "Continuous Deployment",
+            "持續部署：自動將模型封裝為 Docker 容器並部署至 K8s 產線 API"
+          ],
+          [
+            "CT",
+            "Continuous Training",
+            "持續訓練：MLOps 特有！監控到數據漂移 (Data Drift) 時自動重新訓練模型"
+          ],
+          [
+            "Feature Store",
+            "Centralized Feature Repository",
+            "中央特徵庫 (如 Feast)，消除線上與離線特徵不一致 (Training-Serving Skew)"
+          ]
+        ],
+        "focus": "💡 試題常考：CT (Continuous Training) 是 MLOps 相較於傳統 DevOps 最具代表性的核心自動化能力。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "大數據管道架構清單代碼",
+        "sub": "Data Stack Architecture",
+        "type": "code",
+        "code_snippet": "BigData_MLOps_Stack = {\n    'Storage': ['HDFS (Block 128MB, Rep=3)', 'Data Lake (S3 Schema-on-Read)', 'Parquet (Columnar)'],\n    'Compute': ['Apache Spark (In-Memory, RDD, DAG)', 'Catalyst Optimizer'],\n    'MLOps': ['CI (Code test)', 'CD (Docker/K8s)', 'CT (Auto-retrain)', 'Feature Store (Feast)']\n}",
+        "focus": "🔑 關鍵概念：Parquet 是列式儲存 (Columnar) 適合 OLAP 查詢；HDFS block 預設 128MB。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『CAP 定理中，傳統 RDBMS (如 MySQL) 與分散式 NoSQL (如 Cassandra) 分別屬於？』 ➔ 答案：MySQL 屬於 CA (單機強一致與可用)；Cassandra 屬於 AP (分散式高可用與分區容忍)。",
+          "⚠️ 考題問『Spark 中何種組件負責將 SQL / DataFrame 查詢轉化為最佳化執行計劃？』 ➔ 答案：Catalyst Optimizer (催化劑優化器)。",
+          "⚠️ 消除 Training-Serving Skew ➔ 使用 Feature Store 統一管理特徵定義。"
+        ],
+        "focus": "💯 秒解原則：聽到『分散式只能三選二』選 CAP 定理；聽到『Spark 查詢優化器』選 Catalyst；聽到『自動重新訓練』選 CT。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 管道演進：ETL (傳統硬轉) ➔ ELT (雲端存 RAW 彈性轉)",
+          "✅ CAP 定理：Consistency, Availability, Partition 只能三選二 (CP 或 AP)",
+          "✅ MLOps 三柱：CI (整合測試) + CD (容器部署) + CT (自動持續重訓)"
+        ],
+        "focus": "🎯 記憶口訣：『ELT 先存 RAW 資料，CAP 三者選其二，MLOps 自動重訓練看 CT！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 10",
+    "category": "主題二：高頻專有名詞與縮寫",
+    "title": "資安、倫理與合規專業縮寫全集 (PII, DLP, XAI, SHAP, LIME, DP, FL)",
+    "badge_tag": "強效進階 主題二",
+    "desc": "打通 AI 安全防護、去識別化與合規最常考縮寫！安全與倫理術語總整理！",
+    "capsules": [
+      "PII & SPII & DLP",
+      "XAI / SHAP / LIME",
+      "k-Anonymity & DP",
+      "FL (Federated Learning)"
+    ],
+    "checklist": [
+      "掌握 PII (個人可識別資訊)、SPII (敏感 PII) 與 DLP (資料外洩防護)",
+      "掌握 XAI (可解釋性 AI)、SHAP (Shapley 加性值) 與 LIME (局部替代模型)",
+      "掌握 DP (差分隱私)、FL (聯邦學習) 與 EU AI Act"
+    ],
+    "flow": [
+      "PII Detection ➔ Masking/DLP ➔ Differential Privacy / FL Training ➔ SHAP/XAI Audit"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "資安與資產防護縮寫全覽表",
+        "sub": "PII / SPII / DLP / Masking",
+        "type": "table",
+        "headers": [
+          "英文縮寫",
+          "全稱 (Full Name)",
+          "核心定義與保護標的",
+          "考試重點與關鍵字"
+        ],
+        "rows": [
+          [
+            "PII",
+            "Personally Identifiable Information",
+            "個人可辨識資訊 (姓名、身分證號、電話、Email)",
+            "必須進行 Masking 去識別化才能傳輸或訓練"
+          ],
+          [
+            "SPII",
+            "Sensitive PII",
+            "敏感個人可辨識資訊 (病歷、基因、宗教、性傾向、犯罪紀錄)",
+            "極高法律保護等級，原則上嚴禁搜集與傳輸"
+          ],
+          [
+            "DLP",
+            "Data Loss Prevention",
+            "資料防洩漏系統",
+            "在 Enterprise Gateway 層監控與封鎖 PII 外傳至公用 LLM"
+          ],
+          [
+            "Masking",
+            "Data Masking / Anonymization",
+            "資料遮蔽 / 匿名化",
+            "將身分證號轉為 A123***789 或使用 Hash 雜湊處理"
+          ]
+        ],
+        "focus": "💡 考試重點：影子 AI (Shadow AI) 治理的核心就是在 Gateway 端設置 DLP 進行 PII Masking。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "SHAP vs LIME 的法醫與特約偵探比喻",
+        "type": "analogy",
+        "analogy_title": "🔬 嚴謹法醫報告 (SHAP) vs 現場特約偵探 (LIME)",
+        "analogy_desc": "可解釋性 AI (XAI) 中：SHAP 就好比國家級嚴謹法醫報告，基於賽局理論計算每個變數的邊際貢獻（Shapley 值），結果 100% 一致且全域/局部皆適用（加性特徵）；LIME 就好比現場特約偵探，只在特定案發現場（單一樣本點周圍）畫一個小範圍做局部線性逼近，快速給出解釋，但換個現場可能結論微變！",
+        "focus": "🎯 秒記：SHAP 具備『賽局理論與全域一致性』；LIME 專注於『單一點的局部線性逼近』。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "隱私保護與合規縮寫對照",
+        "sub": "DP vs FL vs XAI",
+        "type": "compare",
+        "headers": [
+          "縮寫",
+          "全稱",
+          "核心定義與保護機制"
+        ],
+        "rows": [
+          [
+            "DP",
+            "Differential Privacy (差分隱私)",
+            "在查詢結果或梯度中注入控制好的拉普拉斯/高斯數學雜訊 (Noise)，保護個體隱私"
+          ],
+          [
+            "FL",
+            "Federated Learning (聯邦學習)",
+            "『數據不動模型動 (Data Stays Local)』，分散式本機訓練，僅上傳加密梯度做 FedAvg 聚合"
+          ],
+          [
+            "XAI",
+            "Explainable Artificial Intelligence",
+            "可解釋性 AI 總稱，打破黑盒 (Black-box) 模型，提供決策透明度與信任"
+          ]
+        ],
+        "focus": "💡 試題常考：差分隱私 (DP) 中的 Epsilon (ε) 代表隱私預算，ε 越小保護越嚴格但雜訊越大。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "資安倫理架構清單代碼",
+        "sub": "Security & Ethics Taxonomy",
+        "type": "code",
+        "code_snippet": "Security_Ethics_Taxonomy = {\n    'Data_Protection': ['PII Masking', 'SPII Encryption', 'DLP Gateway', 'k-Anonymity'],\n    'Privacy_Tech': ['Differential Privacy (Laplace Noise, Epsilon)', 'Federated Learning (FedAvg)'],\n    'XAI_Tools': ['SHAP (Shapley Values, TreeSHAP)', 'LIME (Local Surrogate)'],\n    'Compliance': ['EU AI Act (4 Tiers)', 'NIST AI RMF (Govern/Map/Measure/Manage)']\n}",
+        "focus": "🔑 關鍵概念：聯邦學習保數據不離本機；差分隱私注入數學雜訊；SHAP 提供可加性特徵歸因。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『何者屬於敏感個人可識別資訊 (SPII)？』 ➔ 答案：病歷醫療紀錄、基因資訊、犯罪紀錄 (比普通 PII 更嚴格)。",
+          "⚠️ 考題問『SHAP (Shapley Additive exPlanations) 的基礎理論來源為何？』 ➔ 答案：合作賽局理論 (Cooperative Game Theory)。",
+          "⚠️ 聯邦學習 (Federated Learning) 的聚合演算法 ➔ FedAvg (Federated Averaging，將各客戶端權重按樣本數加權平均)。"
+        ],
+        "focus": "💯 秒解原則：聽到『賽局理論』選 SHAP；聽到『數據留在本地』選 聯邦學習 (FL)；聽到『注入數學雜訊』選 差分隱私 (DP)。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 資安護欄：PII / SPII 需經 DLP 遮蔽；影子 AI 需由 Enterprise Gateway 控管",
+          "✅ 隱私雙雄：差分隱私 DP (注入 Laplace 雜訊) + 聯邦學習 FL (數據不動模型動)",
+          "✅ XAI 對決：SHAP (賽局理論/全域局部/加性) vs LIME (局部線性逼近)"
+        ],
+        "focus": "🎯 記憶口訣：『PII 遮蔽防外洩，DP 注入數學噪，FL 數據留在地，SHAP 基於賽局論！』"
+      }
+    ]
+  }
+]

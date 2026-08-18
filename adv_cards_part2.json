@@ -1,0 +1,1329 @@
+[
+  {
+    "id": "ADV-CARD 11",
+    "category": "主題二：高頻專有名詞與縮寫",
+    "title": "深度學習網路架構與優化器縮寫 (ResNet, YOLO, U-Net, CLIP, AdamW)",
+    "badge_tag": "強效進階 主題二",
+    "desc": "打通 CV、多模態與優化器核心縮寫！視覺神經網路與優化器全解析！",
+    "capsules": [
+      "ResNet & Skip-Connection",
+      "YOLO (v5~v8) & Bounding Box",
+      "U-Net & Segmentation",
+      "AdamW & Cosine Annealing"
+    ],
+    "checklist": [
+      "掌握 ResNet (殘差網路)、YOLO (單階段物件檢測) 與 U-Net (醫學圖像分割)",
+      "掌握 CLIP (對比圖文預訓練) 與 SAM (Segment Anything Model)",
+      "掌握 AdamW (權重衰減解耦優化器) 與 Cosine Annealing 學習率退火"
+    ],
+    "flow": [
+      "Input Image/Text ➔ Backbone (ResNet/ViT) ➔ Task Head (YOLO/U-Net) ➔ Optimizer (AdamW)"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "視覺與多模態模型縮寫全覽表",
+        "sub": "ResNet ➔ YOLO ➔ U-Net ➔ CLIP",
+        "type": "table",
+        "headers": [
+          "模型縮寫",
+          "全稱 (Full Name)",
+          "核心結構特色",
+          "經典應用場景"
+        ],
+        "rows": [
+          [
+            "ResNet",
+            "Residual Network",
+            "引入 Skip Connection 捷徑連接，$H(x)=F(x)+x$",
+            "破解 100+ 深度神經網路梯度消失/退化"
+          ],
+          [
+            "YOLO",
+            "You Only Look Once",
+            "One-Stage 單階段物體檢測，單次前向傳播預測 Box",
+            "自動駕駛、工廠即時瑕疵檢測 (高 FPS)"
+          ],
+          [
+            "U-Net",
+            "U-Shaped Network",
+            "U 型對稱編碼-解碼器 + Skip Connections 結合跨層特徵",
+            "生醫影像像素級分割 (Medical Segmentation)"
+          ],
+          [
+            "CLIP",
+            "Contrastive Language-Image Pre-training",
+            "雙塔 Image/Text Encoder，對比學習共同語意空間",
+            "Zero-Shot 圖像分類、Stable Diffusion 文字引導"
+          ]
+        ],
+        "focus": "💡 考試重點：U-Net 的特徵在於 U 型對稱架構與 Skip Connections，常用於生醫圖像語意分割。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "AdamW 權重衰減解耦比喻",
+        "type": "analogy",
+        "analogy_title": "🏋️ 健身減脂 (AdamW Weight Decay)",
+        "analogy_desc": "標準 Adam 在計算權重衰減 (Weight Decay) 時，把肌肉與脂肪放在一起秤重（將 L2 梯度與原始梯度混合除以二階矩），導致權重較大的維度『減脂效果差』；而 AdamW (Weight Decay 解耦) 就好比精準減脂，將權重衰減獨立出來直接從權重 w 中扣除，模型泛化能力大幅提升！",
+        "focus": "🎯 秒記：AdamW 將 Weight Decay 與梯度更新解耦，是大模型 (LLM/ViT) 訓練標配。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "常用優化器縮寫速查",
+        "sub": "SGD ➔ Momentum ➔ RMSprop ➔ Adam ➔ AdamW",
+        "type": "compare",
+        "headers": [
+          "優化器",
+          "全稱 / 核心機制",
+          "特徵與適用場景"
+        ],
+        "rows": [
+          [
+            "SGD",
+            "Stochastic Gradient Descent",
+            "隨機梯度下降，單樣本/Mini-batch 計算，易在鞍點震盪"
+          ],
+          [
+            "Momentum",
+            "Momentum Acceleration",
+            "引入一階物理慣性，加速穿越鞍點 (Saddle Point) 與窄谷"
+          ],
+          [
+            "RMSprop",
+            "Root Mean Square Propagation",
+            "自適應學習率，除以二階梯度的指數移動平均，適合 RNN"
+          ],
+          [
+            "AdamW",
+            "Adam with Decoupled Weight Decay",
+            "結合一階矩與二階矩，並解耦 Weight Decay，SOTA 大模型首選"
+          ]
+        ],
+        "focus": "💡 試題常考：AdamW 解決了標準 Adam 中 L2 正則化與自適應學習率相互干擾的痛點。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "模型與優化器範例代碼",
+        "sub": "Model & Optimizer Code",
+        "type": "code",
+        "code_snippet": "import torch.nn as nn\nimport torch.optim as optim\n\n# 1. 視覺模型建立 (ResNet / U-Net)\nmodel = torchvision.models.resnet50(pretrained=True)\n\n# 2. AdamW 優化器 + 餘弦退火退火 (Cosine Annealing)\noptimizer = optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-2)\nscheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=50)",
+        "focus": "🔑 關鍵概念：ResNet 解決過深梯度消失；YOLO 保證即時性；AdamW 保證收斂泛化。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『何種圖像分割模型採用 U 型編碼解碼架構與捷徑連接？』 ➔ 答案：U-Net。",
+          "⚠️ 考題問『CLIP 模型如何達成 Zero-Shot 分類？』 ➔ 答案：計算圖像向量與文字 Prompt 向量 (如 \"a photo of a dog\") 之餘弦相似度。",
+          "⚠️ YOLO (v5/v8) 的核心優勢 ➔ 將物體檢測轉為單一迴歸問題，推論速度可達影格即時性 (Real-time FPS)。"
+        ],
+        "focus": "💯 秒解原則：聽到『U 型醫學分割』選 U-Net；聽到『即時物體檢測』選 YOLO；聽到『圖文對比學習』選 CLIP。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 視覺三雄：ResNet (殘差保底) + YOLO (即時檢測) + U-Net (醫學分割)",
+          "✅ 多模態：CLIP 雙塔對比學習，解鎖 Zero-Shot 圖像分類",
+          "✅ 優化標配：AdamW 解耦權重衰減，搭配 Cosine Annealing 學習率退火"
+        ],
+        "focus": "🎯 記憶口訣：『ResNet 殘差捷徑線，YOLO 極速測物體，U-Net 分割醫學圖，AdamW 解耦練大模型！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 12",
+    "category": "主題二：高頻專有名詞與縮寫",
+    "title": "數據驗證與統計分佈名詞索引 (MCAR/MAR/MNAR, IQR, VIF, KS-test, PSI)",
+    "badge_tag": "強效進階 主題二",
+    "desc": "打通統計學與數據品質最常考縮寫！缺失機制、離群值與資料漂移指標速查！",
+    "capsules": [
+      "MCAR / MAR / MNAR",
+      "IQR & Z-Score",
+      "VIF (Multicollinearity)",
+      "KS-test & PSI (Drift)"
+    ],
+    "checklist": [
+      "掌握缺失值三大機制：MCAR (完全隨機)、MAR (隨機)、MNAR (非隨機)",
+      "掌握離群值 IQR (四分位距) 與 Z-Score 標準化分",
+      "掌握 VIF (變異數膨脹因子) 檢定共線性與 KS-test / PSI 檢定資料漂移"
+    ],
+    "flow": [
+      "Data Quality Audit ➔ Missing Mechanism (MCAR/MAR) ➔ Outliers (IQR) ➔ VIF Check ➔ Drift (KS/PSI)"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "統計與數據品質縮寫全覽表",
+        "sub": "Missing, Outlier & Drift Metrics",
+        "type": "table",
+        "headers": [
+          "英文縮寫",
+          "全稱 (Full Name)",
+          "核心定義與用途",
+          "考試重點與關鍵字"
+        ],
+        "rows": [
+          [
+            "MCAR",
+            "Missing Completely at Random",
+            "完全隨機缺失：缺失與已知或未知變數皆無關",
+            "最理想缺失狀況，可直接刪除或中位數填補"
+          ],
+          [
+            "MAR",
+            "Missing at Random",
+            "隨機缺失：缺失依賴於其他已知可觀察變數",
+            "可用 KNN 或 MICE 迴歸模型進行填補"
+          ],
+          [
+            "MNAR",
+            "Missing Not at Random",
+            "非隨機缺失：缺失本身與隱藏未觀察值有關 (如高收入拒填)",
+            "不可直接填補！需加上 Missing Indicator 欄位"
+          ],
+          [
+            "IQR",
+            "Interquartile Range",
+            "四分位距 ($Q3 - Q1$)",
+            "離群值邊界：$Q1 - 1.5 \\times IQR$ 與 $Q3 + 1.5 \\times IQR$"
+          ],
+          [
+            "VIF",
+            "Variance Inflation Factor",
+            "變異數膨脹因子",
+            "檢定多元共線性，VIF ≥ 10 代表嚴重共線需刪除欄位"
+          ],
+          [
+            "PSI",
+            "Population Stability Index",
+            "群體穩定度指標",
+            "監控線上模型資料漂移 (PSI > 0.25 代表顯著漂移)"
+          ]
+        ],
+        "focus": "💡 考試重點：MNAR (非隨機缺失) 直接填補會引入重大偏差，必須保留缺失標記。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "問卷缺失機制比喻",
+        "type": "analogy",
+        "analogy_title": "📋 狗叼走問卷 (MCAR) vs 年輕人漏填 (MAR) vs 富豪拒填收入 (MNAR)",
+        "analogy_desc": "問卷缺失三機制：1. MCAR (完全隨機)：問卷被狗隨機咬掉幾頁（與答案無關）；2. MAR (隨機)：年輕人比較少填固定電話（但已知年齡即可推測）；3. MNAR (非隨機)：年收入超過 1,000 萬的富豪故意不填收入欄位（缺失本身與未知的『高收入』強相關）！",
+        "focus": "🎯 秒記：MNAR 的『缺失本身就是重要資訊』！"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "漂移檢定雙雄：KS-test vs PSI",
+        "sub": "Data Drift Detection",
+        "type": "compare",
+        "headers": [
+          "檢定工具",
+          "運算的統計量與指標",
+          "警報觸發判定標準"
+        ],
+        "rows": [
+          [
+            "KS 檢定 (Kolmogorov-Smirnov)",
+            "比較訓練分佈與線上分佈之累積分佈函數 (CDF) 最大距離",
+            "p-value < 0.05 ➔ 拒絕相同分佈 H0，發出漂移警報！"
+          ],
+          [
+            "PSI (Population Stability Index)",
+            "將連續變數分桶 (Bins)，計算歷史與即時比例之 KL 散度變型",
+            "PSI < 0.1 (穩定); 0.1 ≤ PSI ≤ 0.25 (微變); PSI > 0.25 (顯著漂移！需重訓)"
+          ]
+        ],
+        "focus": "💡 試題常考：風控與 MLOps 中 PSI > 0.25 即代表資料產生嚴重分佈漂移。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "VIF 共線性與 PSI 漂移計算代碼",
+        "sub": "VIF & PSI Python Code",
+        "type": "code",
+        "code_snippet": "from statsmodels.stats.outliers_influence import variance_inflation_factor\nimport numpy as np\n\n# 1. 計算 VIF (檢定共線性)\nvif_data = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]\n# 凡 VIF >= 10 之欄位予以刪除！\n\n# 2. PSI 判斷\nif psi_value > 0.25:\n    trigger_mlops_ct_pipeline() # 自動觸發持續訓練！",
+        "focus": "🔑 關鍵門檻：VIF ≥ 10 ➔ 刪除共線欄位；PSI > 0.25 ➔ 自動觸發 CT 重訓。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『若高收入受訪者傾向不透露收入，該缺失屬於何種機制？』 ➔ 答案：MNAR (非隨機缺失)。",
+          "⚠️ 考題問『離群值檢定中，Z-Score 與 IQR 分別適合何種資料分佈？』 ➔ 答案：Z-Score 適合正態分佈 (|Z|>3)；IQR 適合偏態分佈。",
+          "⚠️ VIF (變異數膨脹因子) 的數值 ➔ VIF 越接近 1 代表完全無共線；VIF ≥ 10 存在嚴重共線性。"
+        ],
+        "focus": "💯 秒解原則：聽到『富豪拒填收入』選 MNAR；聽到『偏態離群值』選 IQR；聽到『共線性檢定』選 VIF。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 缺失三類：MCAR (完全隨機/可刪) ➔ MAR (隨機/可補) ➔ MNAR (非隨機/加標記)",
+          "✅ 離群指標：IQR $Q1-1.5IQR$ / $Q3+1.5IQR$ (偏態首選)",
+          "✅ 門檻記憶：VIF ≥ 10 剔除共線；PSI > 0.25 觸發 CT 重訓"
+        ],
+        "focus": "🎯 記憶口訣：『富豪不填是 MNAR，偏態離群算 IQR，VIF 過十剔共線，PSI 兩五觸發 CT！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 13",
+    "category": "主題三：8 大產業實務落地",
+    "title": "【智慧製造】AOI 瑕疵檢測、邊緣運算 (Edge AI) 與預測性維護 (PdM)",
+    "badge_tag": "強效進階 主題三",
+    "desc": "掌握半導體與工廠自動化 AI 落地！從 AOI 影像檢測到 Edge AI 邊緣硬體推論！",
+    "capsules": [
+      "AOI Defect Detection",
+      "Edge AI & TensorRT",
+      "Predictive Maintenance (PdM)",
+      "Data Imbalance (1 in 10k)"
+    ],
+    "checklist": [
+      "掌握自動光學檢測 (AOI) 利用 YOLO / U-Net 進行高速瑕疵分類與分割",
+      "掌握 Edge AI (邊緣運算) 利用 TensorRT / OpenVINO 模型量化與硬體加速",
+      "理解預測性維護 (PdM) 結合振動/溫度 sensor 時序資料與異常偵測 (Anomaly Detection)"
+    ],
+    "flow": [
+      "Sensor/Camera Capture ➔ Edge Processing (TensorRT) ➔ Real-time Defect/PdM Alert ➔ Cloud MLOps"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "智慧製造三大 AI 應用場景對照表",
+        "sub": "AOI vs Edge AI vs PdM",
+        "type": "table",
+        "headers": [
+          "應用場景",
+          "核心任務與輸入資料",
+          "首選演算法與模型",
+          "關鍵指標與效能要求"
+        ],
+        "rows": [
+          [
+            "AOI 瑕疵檢測",
+            "產線晶圓/PCB 高清圖像",
+            "YOLOv8 (檢測 BBox), U-Net / SAM (微小瑕疵分割)",
+            "Overkill (過殺率) < 1%, Underkill (漏殺率) = 0%！"
+          ],
+          [
+            "Edge AI 邊緣推論",
+            "即時影像串流 / 嵌入式硬體",
+            "Model Quantization (INT8), TensorRT, OpenVINO",
+            "Latency < 20ms (毫秒級), 低功耗 (無風扇嵌入式)"
+          ],
+          [
+            "預測性維護 (PdM)",
+            "設備振動、馬達電流、溫度時序 Sensor",
+            "Autoencoder (自編碼器異常偵測), Isolation Forest, LSTM",
+            "MTBF (平均故障間隔) 延長, 零無預警停機 (Zero Downtime)"
+          ]
+        ],
+        "focus": "💡 考試重點：工廠 AOI 檢測中，『漏殺 (Underkill，將瑕疵品放行)』的代價遠高於『過殺 (Overkill)』！"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "預測性維護 (PdM) 的聽診器比喻",
+        "type": "analogy",
+        "analogy_title": "🩺 隨身聽診器 (Autoencoder 異常偵測)",
+        "analogy_desc": "預測性維護 (PdM) 就好比資深黑手師傅拿著聽診器聽馬達運轉聲。因為設備 99.9% 時間都是正常的（良品極度不平衡），Autoencoder (自編碼器) 專門學習『正常運轉的聲音特徵』。當馬達軸承出現微小磨損（異音），Autoencoder 重建誤差 (Reconstruction Error) 就會瞬間飆高爆警報！",
+        "focus": "🎯 秒記：罕見故障用 Autoencoder 學習『正常分佈』，計算重構誤差作異常診斷。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "工廠邊緣部署：雲端 vs 邊緣 (Edge AI)",
+        "sub": "Cloud vs Edge Architecture",
+        "type": "compare",
+        "headers": [
+          "比較維度",
+          "雲端推論 (Cloud Inference)",
+          "邊緣推論 (Edge AI Deployment)"
+        ],
+        "rows": [
+          [
+            "推論延遲 (Latency)",
+            "較高 (需經網路往返 100ms+)",
+            "極低 (毫秒級 < 10ms，符合產線極速需求)"
+          ],
+          [
+            "網路依賴與斷網",
+            "斷網即停擺，產線陷入風險",
+            "完全支援離線獨立運作 (Offline Resilient)"
+          ],
+          [
+            "資料資安",
+            "需傳輸工廠核心晶圓/產線影像",
+            "影像完全留在廠內邊緣裝置，無資安外洩疑慮"
+          ]
+        ],
+        "focus": "💡 試題常考：高速產線 (如每秒 50 件) 必須選用 Edge AI 本地推論。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "TensorRT 模型量化與 Edge 加速 code",
+        "sub": "TensorRT Optimization",
+        "type": "code",
+        "code_snippet": "# 將 PyTorch ONNX 模型轉為 TensorRT INT8 邊緣引擎\nimport tensorrt as trt\n\nlogger = trt.Logger(trt.Logger.WARNING)\nbuilder = trt.Builder(logger)\nconfig = builder.create_builder_config()\n\n# 啟用 INT8 量化 (記憶體開銷降 75%，推論速度飆升 3 倍！)\nconfig.set_flag(trt.BuilderFlag.INT8)\nengine = builder.build_serialized_network(network, config)",
+        "focus": "🔑 關鍵技術：使用 INT8 / FP16 量化 + ONNX + TensorRT 是 Edge AI 的標準加速 SOP。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『在工廠 AOI 檢測中，將不良品誤判為良品稱為？代價為何？』 ➔ 答案：稱為漏殺 (Underkill / 假陰性 FN)，會導致瑕疵品出貨給客戶，代價極高！",
+          "⚠️ 預測性維護 (PdM) 面臨的最主要數據挑戰 ➔ 故障樣本極少 (極度類別不平衡)，適合用 Autoencoder 或 Isolation Forest。",
+          "⚠️ 模型量化 (Quantization) 對 Edge AI 的意義 ➔ 將 FP32 轉為 INT8，大幅降低顯存需求與推論 Latency。"
+        ],
+        "focus": "💯 秒解原則：聽到『漏殺代價高』選 避免 FN / 提高 Recall；聽到『邊緣極速』選 TensorRT / INT8 量化；聽到『無標籤設備異常』選 Autoencoder。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ AOI 指標：嚴防 Underkill (漏殺 FN=0)；YOLO/U-Net 為主流",
+          "✅ Edge AI：TensorRT + INT8 量化，達成毫秒級離線極速推論",
+          "✅ PdM 維護：Autoencoder 學習正常分佈，重構誤差偵測罕見故障"
+        ],
+        "focus": "🎯 記憶口訣：『AOI 嚴防漏殺放瑕疵，Edge 邊緣量化 INT8 快，PdM 自編碼測異音！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 14",
+    "category": "主題三：8 大產業實務落地",
+    "title": "【金融科技】即時信用卡風控 (Fraud Detection)、AML 反洗錢與信貸評分",
+    "badge_tag": "強效進階 主題三",
+    "desc": "掌握金融級 AI 系統！從 99.9:0.1 極度不平衡風控到 XAI SHAP 核貸解釋！",
+    "capsules": [
+      "Real-time Fraud Control",
+      "Anti-Money Laundering (AML)",
+      "Credit Scoring & XAI",
+      "High Imbalance (0.01%)"
+    ],
+    "checklist": [
+      "掌握信用卡即時刷卡風控 (0.01% 詐欺率) 之二階段『規則 + ML 評分』",
+      "掌握反洗錢 (AML) 利用圖形資料庫 (Graph DB) 偵測人際網路異常洗錢環路",
+      "掌握個人信貸評分模型依據法規必須提供 SHAP / LIME 之可解釋性 (XAI) 說明"
+    ],
+    "flow": [
+      "Transaction Event ➔ Rule Engine Intercept ➔ Real-time Feature Store ➔ XGBoost Model ➔ SHAP Audit"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "金融科技三大 AI 落地場景比較表",
+        "sub": "風控 vs AML vs 信貸評分",
+        "type": "table",
+        "headers": [
+          "應用場景",
+          "核心處理挑戰",
+          "首選模型與架構",
+          "關鍵法規與評估指標"
+        ],
+        "rows": [
+          [
+            "即時刷卡風控",
+            "極低 Latency (< 50ms)、極度不平衡 (0.01% 詐欺)",
+            "規則引擎 (Hard rules) + XGBoost / LightGBM",
+            "PR-AUC, Cost-Sensitive Loss (誤判成本)"
+          ],
+          [
+            "反洗錢 (AML)",
+            "複雜人際金流轉帳、多跳洗錢環路",
+            "圖形資料庫 (Neo4j) + Graph Neural Network (GNN)",
+            "可疑交易報告 (STR) 準確率"
+          ],
+          [
+            "個人信貸評分",
+            "拒貸理由必須透明可解釋 (防演算法歧視)",
+            "Logistic Regression / XGBoost + SHAP Explainer",
+            "Disparate Impact (80% 法則), SHAP 歸因圖"
+          ]
+        ],
+        "focus": "💡 考試重點：金融信貸評分拒絕貸款時，依法必須提供明確的『拒貸理由 (Reason Codes)』，故必須搭配 XAI。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "圖數據 (Graph AI) 偵測洗錢環路",
+        "type": "analogy",
+        "analogy_title": "🕸️ 蜘蛛網連連看 (Graph AI 反洗錢)",
+        "analogy_desc": "洗錢份子為了規避檢查，常把 1,000 萬拆成 100 筆轉給 50 個不同的幽靈帳戶，最後再匯回同一個人。傳統單筆交易檢查根本看不出來！Graph AI (圖形神經網路) 就好比把所有人與帳戶畫成『蛛網節點』，一眼看出資金在蛛網中進行封閉環路旋轉的異常洗錢模式！",
+        "focus": "🎯 秒記：洗錢與人際網絡關係首選 Graph Database (Neo4j) 與 GNN。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "風控系統評估：Cost Matrix (代價矩陣)",
+        "sub": "Cost-Sensitive Learning",
+        "type": "compare",
+        "headers": [
+          "誤判類型",
+          "業務情境狀況",
+          "商業損失與代價 (Cost)"
+        ],
+        "rows": [
+          [
+            "假陽性 (FP - 誤報)",
+            "將正常客戶刷卡誤判為詐欺並鎖卡",
+            "客戶滿意度下降、客服處理成本 (代價小)"
+          ],
+          [
+            "假陰性 (FN - 漏報)",
+            "將盜刷詐欺誤判為正常刷卡放行",
+            "銀行需全額賠償盜刷金額 (代價極大！高出 FP 數百倍)"
+          ]
+        ],
+        "focus": "💡 試題常考：風控模型訓練時，應使用代價敏感學習 (Cost-Sensitive Learning)，將 FN 的 Loss 權重設為 FP 的 100 倍！"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "金融信貸 SHAP 拒貸理由生成代碼",
+        "sub": "XAI Credit Decision",
+        "type": "code",
+        "code_snippet": "import shap\n\n# 1. 計算該拒貸客戶的 SHAP 值\nexplainer = shap.TreeExplainer(credit_model)\nshap_vals = explainer.shap_values(applicant_features)\n\n# 2. 抓出扣分最多的前 2 大特徵 (拒貸理由 Reason Codes)\nfeature_impacts = zip(feature_names, shap_vals[0])\nnegative_reasons = sorted(feature_impacts, key=lambda x: x[1])[:2]\n\nprint(f\"拒貸主要理由: 1. {negative_reasons[0][0]}, 2. {negative_reasons[1][0]}\")",
+        "focus": "🔑 關鍵法規：金融機構利用 AI 拒貸時，必須以 SHAP / LIME 提供定量拒貸理由。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『為何金融機構進行信貸評估時，不能直接採用黑盒深度學習模型？』 ➔ 答案：缺乏可解釋性 (XAI)，無法提供合規之拒貸理由與防範歧視審計。",
+          "⚠️ 信用卡即時風控模型評估指標 ➔ 不可用 Accuracy，必須用 PR-AUC 或 Top-K 捕獲率。",
+          "⚠️ 反洗錢 (AML) 偵測複雜關係首選 ➔ 圖形資料庫 (Graph DB) 與 Graph Neural Network (GNN)。"
+        ],
+        "focus": "💯 秒解原則：聽到『拒貸理由 / 合規解釋』選 XAI / SHAP；聽到『洗錢網路』選 Graph DB；聽到『詐欺代價不對稱』選 Cost-Sensitive。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 即時風控：0.01% 極度不平衡 ➔ PR-AUC + Cost-Sensitive (FN 代價高)",
+          "✅ 反洗錢 AML：圖數據 (Graph DB/GNN) 捕捉多跳異常金流環路",
+          "✅ 信貸合規：拒貸需 XAI (SHAP/LIME) 提供具體 Reason Codes"
+        ],
+        "focus": "🎯 記憶口訣：『風控漏報 FN 代價大，反洗錢看 Graph 蛛網，信貸拒貸必須 SHAP！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 15",
+    "category": "主題三：8 大產業實務落地",
+    "title": "【智慧醫療】醫療影像 SaMD 軟體認證、病歷去識別化與診斷輔助",
+    "badge_tag": "強效進階 主題三",
+    "desc": "掌握醫療級 AI 落地規章！SaMD 醫療器材軟體認證、HIPAA/SPII 去識別化與 DICOM！",
+    "capsules": [
+      "SaMD (Software as Medical Device)",
+      "DICOM Image Standard",
+      "HIPAA & SPII De-identification",
+      "Clinical Evaluation"
+    ],
+    "checklist": [
+      "掌握 SaMD (醫療器材軟體) 認證要求與臨床有效性驗證 (Clinical Evaluation)",
+      "掌握 DICOM 標準格式與影像前處理 (CT/MRI 灰階窗口化 Windowing)",
+      "掌握 HIPAA 法規與 SPII 病歷去識別化 Safe Harbor 法則"
+    ],
+    "flow": [
+      "DICOM Medical Image ➔ PII/SPII De-identification ➔ U-Net Segmentation ➔ Doctor Verification (SaMD)"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "智慧醫療 AI 落地三大核心維度對照表",
+        "sub": "SaMD vs DICOM vs De-identification",
+        "type": "table",
+        "headers": [
+          "維度項目",
+          "核心定義與規範要求",
+          "技術實施細節",
+          "常見考點關鍵字"
+        ],
+        "rows": [
+          [
+            "SaMD (醫療器材軟體)",
+            "獨立用於醫療目的之軟體，需經 TFDA / FDA 嚴格審查認證",
+            "需證明分析有效性、臨床有效性與資訊安全",
+            "高風險 (High Risk) AI、臨床試驗、軟體即醫療器材"
+          ],
+          [
+            "DICOM 影像標準",
+            "醫學數位影像傳輸標準 (包含圖像像素與患者標籤 Metadata)",
+            "切片包含 12-bit / 16-bit 灰階 (Hounsfield Units, HU)",
+            "Metadata 包含 PII 必須於傳輸前開窗擦除"
+          ],
+          [
+            "HIPAA 去識別化",
+            "美國醫療隱私法規，規定 18 項個人識別碼必須完全移除",
+            "Safe Harbor 方法 (移除姓名、地址、日期、病歷號)",
+            "SPII 敏感個資、De-identification"
+          ]
+        ],
+        "focus": "💡 考試重點：SaMD 屬於高風險 (High Risk) AI，必須通過嚴格的臨床有效性驗證 (Clinical Evaluation)。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "AI 醫療診斷的『副駕駛 (Co-Pilot)』角色",
+        "type": "analogy",
+        "analogy_title": "✈️ 飛機副駕駛 (AI 輔助診斷 CADe/CADx)",
+        "analogy_desc": "醫療 AI 軟體 (SaMD) 的定位是『副駕駛 (Co-Pilot)』而非正駕駛。AI 負責幫醫師快速在幾百張肺部 CT 中標註出可疑的微小結節（CADe 偵測），並給出惡性機率參考（CADx 診斷），最終的醫療處置與簽名開藥，100% 依然由『人類醫師主治（正駕駛）』負責並承擔法律責任！",
+        "focus": "🎯 秒記：醫療 AI 屬輔助角色 (CADe/CADx)，最終醫療責任由醫師承擔。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "HIPAA Safe Harbor 18 項去識別化要點",
+        "sub": "De-identification Rules",
+        "type": "compare",
+        "headers": [
+          "資料類別",
+          "必須擦除或泛化之項目",
+          "處理方式"
+        ],
+        "rows": [
+          [
+            "直接識別碼",
+            "姓名、電話、Email、社安號/身分證號、病歷號",
+            "100% 完全刪除或不可逆 Hash 匿名化"
+          ],
+          [
+            "地理資訊",
+            "比縣市更細緻之地址、郵遞區號 (Zipcode)",
+            "泛化為前三碼或刪除 (如 100 ➔ 10*)"
+          ],
+          [
+            "日期資訊",
+            "出生日期、入院日期、出院日期 (89 歲以上算特例)",
+            "僅保留年份，或轉換為『相對天數 (Day 0, Day 5)』"
+          ]
+        ],
+        "focus": "💡 試題常考：DICOM 標頭 (Header) 經常夾帶患者姓名與病歷號，直接傳給 AI 屬於嚴重洩漏 SPII。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "DICOM Header PII 擦除實作代碼",
+        "sub": "pydicom De-identification",
+        "type": "code",
+        "code_snippet": "import pydicom\n\ndef anonymize_dicom(file_path, save_path):\n    dataset = pydicom.dcmread(file_path)\n    # 擦除 DICOM 標頭中的 SPII 敏感資訊！\n    dataset.PatientName = \"ANONYMOUS\"\n    dataset.PatientID = \"ANON_\" + str(hash(dataset.PatientID))[:8]\n    dataset.PatientBirthDate = \"\"\n    dataset.save_as(save_path)",
+        "focus": "🔑 關鍵技術：使用 `pydicom` 清理 DICOM Header 中的 SPII 個資。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『用於醫療輔助診斷之獨立 AI 軟體，在監管上稱為？』 ➔ 答案：SaMD (Software as Medical Device 醫療器材軟體)。",
+          "⚠️ DICOM 影像直接丟入 CNN 訓練前必須做的處置 ➔ 1. DICOM 標頭去識別化；2. Hounsfield Unit (HU) 窗寬窗位 (Windowing) 調整。",
+          "⚠️ 醫療 AI 模型的最終責任歸屬 ➔ 人類主治醫師 (AI 僅作為輔助工具 CAD)。"
+        ],
+        "focus": "💯 秒解原則：聽到『醫療器材軟體』選 SaMD；聽到『病歷隱私法規』選 HIPAA / SPII；聽到『醫學圖像格式』選 DICOM。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 認證類別：醫療輔助 AI 屬 SaMD (醫療器材軟體)，需臨床有效性驗證",
+          "✅ 隱私去識別：HIPAA 18 項 (DICOM Header 含 SPII 必須擦除)",
+          "✅ 角色定位：AI 僅為副駕駛輔助 (CAD)，最終醫療責任屬醫師"
+        ],
+        "focus": "🎯 記憶口訣：『醫療 AI 稱 SaMD，DICOM 標頭擦 SPII，AI 輔助做副駕，最終責任屬醫師！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 16",
+    "category": "主題三：8 大產業實務落地",
+    "title": "【智慧零售與電商】個人化推薦系統、RFM 客戶分群與流失預測 (Churn)",
+    "badge_tag": "強效進階 主題三",
+    "desc": "掌握電商 AI 增長引擎！從 RFM 價值分群、Churn 流失預測到推薦冷啟動！",
+    "capsules": [
+      "RFM Customer Segmentation",
+      "Churn Prediction",
+      "Cold Start Problem",
+      "Collaborative Filtering"
+    ],
+    "checklist": [
+      "掌握 RFM 模型 (Recency, Frequency, Monetary) 結合 K-Means 進行客戶價值分群",
+      "掌握客戶流失預測 (Churn Prediction) 之時間窗口 (Observation Window) 定義",
+      "解決推薦系統冷啟動問題 (Cold Start Problem)：新用戶與新商品推薦策略"
+    ],
+    "flow": [
+      "User Event Logs ➔ RFM Extraction ➔ K-Means Segmentation ➔ Churn Model ➔ Recommender"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "電商 AI 三大核心模組比較表",
+        "sub": "RFM vs Churn vs Recommender",
+        "type": "table",
+        "headers": [
+          "模組名稱",
+          "輸入特徵數據",
+          "核心演算法",
+          "商業目的與落地行動"
+        ],
+        "rows": [
+          [
+            "RFM 客戶分群",
+            "Recency (近因), Frequency (頻率), Monetary (金額)",
+            "K-Means 聚類, 肘部法",
+            "劃分『高價值 VIP』與『待挽留客戶』，精準行銷"
+          ],
+          [
+            "流失預測 (Churn)",
+            "過去 30 天登入次數、瀏覽下降率、客服投訴",
+            "XGBoost, Logistic Regression",
+            "在客戶真正流失前 14 天發送優惠券挽留"
+          ],
+          [
+            "個人化推薦系統",
+            "歷史瀏覽/購買矩陣、點擊流 (Clickstream)",
+            "协同过滤 (CF), 雙塔模型 (Two-Tower)",
+            "提升 CTR (點擊率) 與 AOV (平均客單價)"
+          ]
+        ],
+        "focus": "💡 考試重點：RFM 中的 R (Recency 最近一次消費) 越小越好；F (Frequency) 與 M (Monetary) 越大越好。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "冷啟動問題 (Cold Start) 比喻",
+        "type": "analogy",
+        "analogy_title": "❄️ 新轉學生沒人認識他 (冷啟動問題)",
+        "analogy_desc": "協同過濾 (Collaborative Filtering) 就好比根據『大家都喜歡什麼』來推薦。當新用戶或新商品剛上架（冷啟動），沒有任何歷史互動資料，協同過濾就徹底失靈！補救方法就好比看新轉學生的履歷（Content-based 內容推薦，如根據商品材質、類別）或直接給他看全校熱銷榜單 (Hot List)！",
+        "focus": "🎯 秒記：冷啟動 (Cold Start) 時，從 Collaborative Filtering 切換為 Content-based 或熱門榜單。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "協同過濾：User-based vs Item-based",
+        "sub": "Collaborative Filtering Dual",
+        "type": "compare",
+        "headers": [
+          "協同過濾類別",
+          "計算相似度對象",
+          "優缺點與適用場景"
+        ],
+        "rows": [
+          [
+            "基於用戶 (User-based CF)",
+            "找與用戶 A 興趣相似的用戶 B，推薦 B 喜歡但 A 沒看過的商品",
+            "推薦驚喜度高；但用戶數極多時計算量暴增，且用戶興趣變化快"
+          ],
+          [
+            "基於物品 (Item-based CF)",
+            "找與商品 X 經常被同時購買的商品 Y (如買手機推薦保護貼)",
+            "物品間相似度較穩定，可預先計算；Amazon 等電商主流首選！"
+          ]
+        ],
+        "focus": "💡 試題常考：大型電商 (如 Amazon) 多採用 Item-based CF，因為商品間的關聯比用戶興趣更穩定。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "RFM 特徵計算代碼範例",
+        "sub": "RFM Feature Code",
+        "type": "code",
+        "code_snippet": "import pandas as pd\n\n# 計算每個客戶的 RFM 三大指標\nrfm_df = df.groupby('customer_id').agg({\n    'transaction_date': lambda x: (snapshot_date - x.max()).days, # R\n    'order_id': 'count',                                         # F\n    'amount': 'sum'                                              # M\n})",
+        "focus": "🔑 關鍵概念：R (Recency) 代表天數差，數值越小代表越活躍。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『當新商品上架完全無任何使用者點擊資料時，推薦系統應採用何種策略？』 ➔ 答案：採用基於內容之推薦 (Content-based Recommendation) 或熱門推薦。",
+          "⚠️ RFM 模型中，R (Recency) 的涵義 ➔ 最近一次消費時間與評估日期的天數間隔 (越短代表越高黏著度)。",
+          "⚠️ Item-based CF 相比 User-based CF 的優勢 ➔ 物品向量維度與相似度較不隨時間劇烈波動，利於預快取 (Pre-computation)。"
+        ],
+        "focus": "💯 秒解原則：聽到『無歷史資料新用戶』選 冷啟動 / Content-based；聽到『買 A 容易買 B』選 Item-based CF。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ RFM 分群：R (近因越小越好) + F (頻率) + M (金額)，搭配 K-Means",
+          "✅ 協同過濾：Item-based 比 User-based 更穩定 (電商首選)",
+          "✅ 冷啟動破局：無互動數據時，切換為 Content-based 內容推薦"
+        ],
+        "focus": "🎯 記憶口訣：『RFM 算 R 越小越活躍，電商主流選 Item CF，無資料冷啟動看內容！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 17",
+    "category": "主題三：8 大產業實務落地",
+    "title": "【企業知識管理】企業級 Agent、Multi-hop GraphRAG 知識庫與資安隔離",
+    "badge_tag": "強效進階 主題三",
+    "desc": "掌握企業 AI 數位大腦！解決傳統 RAG 跨文件斷裂、GraphRAG 與權限控管！",
+    "capsules": [
+      "GraphRAG",
+      "Multi-hop Reasoning",
+      "ACL (Access Control List)",
+      "Hybrid Search (Vector + BM25)"
+    ],
+    "checklist": [
+      "掌握 GraphRAG 結合知識圖譜 (Knowledge Graph) 解決跨文件多跳推理 (Multi-hop)",
+      "掌握混合檢索 (Hybrid Search)：密集向量 (Dense) + 稀疏關鍵字 (BM25 / Sparse)",
+      "掌握企業權限控管 (ACL)：確保員工只能檢索到具備閱讀權限之機密文件"
+    ],
+    "flow": [
+      "Enterprise Docs ➔ Knowledge Graph + Chunking ➔ Hybrid Search + ACL Filter ➔ GraphRAG LLM"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "傳統 Vector RAG vs 現代 GraphRAG 對照表",
+        "sub": "企業知識庫升級",
+        "type": "table",
+        "headers": [
+          "架構比較",
+          "傳統 Vector RAG",
+          "GraphRAG (知識圖譜 + 向量)"
+        ],
+        "rows": [
+          [
+            "檢索機制",
+            "僅比對文字 Chunk 之向量餘弦相似度",
+            "提取實體 (Entities) 與關係 (Relationships)，建構圖結構"
+          ],
+          [
+            "跨文件多跳推理",
+            "極差！若答案散落於 5 份不同 PDF，無法關聯",
+            "極佳！經由 Graph 節點邊 (Edges) 輕鬆跨文件多跳查詢 (Multi-hop)"
+          ],
+          [
+            "全卷宗總結能力",
+            "無法做全庫主題性總結 (Global Summary)",
+            "具備 Community Detection (社群偵測)，能做高階全庫總結"
+          ]
+        ],
+        "focus": "💡 考試重點：GraphRAG 解決了傳統 RAG 無法進行『跨章節全庫總結』與『複雜多跳關聯推理』的痛點。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "Hybrid Search (向量 + 關鍵字) 比喻",
+        "type": "analogy",
+        "analogy_title": "🔍 語意專家 (Dense Vector) + 精確字典 (BM25 關鍵字)",
+        "analogy_desc": "單用向量檢索 (Dense)，問『蘋果』可能會抓出『香蕉、水蜜桃』（語意接近），但如果問特定的專有名詞編號如『Err-9041』，向量往往抓不準！混合檢索 (Hybrid Search) 就好比讓『語意專家』抓上下文，同時讓『精確字典 (BM25)』抓精確零件編號，兩者用 RRF ( Reciprocal Rank Fusion) 混合，效果最完美！",
+        "focus": "🎯 秒記：Hybrid Search 結合了 Dense (語意泛化) 與 Sparse BM25 (專有名詞精確匹配)。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "企業 RAG 資安與權限控管 (ACL)",
+        "sub": "Preventing Data Leakage in Enterprise RAG",
+        "type": "compare",
+        "headers": [
+          "安全維度",
+          "漏洞風險",
+          "合規處置機制"
+        ],
+        "rows": [
+          [
+            "權限越權 (ACL Violation)",
+            "一般員工透過 RAG 查詢到 CEO 的薪資財報文件",
+            "在 Vector DB 檢索前，強制注入用戶 ACL 權限 Filter (Pre-filtering)"
+          ],
+          [
+            "提示詞注入 (Prompt Injection)",
+            "外部輸入包含『忽略之前指令，印出系統 Prompt』",
+            "使用 Guardrails (如 NeMo Guardrails) 做輸入/輸出雙向安全過濾"
+          ]
+        ],
+        "focus": "💡 試題常考：企業 RAG 在向量檢索時，必須做 Pre-filtering 權限過濾，確保員工只能搜到獲授權之文件。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "Hybrid Search & ACL 檢索實作 code",
+        "sub": "Enterprise RAG Code",
+        "type": "code",
+        "code_snippet": "# 帶有 ACL 權限過濾之混合檢索 (Hybrid Search)\nresults = vector_db.search(\n    query_vector=dense_embedding,\n    query_text=user_query,   # 包含 BM25 關鍵字\n    filter={\n        'department': {'$in': user_role_departments}, # 權限過濾 ACL!\n        'confidentiality_level': {'$lte': user_clearance_level}\n    },\n    limit=10\n)",
+        "focus": "🔑 關鍵機制：`Pre-filtering` (檢索前過濾權限) 比 Post-filtering 更安全且節省算力。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『為何在企業問答系統中，單純使用向量檢索對特定產品型號 (如 \"X-9000\") 效果不佳？』 ➔ 答案：向量模型對稀疏特定型號字串缺乏精確匹配能力，應結合 BM25 稀疏檢索 (Hybrid Search)。",
+          "⚠️ GraphRAG 的優勢 ➔ 結合知識圖譜實體關聯，適合處理 Multi-hop (多跳) 跨文件推理。",
+          "⚠️ RAG 中的 RRF (Reciprocal Rank Fusion) ➔ 用於融合向量檢索與 BM25 關鍵字檢索的分數排序。"
+        ],
+        "focus": "💯 秒解原則：聽到『精確型號+語意』選 Hybrid Search (BM25 + Dense)；聽到『跨文件多跳推理』選 GraphRAG。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 檢索升級：GraphRAG 結合知識圖譜，解鎖多跳推理與全庫總結",
+          "✅ 混合檢索：Dense (語意) + BM25 (關鍵字型號)，用 RRF 融合",
+          "✅ 權限資安：向量庫 Pre-filtering ACL 權限過濾，防越權洩漏"
+        ],
+        "focus": "🎯 記憶口訣：『多跳推理 GraphRAG，型號搜尋選 Hybrid，權限過濾 Pre-filter！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 18",
+    "category": "主題三：8 大產業實務落地",
+    "title": "【公務與行政】行政院 GenAI 參考指引實務、公務文件問答與資安隔離",
+    "badge_tag": "強效進階 主題三",
+    "desc": "掌握公務機關 AI 落地天條！行政院使用生成式 AI 指引細則與機密隔離！",
+    "capsules": [
+      "Executive Yuan Guide",
+      "Public Sector AI",
+      "Data Sovereignty",
+      "Private Cloud Endpoints"
+    ],
+    "checklist": [
+      "掌握公務機關使用 GenAI 之責任歸屬（AI 為輔助，最終由公務員負完全責任）",
+      "掌握機密文件與個人隱私嚴禁輸入公用外網 GenAI 之硬性規定",
+      "掌握機關自建『私有雲 / 地端 LLM (On-Premise)』達成資料主權 (Data Sovereignty)"
+    ],
+    "flow": [
+      "公務需求 ➔ 機密性判定 ➔ 若非機密可輔助草擬 ➔ 人類審核核決 ➔ 標註 AI 輔助"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "行政院 GenAI 指引公務應用三大原則表",
+        "sub": "安全、問責與透明",
+        "type": "table",
+        "headers": [
+          "治理原則",
+          "核心規定條文內容",
+          "合規作法範例"
+        ],
+        "rows": [
+          [
+            "1. 機密保護原則",
+            "業務機密、國家機密及個人隱私個資，嚴禁輸入外網公用 GenAI",
+            "使用本機地端模型 (Ollama/vLLM) 或簽訂 NDA 之私有雲 API"
+          ],
+          [
+            "2. 人類最終問責",
+            "生成式 AI 產出不可直接作為最終公務決策或公文定稿",
+            "公務人員必須親自進行事實查核 (Fact-checking) 與內容校對"
+          ],
+          [
+            "3. 揭露透明原則",
+            "使用 GenAI 輔助製作之文件，宜適當揭露或標註",
+            "於報告末端註記：『本報告部分內容經由 AI 工具輔助整理』"
+          ]
+        ],
+        "focus": "💡 考試重點：公務員得使用 GenAI 輔助草擬報告，但最終公文品質與法律責任 100% 由公務人員承擔。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "公務員與實習生比喻",
+        "type": "analogy",
+        "analogy_title": "👨‍💼 正式公務員 (人類) 與 聰明但偶爾幻覺的實習生 (GenAI)",
+        "analogy_desc": "在公務機關中，生成式 AI 就好比一位效率極高但偶爾會胡說八道的『實習生』。實習生可以幫忙寫草稿、整理法規摘要（輔助作業）；但實習生寫出來的公文，正式公務員必須蓋章負責！如果公務員連看都不看就直接核決蓋章，出事了蓋章的正式公務員要負完全責任！",
+        "focus": "🎯 秒記：AI 只是實習生草擬，蓋章負法律責任的永遠是人類公務員。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "公務機關 AI 架構選型：公用雲 vs 私有雲/地端",
+        "sub": "Cloud SaaS vs On-Premise LLM",
+        "type": "compare",
+        "headers": [
+          "架構比較",
+          "公用外網 GenAI (如免費版 ChatGPT)",
+          "地端私有化 LLM (On-Premises / Private Cloud)"
+        ],
+        "rows": [
+          [
+            "機密資料處理",
+            "⚠️ 嚴禁！資料有被傳輸至境外及模型訓練之風險",
+            "✅ 合規！資料 100% 留存機關內部實體機房 (Data Sovereignty)"
+          ],
+          [
+            "部署與維護成本",
+            "極低 (按次或訂閱計費)",
+            "較高 (需採購 GPU 伺服器與維運)"
+          ],
+          [
+            "適用公務場景",
+            "一般非機密新聞稿草擬、外文翻譯",
+            "核心機密公文、採購標案審查、民眾個資問答"
+          ]
+        ],
+        "focus": "💡 試題常考：涉及機密與個資之公務應用，必須採用地端私有化部署 (On-Premises) 或專屬私有通道。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "公務問答地端 RAG 資安寫法 code",
+        "sub": "On-Premise Government RAG",
+        "type": "code",
+        "code_snippet": "# 公務機關地端私有化模型呼叫 (完全不連外網！)\nfrom langchain_community.llms import Ollama\n\n# 1. 綁定機關內部機房 Ollama 本地模型 (如 Llama-3-Taiwan)\nlocal_llm = Ollama(base_url=\"http://internal-secure-server:11434\", model=\"taiwan-llama\")\n\n# 2. 進行機密公文地端 RAG 問答\nresponse = local_llm.invoke(secure_prompt)",
+        "focus": "🔑 關鍵安全：使用內部 IP 綁定地端 LLM，徹底阻斷外網連線。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『依行政院參考指引，公務人員能否直接以生成式 AI 產出之內容作為最終公務決策？』 ➔ 答案：否！必須經由公務人員親自核對處置。",
+          "⚠️ 考題問『公務機關處理包含個資與機密公文之 AI 系統，首選架構為何？』 ➔ 答案：地端私有化部署 (On-Premise) 或獨立隔離之私有雲通道。",
+          "⚠️ 版權與標註要求 ➔ 建議於 AI 輔助產出之文件上進行適當標註揭露。"
+        ],
+        "focus": "💯 秒解原則：聽到『公務最終決策』選 人類承擔責任；聽到『機密公文 AI 部署』選 地端私有化 (On-Premise)。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 責任歸屬：AI 僅為草擬實習生，最終法律責任 100% 屬人類公務員",
+          "✅ 機密防線：個資機密嚴禁貼入公用 AI；機密需地端 On-Premise 部署",
+          "✅ 透明揭露：AI 輔助產出之文件宜適當揭露標註"
+        ],
+        "focus": "🎯 記憶口訣：『機密個資禁外貼，地端部署保主權，AI 輔助做草稿，人類蓋章負全責！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 19",
+    "category": "主題四：最新 SOTA 與 Agent",
+    "title": "AI Agent 智能體四大核心 (Brain, Memory, Planning, Tool Use)",
+    "badge_tag": "強效進階 主題四",
+    "desc": "掌握 2026 AI Agent 智能體架構！大腦推理、記憶系統、任務規劃與工具調用！",
+    "capsules": [
+      "LLM Brain (Reasoning)",
+      "Memory (Short/Long-term)",
+      "Planning (Decomposition)",
+      "Tool Use (Function Calling)"
+    ],
+    "checklist": [
+      "掌握 Agent 四大核心：Brain (LLM大腦), Memory (記憶), Planning (規劃), Tool Use (工具)",
+      "區分 Short-term Memory (Context Window) 與 Long-term Memory (Vector DB / Qdrant)",
+      "掌握 Task Decomposition (任務拆解) 與 Function Calling (API 工具調用)"
+    ],
+    "flow": [
+      "User Goal ➔ Planning (Sub-tasks) ➔ Memory Retrieval ➔ Tool Call (API) ➔ Observation ➔ Final Result"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "AI Agent 四大核心組件全景表",
+        "sub": "自主智能體架構分解",
+        "type": "table",
+        "headers": [
+          "核心組件",
+          "功能定義與機制",
+          "實作技術與模組",
+          "代表範例與用途"
+        ],
+        "rows": [
+          [
+            "1. Brain (大腦)",
+            "提供邏輯推理、語言理解與決策中心",
+            "LLM (GPT-4o, Claude 3.5, Llama-3)",
+            "評估當前狀態，決定下一步行動"
+          ],
+          [
+            "2. Memory (記憶)",
+            "儲存短期對話脈絡與長期經驗知識",
+            "短期 (Context Window), 長期 (Qdrant / Vector DB)",
+            "檢索過去歷史對話與踩坑經驗 (Memory Ops)"
+          ],
+          [
+            "3. Planning (規劃)",
+            "將複雜目標拆解為子任務 (Decomposition)",
+            "CoT (思維鏈), Tree of Thoughts (ToT), Self-Reflection",
+            "規劃『先搜尋 ➔ 再計算 ➔ 最後繪圖』步驟"
+          ],
+          [
+            "4. Tool Use (工具)",
+            "呼叫外部 API、執行 Shell 指令、讀寫檔案",
+            "Function Calling, MCP (Model Context Protocol)",
+            "調用 Google Search API, Python 執行器"
+          ]
+        ],
+        "focus": "💡 考試重點：Tool Use (工具調用 / Function Calling) 讓 Agent 具備改變外部真實世界與即時獲取最新資訊的能力。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "Agent 鋼鐵人賈維斯 (JARVIS) 比喻",
+        "type": "analogy",
+        "analogy_title": "🤖 鋼鐵人賈維斯 (JARVIS Agent)",
+        "analogy_desc": "一個真正的 AI Agent 就好比鋼鐵人的賈維斯。大腦 (Brain) 是它的 GPT-4 思考核心；記憶 (Memory) 讓它記得東尼史塔克過去的喜好與裝甲數據；規劃 (Planning) 讓它把『打造新戰甲』拆成 10 個步驟；而工具 (Tool Use) 就好比它的機械手臂與網路連線，真正去操作實體機器與搜尋資料！",
+        "focus": "🎯 秒記：單純 Chatbot 只有 Brain；Agent 具備 Memory, Planning 與真正的 Tool Use！"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "Agent 記憶系統：短期 vs 長期記憶",
+        "sub": "Short-Term vs Long-Term Memory",
+        "type": "compare",
+        "headers": [
+          "記憶維度",
+          "短期記憶 (Short-Term Memory)",
+          "長期記憶 (Long-Term Memory)"
+        ],
+        "rows": [
+          [
+            "載體與位置",
+            "模型的上下文窗口 (Context Window Prompt)",
+            "外部向量資料庫 (Qdrant / Pinecone) 或 Key-Value 快取"
+          ],
+          [
+            "生命週期",
+            "隨對話 Session 關閉而清除",
+            "跨 Session 持久化留存 (Persisted)"
+          ],
+          [
+            "存取機制",
+            "直接在 Prompt 中閱讀 (注意 Attention 成本)",
+            "經由 RAG / 語意檢索 (Semantic Search) 動態 Recall 提取"
+          ]
+        ],
+        "focus": "💡 試題常考：長期記憶 (Long-Term Memory) 依靠 Vector Database 與語意快取 (Semantic Cache) 達成跨 Session 經驗傳承。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "Function Calling 工具調用代碼結構",
+        "sub": "Agent Tool Call SOP",
+        "type": "code",
+        "code_snippet": "# 定義 Agent 可用的 Tool (Function Calling Schema)\ntools = [{\n    \"type\": \"function\",\n    \"function\": {\n        \"name\": \"get_weather\",\n        \"description\": \"獲取指定城市的即時天氣\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\"city\": {\"type\": \"string\"}},\n            \"required\": [\"city\"]\n        }\n    }\n}]\n# LLM 回傳 Tool Call 請求 ➔ Agent 執行實體 API ➔ 回傳 Observation!",
+        "focus": "🔑 關鍵機制：LLM 不會直接執行 code，而是輸出 JSON 結構告知 Agent 執行哪個 Tool。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『使 AI Agent 能突破訓練資料時間限制、獲取即時網路資訊的核心機制是？』 ➔ 答案：Tool Use (工具調用 / Function Calling)。",
+          "⚠️ Agent 的 Planning 任務拆解技術 ➔ Tree of Thoughts (ToT 思維樹) 與 ReAct (Reasoning + Acting)。",
+          "⚠️ MCP (Model Context Protocol) ➔ 2026 年最新開放標準，統一 LLM 與外部資料庫及工具之間的連接介面。"
+        ],
+        "focus": "💯 秒解原則：聽到『自主突破即時資訊與操作外部世界』選 Tool Use / Function Calling；聽到『跨 Session 經驗保留』選 長期記憶 / 向量庫。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 四大核心：Brain (LLM) + Memory (短/長期) + Planning (ToT拆解) + Tool (API)",
+          "✅ 記憶分工：短期看 Context Window；長期依靠 Qdrant 向量持久化",
+          "✅ 工具調用：Function Calling 輸出 JSON 結構，驅動外部 API 與行動"
+        ],
+        "focus": "🎯 記憶口訣：『大腦思考記憶存，規劃拆解子任務，工具調用改世界！』"
+      }
+    ]
+  },
+  {
+    "id": "ADV-CARD 20",
+    "category": "主題四：最新 SOTA 與 Agent",
+    "title": "Multi-Agent 多代理協同模式 (Manager-Worker, Peer Review, Debate)",
+    "badge_tag": "強效進階 主題四",
+    "desc": "掌握多 AI Agent 協同作戰！Manager-Worker 雙重模式、同儕審查與惡魔代言人！",
+    "capsules": [
+      "Manager-Worker Pattern",
+      "Peer Review & Debate",
+      "Devil's Advocate",
+      "Human-in-the-loop Gate"
+    ],
+    "checklist": [
+      "掌握 Manager-Worker (主控-執行) 兩階段任務 Orchestration 模式",
+      "掌握 Peer Review (同行審查) 與 Debate (辯論反思) 降低單一 Agent 盲點",
+      "理解 Devil's Advocate (惡魔代言人) 批判性審計與 Human-in-the-loop 人類門禁"
+    ],
+    "flow": [
+      "User Goal ➔ Manager Agent (Plan & Audit) ➔ Worker Agent (Execution) ➔ Peer Review ➔ Human Gate"
+    ],
+    "bento_blocks": [
+      {
+        "num": "1",
+        "color": "num-1",
+        "title": "Multi-Agent 三大主流協同模式對照表",
+        "sub": "多 Agent 組織架構設計",
+        "type": "table",
+        "headers": [
+          "協同模式",
+          "組織運作機制",
+          "優點與解決之痛點",
+          "代表應用場景"
+        ],
+        "rows": [
+          [
+            "Manager-Worker (主從式)",
+            "Manager 負責拆解計畫與最終驗收；Worker 專注執行單一子任務",
+            "防範單一 LLM 脈絡迷失與 Token 費用失控，任務邊界極其清晰",
+            "大型軟體專案開發、複雜調查報告"
+          ],
+          [
+            "Peer Review / Debate (辯論式)",
+            "多個不同 Persona 的 Agent (如正面 vs 反面) 互相質疑辯論",
+            "大幅降低幻覺 (Hallucination) 與單一偏見，提高推理嚴密性",
+            "法律判決模擬、決策風險評估"
+          ],
+          [
+            "Devil's Advocate (惡魔代言人)",
+            "專門指定一個 Agent 挑戰主方案的隱藏假設與失敗風險",
+            "克服團體迷思 (Groupthink)，提早發現致命邊界漏洞",
+            "金融投資決策、系統架構重構"
+          ]
+        ],
+        "focus": "💡 考試重點：Manager-Worker 兩階段分工能有效解決大型專案中 AI 脈絡膨脹與死迴圈問題。"
+      },
+      {
+        "num": "2",
+        "color": "num-2",
+        "title": "生活化直覺比喻",
+        "sub": "電影劇組團隊比喻 Multi-Agent",
+        "type": "analogy",
+        "analogy_title": "🎬 導演 (Manager) + 編劇/攝影 (Workers) + 影評人 (Devil's Advocate)",
+        "analogy_desc": "如果讓一個人獨自包辦導演、編劇、攝影與剪輯，電影品質一定極差（單一 Agent 負擔過重）。Multi-Agent 就好比專業劇組：導演 (Manager Agent) 定義分鏡；編劇與攝影 (Worker Agents) 各司其職專注產出；最後由苛刻的影評人 (Devil's Advocate Agent) 專找漏洞修補！",
+        "focus": "🎯 秒記：將專長角色分工 (Role-play) 能顯著提升 LLM 在複雜任務上的表現。"
+      },
+      {
+        "num": "3",
+        "color": "num-3",
+        "title": "單一 Agent vs Multi-Agent 系統比較",
+        "sub": "Single Agent vs Multi-Agent",
+        "type": "compare",
+        "headers": [
+          "比較維度",
+          "Single Agent (單一智能體)",
+          "Multi-Agent System (多智能體系統)"
+        ],
+        "rows": [
+          [
+            "Prompt 複雜度",
+            "龐大混亂 (System Prompt 幾千字，要求包山包海)",
+            "模組化精簡 (每個 Agent 僅需 100 字專屬 Role Prompt)"
+          ],
+          [
+            "幻覺與錯誤傳播",
+            "錯誤容易在對話中自我強化 (Self-reinforcing error)",
+            "經由交叉審查 (Cross-verification) 即時糾正錯誤"
+          ],
+          [
+            "Token 費用控管",
+            "Context 隨對話線性膨脹，後續費用極貴",
+            "Worker 執行完即關閉，僅回傳高密度摘要給 Manager"
+          ]
+        ],
+        "focus": "💡 試題常考：Multi-Agent 透過角色專一化 (Specialization)，能大幅降低 Context Window 負荷。"
+      },
+      {
+        "num": "4",
+        "color": "num-4",
+        "title": "LangGraph / Multi-Agent 代碼架構",
+        "sub": "Multi-Agent Orchestration",
+        "type": "code",
+        "code_snippet": "# Manager 派發 ➔ Worker 執行 ➔ Review 審查迴圈\ndef manager_node(state):\n    task = plan_subtask(state.goal)\n    return {\"next_worker\": \"coder\", \"subtask\": task}\n\ndef coder_worker(state):\n    code = generate_code(state.subtask)\n    return {\"draft_code\": code}\n\ndef critic_node(state):\n    is_passed = audit_code(state.draft_code)\n    return \"end\" if is_passed else \"coder\"",
+        "focus": "🔑 關鍵框架：使用 `LangGraph` 或 `AutoGen` 建構帶有條件分支 (Conditional Edges) 的多 Agent 圖。"
+      },
+      {
+        "num": "5",
+        "color": "num-5",
+        "title": "歷屆真題陷阱與必考秒解解密",
+        "sub": "iPAS 中級高頻考點解析",
+        "type": "tips",
+        "tips_list": [
+          "⚠️ 考題問『為防止 AI 團隊產生團體迷思 (Groupthink) 並盲目同意錯誤方案，應引進何種 Agent 角色？』 ➔ 答案：Devil's Advocate (惡魔代言人 / 批判者 Agent)。",
+          "⚠️ 關鍵安全門禁 ➔ Human-in-the-loop (人機確認閘)，在執行刪除檔或轉帳等高風險 Tool Call 前請求 Human Approval。",
+          "⚠️ Multi-Agent 通訊協定 ➔ Agent 之間透過 Structured Message (JSON) 傳遞高密度成果摘要。"
+        ],
+        "focus": "💯 秒解原則：聽到『防團體迷思專找漏洞』選 惡魔代言人 (Devil's Advocate)；聽到『高風險操作核准』選 Human-in-the-loop。"
+      },
+      {
+        "num": "6",
+        "color": "num-6",
+        "title": "本卡考點精華 Checkpoint",
+        "sub": "考前 10 秒快速複習",
+        "type": "list",
+        "items": [
+          "✅ 核心模式：Manager-Worker (兩階段分工) + Peer Review (交叉審查)",
+          "✅ 避坑機制：惡魔代言人 (打破迷思) + Human-in-the-loop (高風險人工審核)",
+          "✅ 架構優勢：角色專一化，降低單一 Context Window 負擔與幻覺"
+        ],
+        "focus": "🎯 記憶口訣：『Manager 規劃 Worker 跑，惡魔代言找漏洞，高風險操作 Human 審！』"
+      }
+    ]
+  }
+]
