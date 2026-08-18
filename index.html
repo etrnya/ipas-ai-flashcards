@@ -554,8 +554,8 @@
 
   <footer>
     Antigravity Agent OS 開發 | 內容依據 iPAS 官方考試大綱與歷屆 300 題考點編製 | 創用 CC BY-NC-SA 4.0 授權
-  </footer>
-
+  <!-- 引入內置全備份資料庫，保證 file:// 協議與離線環境下 100% 可存取 -->
+  <script src="cards_bundle.js"></script>
   <script>
     let allCards = [];
     let filteredCards = [];
@@ -576,26 +576,40 @@
 
     function loadLevelData(level) {
       const jsonFile = levelFiles[level];
-      // 加入 Cache Busting 避免瀏覽器/CDN 請求到舊版 404 緩存
+      const fallbackMap = {
+        'junior': window.JUNIOR_CARDS,
+        'mid': window.MID_CARDS,
+        'adv': window.ADV_CARDS
+      };
+
+      // 優先執行 AJAX fetch (帶 Cache-Busting)
       const cacheBustUrl = `${jsonFile}?v=${Date.now()}`;
       fetch(cacheBustUrl)
         .then(res => {
-          if (!res.ok) {
-            throw new Error(`HTTP ${res.status}: ${res.statusText}`);
-          }
+          if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
           return res.json();
         })
         .then(data => {
-          allCards = data;
-          updateCategoryOptions();
-          filteredCards = [...allCards];
-          currentIndex = 0;
-          renderCurrentCard();
+          initCardData(data);
         })
         .catch(err => {
-          console.error('Error loading cards:', err);
-          document.getElementById('cardContainer').innerHTML = `<div style="color:#ef4444; padding:40px; text-align:center; font-size:16px;">⚠️ 無法載入圖卡資料庫 ${jsonFile} (${err.message})<br><br><button onclick="loadLevelData('${level}')" style="padding:8px 16px; background:#38bdf8; color:#0f172a; border:none; border-radius:6px; font-weight:700; cursor:pointer;">🔄 重新嘗試載入</button></div>`;
+          console.warn(`Fetch failed (${err.message}). Activating embedded fallback dataset for ${level}...`);
+          const fallbackData = fallbackMap[level];
+          if (fallbackData && fallbackData.length > 0) {
+            initCardData(fallbackData);
+          } else {
+            console.error('Fatal: Both fetch and fallback failed for level:', level);
+            document.getElementById('cardContainer').innerHTML = `<div style="color:#ef4444; padding:40px; text-align:center; font-size:16px;">⚠️ 無法載入圖卡資料庫 ${jsonFile} (${err.message})<br><br><button onclick="loadLevelData('${level}')" style="padding:8px 16px; background:#38bdf8; color:#0f172a; border:none; border-radius:6px; font-weight:700; cursor:pointer;">🔄 重新嘗試載入</button></div>`;
+          }
         });
+    }
+
+    function initCardData(data) {
+      allCards = data;
+      updateCategoryOptions();
+      filteredCards = [...allCards];
+      currentIndex = 0;
+      renderCurrentCard();
     }
 
     // 動態更新分類選單
