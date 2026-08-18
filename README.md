@@ -27,7 +27,10 @@
 - 💡 **零基礎直覺比喻**：拋棄抽象數學公式，使用「果汁機 vs 特級廚師」、「外掛便條紙 LoRA」、「拍桌彈起棋子 SVM Kernel」、「盲眼大師與翻譯官 VLM」等生活故事秒懂 AI。
 - 🎯 **考試秒解關鍵字**：每張圖卡標註歷屆 300 題真題關鍵字與陷阱題解法，現學現賣。
 - 🔍 **即時搜尋與分類過濾**：內建全文字搜尋（如 `RAG`, `LoRA`, `Optuna`, `SHAP`, `Reasoning`, `VLM`）與考綱單元過濾。
-- 📷 **內建 2K 高清 PNG 產出**：提供完整 76 張圖卡 2K 高清圖片包 (`cards_png/junior/`, `cards_png/mid/`, `cards_png/adv/`)，可直接下載存入手機相簿。
+- 📷 **內建 2K 高清 PNG 照片圖庫**：提供全套 76 張圖卡 2K 高清圖片包，可直接下載存入手機相簿：
+  - 📘 [初級 22 張 PNG 照片包 (cards_png/junior/)](https://github.com/etrnya/ipas-ai-flashcards/tree/main/cards_png/junior)
+  - 📙 [中級 24 張 PNG 照片包 (cards_png/mid/)](https://github.com/etrnya/ipas-ai-flashcards/tree/main/cards_png/mid)
+  - 🚀 [進階強效 30 張 PNG 照片包 (cards_png/adv/)](https://github.com/etrnya/ipas-ai-flashcards/tree/main/cards_png/adv)
 
 ---
 

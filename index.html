@@ -517,7 +517,10 @@
 
       <div class="controls">
         <!-- 選擇 Level -->
-        <select class="level-select" id="levelSelect">
+        <label for="levelSelect" style="font-size:12px; font-weight:700; color:#38bdf8; display:flex; align-items:center; gap:4px;">
+          🎴 選擇卡片庫：
+        </label>
+        <select class="level-select" id="levelSelect" style="font-weight:700; background:#0f172a; color:#38bdf8; border:1px solid #38bdf8;">
           <option value="junior">📘 初級 (Junior) 22 張圖卡</option>
           <option value="mid">📙 中級 (Mid-Level) 24 張圖卡</option>
           <option value="adv">🚀 進階強效 (5 大主題包) 30 張圖卡</option>
@@ -655,8 +658,8 @@
         return;
       }
 
-      const card = filteredCards[currentIndex];
-      counter.innerText = `${currentLevel === 'junior' ? '📘 初級' : '📙 中級'} 圖卡 ${currentIndex + 1} / ${filteredCards.length} (${card.id})`;
+      const levelLabel = currentLevel === 'junior' ? '📘 初級' : (currentLevel === 'mid' ? '📙 中級' : '🚀 進階強效');
+      counter.innerText = `${levelLabel} 圖卡 ${currentIndex + 1} / ${filteredCards.length} (${card.id})`;
       btnPrev.disabled = (currentIndex === 0);
       btnNext.disabled = (currentIndex === filteredCards.length - 1);
 
